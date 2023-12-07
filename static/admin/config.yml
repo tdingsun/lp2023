@@ -7,6 +7,7 @@ collections:
   - name: "entry"
     label: "Entry"
     folder: "content"
+    format: json
     create: true
     identifier_field: name
     slug: "{{slug}}"
