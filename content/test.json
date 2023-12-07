@@ -1,0 +1,17 @@
+{
+    "name": "Test",
+    "introtext": "Test picks for the year.",
+    "songs": [
+      {
+        "songname": "New Jeans",
+        "artistname": "NewJeans",
+        "link": "https://www.youtube.com/watch?v=kcelgrGY1h8",
+        "description": "I love this song",
+        "images": [
+          {
+            "image": "/images/51.jpg"
+          }
+        ]
+      }
+    ]
+  }
