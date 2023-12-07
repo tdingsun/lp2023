@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.markdown-element p {
+        margin-bottom: 1rem;
+}
+
