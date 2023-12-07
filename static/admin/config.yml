@@ -1,0 +1,30 @@
+backend:
+  name: git-gateway
+  branch: main
+media_folder: "static/images"
+public_folder: "/images"
+collections:
+  - name: "entry"
+    label: "Entry"
+    folder: "content"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Intro Text", name: "introtext", widget: "text", required: false}
+      - label: "Songs"
+        name: "songs"
+        widget: "list"
+        summary: '{{fields.songname}} - {{fiends.artistname}}'
+        fields: 
+          - {label: Song Name, name: songname, widget: string}
+          - {label: Artist Name, name: artistname, widget: string}
+          - {label: Link, name: link, widget: string}
+          - {label: Description, name: description, widget: text, required: false}
+          - label: Images
+            name: images
+            widget: "image"
+            choose_url: true
+            allow_multiple: true
+
+
