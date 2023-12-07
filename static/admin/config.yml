@@ -14,7 +14,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Name", name: "name", widget: "string"}
-      - {label: "Intro Text", name: "introtext", widget: "text", required: false}
+      - {label: "Intro Text", name: "introtext", widget: "markdown", required: false}
       - label: "Songs"
         name: "songs"
         widget: "list"
@@ -23,7 +23,7 @@ collections:
           - {label: Song Name, name: songname, widget: string}
           - {label: Artist Name, name: artistname, widget: string}
           - {label: Link, name: link, widget: string}
-          - {label: Description, name: description, widget: text, required: false}
+          - {label: Description, name: description, widget: markdown, required: false}
           - label: Images
             name: images
             widget: "list"

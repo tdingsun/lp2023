@@ -47,9 +47,12 @@ on:resize={() => {handleResize()}}
                     <div>{song.description}</div>
                 </div>
                 <div class="flex flex-wrap gap-4">
-                    {#each song.images as imageObj}
-                        <img src={imageObj.image}/>
-                    {/each}
+                    {#if song.images && song.images[0].image}
+                        {#each song.images as imageObj}
+                            <img src={imageObj.image}/>
+                        {/each}
+                    {/if}
+                    
                 </div>
             </div>
             
