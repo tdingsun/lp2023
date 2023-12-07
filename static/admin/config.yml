@@ -10,6 +10,7 @@ collections:
     format: json
     create: true
     identifier_field: name
+    sortable_fields: [name]
     slug: "{{slug}}"
     fields:
       - {label: "Name", name: "name", widget: "string"}
