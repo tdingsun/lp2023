@@ -23,8 +23,10 @@ collections:
           - {label: Description, name: description, widget: text, required: false}
           - label: Images
             name: images
-            widget: "image"
-            choose_url: true
-            allow_multiple: true
+            widget: "list"
+            required: false
+            fields:
+              - {label: Image, name: image, widget: image, required: false, choose_url: true}
+            
 
 
