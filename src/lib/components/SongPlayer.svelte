@@ -32,12 +32,12 @@ on:resize={() => {resizeYTPlayer()}}/>
     </iframe>
         
     {:else}
-    <div on:click={() => {showYTPlayer()}} class="absolute w-full h-full">
+    <button on:click={() => {showYTPlayer()}} class="absolute w-full h-full">
         <div>cover art</div>
         <div>Play Icon</div>
         
             
-    </div>
+    </button>
     
     {/if}
     

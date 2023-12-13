@@ -4,43 +4,56 @@
 	import type { Entry } from '$lib/types.js';
 	import { onMount } from 'svelte';
 	export let data;
-	let headerHeight: number;
+
 	$: entry = data.entries.find((entry: Entry) => entry.slug === $page.params.name);
-	$: headerHeight;
+
 	let w: number;
 	let h: number;
+	let w2: number;
 	let margins = 32;
 	let pageRatio = 8.5 / 11;
 	let inversePageRatio = 11 / 8.5;
-
 	const handleResize = () => {
-		w = window.innerWidth * 0.5 - margins;
 		h = w * inversePageRatio;
-		if (h > window.innerHeight - margins * 2 - headerHeight) {
-			h = window.innerHeight - margins * 2 - headerHeight;
-			w = h * pageRatio;
+		if (h > window.innerHeight - margins * 2 ) {
+			h = window.innerHeight - margins * 2;
+			w2 = h * pageRatio;
+		} else {
+			w2 = w
 		}
 	};
 	onMount(async () => {
+		window.addEventListener('resize', () => {
+			debounce(handleResize, 300);
+		})
 		handleResize();
 	});
+
+	const debounce = (func: any, delay: number) => {
+		let timer: any;
+
+		return function () {
+			const context = this;
+			const args = arguments;
+			clearTimeout(timer);
+			timer = setTimeout(() => func.apply(context, args), delay);
+		};
+	};
 </script>
 
-<svelte:window
-	on:resize={() => {
-		handleResize();
-	}}
-/>
+<svelte:window on:resize={() => {handleResize()}}/>
 
 {#if entry}
-	<div class="flex flex-col h-full pt-4">
-		<div style="width: {w}px;" class="mx-auto" bind:clientHeight={headerHeight}>
+	<div bind:clientWidth={w} class="w-full h-full relative flex items-end justify-center">
+		<div style="width:{w2}px; height:{h}px;" class="absolute flex flex-col bg-grey0">
 			<h1 class="text-4xl">{entry.name}</h1>
-		</div>
-		<div class="overflow-auto border-t border-black">
-			{#each entry.songs as song, idx}
-				<Song {song} {idx} {w} {h}></Song>
-			{/each}
+	
+			<div class="overflow-auto">
+				{#each entry.songs as song, idx}
+					<Song {song} {idx}></Song>
+				{/each}
+			</div>
 		</div>
 	</div>
+	
 {/if}

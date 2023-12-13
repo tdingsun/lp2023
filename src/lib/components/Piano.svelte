@@ -4,7 +4,7 @@
 </script>
 
 {#each entries as entry}
-	<div class="key-container border-black   border border-l-0 -mt-[1px] relative rounded-r-md">
+	<div class="key-container border-black   border border-l-0 -mt-[1px] relative rounded-r-md bg-white">
 		<a href="/{entry.slug}" >
             <div class="h-20 flex justify-start items-center pl-[calc(12.5vw+16px)] hover:bg-gray-300 rounded-r-md">
                 {entry.name}
