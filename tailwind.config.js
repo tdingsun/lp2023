@@ -16,6 +16,15 @@ export default {
       fontFamily: {
         lores: "LoRes",
         microgramma: "Microgramma"
+      },
+      keyframes: {
+        "speakerpulse": {
+          '0%, 100%': { transform: 'scale(1)' },
+          '10%': { transform: 'scale(1.05)' },
+        }
+      },
+      animation: {
+        "speakerpulse": 'speakerpulse 1s ease infinite'
       }
     },
   },

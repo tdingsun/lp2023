@@ -41,19 +41,21 @@
 	};
 </script>
 
-<svelte:window on:resize={() => {handleResize()}}/>
 
 {#if entry}
-	<div bind:clientWidth={w} class="w-full h-full relative flex items-end justify-center">
-		<div style="width:{w2}px; height:{h}px;" class="absolute flex flex-col bg-grey0">
-			<h1 class="text-4xl">{entry.name}</h1>
-	
-			<div class="overflow-auto">
-				{#each entry.songs as song, idx}
-					<Song {song} {idx}></Song>
-				{/each}
+	<div bind:clientWidth={w} class="w-full relative">
+		<div class="w-full max-w-[calc((100vh-4rem)*0.773)] h-0 pb-[clamp(0px,129.4%,calc(100vh-4rem))] relative mx-auto">
+			<div class=" absolute left-0 right-0 top-0 bottom-0 flex flex-col bg-grey0">
+				<h1 class="text-4xl">{entry.name}</h1>
+		
+				<div class="overflow-auto">
+					{#each entry.songs as song, idx}
+						<Song {song} {idx}></Song>
+					{/each}
+				</div>
 			</div>
 		</div>
+		
 	</div>
 	
 {/if}
