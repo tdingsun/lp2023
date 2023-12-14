@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { currentEmbedCode, YTplayer, embedCodeList, currentYTStatus } from '$lib/stores';
+	import { page } from '$app/stores';
 	import Dog from '$lib/images/dog.svg';
 	let w: number;
 	$: h = w * 0.5625;
@@ -45,10 +46,11 @@
 	function playerStateChange({ data }) {
 		currentYTStatus.set(data);
 		if (data == 0) {
-			if($embedCodeList) {
-				let currIdx = $embedCodeList.findIndex((embedCode) => embedCode === $currentEmbedCode)
-				if (currIdx !== -1 && currIdx < $embedCodeList.length - 1) {
-					currentEmbedCode.set($embedCodeList[currIdx + 1])
+			if($embedCodeList && $embedCodeList[$page.params.name]) {
+				let currEmbedCodeList = $embedCodeList[$page.params.name];
+				let currIdx = currEmbedCodeList.findIndex((embedCode) => embedCode === $currentEmbedCode)
+				if (currIdx !== -1 && currIdx < currEmbedCodeList.length - 1) {
+					currentEmbedCode.set(currEmbedCodeList[currIdx + 1])
 				}
 			}
 		}
