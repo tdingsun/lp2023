@@ -11,19 +11,21 @@
 	import { currentEmbedCode } from '$lib/stores'
 	export let song: SongEntry;
 	export let idx: number;
-	export let entry: Entry;
-
-	const playSong = () => {
-		let embedCode = song.link.split('v=').at(-1);
-		currentEmbedCode.set(embedCode ? embedCode : "");
-	}
+	let embedCode = song.link.split('v=').at(-1);
 </script>
 
 <div class="border-b border-grey6 text-grey6 last:border-b-0">
-	<div class="flex justify-evenly border-b border-inherit">
+	<div class="flex justify-evenly border-b border-inherit relative">
 		<NumberLabel number={idx + 1}></NumberLabel>
-
 		<PlayButton {song}></PlayButton>
+			<div 
+			style="background-image: url(http://i.ytimg.com/vi/{embedCode}/default.jpg);
+			background-position: center center;
+			background-size: 180%;
+			"
+			class="h-[calc(2rem-1px)] w-[calc(2rem-1px)] absolute left-0">
+			</div>
+		
 	</div>
 
 	<div class="tracking-tight">

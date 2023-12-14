@@ -17,7 +17,7 @@
 <div class="overflow-auto px-4">
 	{#if entry.songs && entry.songs.length > 0}
 		{#each entry.songs as song, idx}
-			<Song {entry} {song} {idx}></Song>
+			<Song {song} {idx}></Song>
 		{/each}
 	{/if}
 </div>
