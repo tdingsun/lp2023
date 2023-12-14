@@ -5,9 +5,9 @@
 	$: h = w * 0.5625;
 	$: changeVideo($currentEmbedCode);
 	$: musicStarted = false;
-	let player;
+	let player: any;
 
-	const changeVideo = (id) => {
+	const changeVideo = (id: string|undefined) => {
 		if (id) {
 			if (player) {
 				player.loadVideoById(id);
@@ -67,5 +67,5 @@
 		<div id="ytplayer"></div>
 	</div>
 
-	<img src={Dog} class="{musicStarted ? 'hidden' : ''} h-full pt-[20%] absolute -z-1" />
+	<img src={Dog} alt="dog sillhouette" class="{musicStarted ? 'hidden' : ''} h-full pt-[20%] absolute -z-1" />
 </div>
