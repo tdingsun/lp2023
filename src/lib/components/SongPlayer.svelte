@@ -1,6 +1,5 @@
 <script lang="ts">
-	import type { SongEntry } from '$lib/types';
-	import { currentEmbedCode, musicIsPlaying, YTplayer } from '$lib/stores';
+	import { currentEmbedCode, YTplayer, embedCodeList, currentYTStatus } from '$lib/stores';
 	import Dog from '$lib/images/dog.svg';
 	let w: number;
 	$: h = w * 0.5625;
@@ -9,8 +8,6 @@
 	let player;
 
 	const changeVideo = (id) => {
-		console.log(id);
-
 		if (id) {
 			if (player) {
 				player.loadVideoById(id);
@@ -46,10 +43,14 @@
 	}
 
 	function playerStateChange({ data }) {
-		if (data == 1) {
-			musicIsPlaying.set(true);
-		} else {
-			musicIsPlaying.set(false);
+		currentYTStatus.set(data);
+		if (data == 0) {
+			if($embedCodeList) {
+				let currIdx = $embedCodeList.findIndex((embedCode) => embedCode === $currentEmbedCode)
+				if (currIdx !== -1 && currIdx < $embedCodeList.length - 1) {
+					currentEmbedCode.set($embedCodeList[currIdx + 1])
+				}
+			}
 		}
 	}
 </script>

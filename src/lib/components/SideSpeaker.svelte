@@ -1,14 +1,8 @@
 <script>
-	import { musicIsPlaying } from '$lib/stores';
-
-	let h;
-	$: console.log(h);
+	import { currentYTStatus } from '$lib/stores';
 </script>
 
-<div
-	bind:clientHeight={h}
-	class=" basis-[400px] max-h-[400px] min-h-[200px] flex-shrink flex flex-col"
->
+<div class=" basis-[400px] max-h-[400px] min-h-[200px] flex-shrink flex flex-col">
 	<div class="bg-gradient-to-t from-grey1 to-grey4 basis-2"></div>
 	<div
 		class="flex-grow flex-shrink flex justify-center bg-gradient-to-t from-grey4 via-grey2 via-30% to-grey4 relative"
@@ -104,7 +98,7 @@
 							class="absolute h-full aspect-square bg-gradient-to-t from-grey0 via-grey1 to-grey5 rounded-[50rem]"
 						></div>
 						<div
-							class="{$musicIsPlaying ? 'animate-speakerpulse' : ''} absolute aspect-square h-[80%] bg-grey5 rounded-[50rem] inner-shadow"
+							class="{$currentYTStatus === 1 ? 'animate-speakerpulse' : ''} absolute aspect-square h-[80%] bg-grey5 rounded-[50rem] inner-shadow"
 						></div>
 						<div
 							class="absolute aspect-square h-[60%] radial-gradient-2 outer-shadow rounded-[50rem]"

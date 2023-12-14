@@ -7,10 +7,11 @@
 	import NumberLabel from './NumberLabel.svelte';
 
 	import SvelteMarkdown from 'svelte-markdown';
-	import type { SongEntry } from '$lib/types.js';
+	import type { Entry, SongEntry } from '$lib/types.js';
 	import { currentEmbedCode } from '$lib/stores'
 	export let song: SongEntry;
 	export let idx: number;
+	export let entry: Entry;
 
 	const playSong = () => {
 		let embedCode = song.link.split('v=').at(-1);
@@ -22,7 +23,7 @@
 	<div class="flex justify-evenly border-b border-inherit">
 		<NumberLabel number={idx + 1}></NumberLabel>
 
-		<PlayButton {song} {idx}></PlayButton>
+		<PlayButton {song}></PlayButton>
 	</div>
 
 	<div class="tracking-tight">
