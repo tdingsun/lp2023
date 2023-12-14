@@ -5,9 +5,8 @@
 
 </script>
 
-<div class="flex flex-col h-full">
-  <SideInterface></SideInterface>  
-  <SongPlayer></SongPlayer>
-  <SideSpeaker></SideSpeaker>
-</div>
-
+<div class="basis-1/4 min-w-[300px] flex flex-col h-screen overflow-hidden">
+    <SideInterface></SideInterface>  
+    <SongPlayer></SongPlayer>
+    <SideSpeaker></SideSpeaker>
+  </div>

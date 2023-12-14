@@ -11,7 +11,10 @@ export default {
         grey4: "#7f7d7a",
         grey5: "#605e5c",
         grey6: "#1d1b1b",
-        orange: "#ffc160"
+        orange: "#ffb448",
+        red: "#ff5b4a",
+        lightred: "#f1a19e",
+        darkred: "#7a2037"
       },
       fontFamily: {
         lores: "LoRes",

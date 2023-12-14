@@ -1,34 +1,28 @@
 <script lang="ts">
 	import type { SongEntry } from '$lib/types';
-	import { currentEmbedCode, musicIsPlaying } from '$lib/stores';
-
+	import { currentEmbedCode, musicIsPlaying, YTplayer } from '$lib/stores';
+	import Dog from '$lib/images/dog.svg';
 	let w: number;
 	$: h = w * 0.5625;
-	$: showPlayer = false;
 	$: changeVideo($currentEmbedCode);
-	const resizeYTPlayer = () => {
-		h = w * 0.5625;
-	};
-
+	$: musicStarted = false;
 	let player;
 
 	const changeVideo = (id) => {
 		console.log(id);
-		showPlayer = true;
-        
-        if(id){
-            if (player) {
-			player.loadVideoById(id);
-		} else {
-            console.log('here');
-			if (window.YT) {
-				load();
+
+		if (id) {
+			if (player) {
+				player.loadVideoById(id);
 			} else {
-				window.onYouTubeIframeAPIReady = load;
+				if (window.YT) {
+					load();
+				} else {
+					window.onYouTubeIframeAPIReady = load;
+				}
 			}
+            musicStarted = true;
 		}
-        }
-		
 	};
 
 	function load() {
@@ -36,48 +30,41 @@
 			height: '100%',
 			width: '100%',
 			videoId: $currentEmbedCode,
-			playerVars: { autoplay: 1 },
-            events: {
-                onStateChange: playerStateChange
-            }
+			playerVars: { 
+                autoplay: 1,
+                color: "white",
+                playsinline: 1
+            },
+			events: {
+				onStateChange: playerStateChange
+			}
 		});
+
+        YTplayer.set(player);
+
+        
 	}
 
-    function playerStateChange({data}) {
-        if(data == 1){
-            musicIsPlaying.set(true)
-        } else {
-            musicIsPlaying.set(false)
-        }
-    }
+	function playerStateChange({ data }) {
+		if (data == 1) {
+			musicIsPlaying.set(true);
+		} else {
+			musicIsPlaying.set(false);
+		}
+	}
 </script>
 
 <svelte:head>
 	<script src="https://www.youtube.com/iframe_api"></script>
 </svelte:head>
 
-<svelte:window
-	on:resize={() => {
-		resizeYTPlayer();
-	}}
-/>
-
-<div class="w-full" bind:clientWidth={w} style="height: {h}px">
-	<div class="{showPlayer ? 'block' : 'hidden'} w-full h-full">
-			<div id="ytplayer"></div>
+<div class="w-full pb-[56.25%] relative">
+	<div
+		class="absolute top-0 bottom-0 right-0 left-0
+    bg-gradient-to-tr from-black via-grey6 to-grey5 flex"
+	>
+		<div id="ytplayer"></div>
 	</div>
 
-	<!-- <iframe 
-        class="w-full h-full"
-        src="https://www.youtube.com/embed/{embedCode}" 
-        frameborder="0" 
-        allow="">
-    </iframe> -->
-
-	<!-- <button on:click={() => {showYTPlayer()}} class="{showPlayer ? "hidden" : "block"} absolute w-full h-full z-100">
-        <div>cover art</div>
-        <div>Play Icon</div>
-        
-            
-    </button> -->
+	<img src={Dog} class="{musicStarted ? 'hidden' : ''} h-full pt-[20%] absolute -z-1" />
 </div>

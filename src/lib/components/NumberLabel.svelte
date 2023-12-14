@@ -3,7 +3,7 @@
 </script>
 
 <div
-			class="rounded-[10rem] border-black border w-8 h-8 flex-grow-0 flex-shrink-0 flex justify-center items-center mx-2"
+			class="w-8 h-8 border-inherit border rounded-[8rem] -my-[1px] flex-shrink-0 flex justify-center items-center"
 		>
 			{number}
 		</div>
