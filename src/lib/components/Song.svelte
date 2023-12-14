@@ -23,7 +23,7 @@
 			background-position: center center;
 			background-size: 180%;
 			"
-			class="h-[calc(2rem-1px)] w-[calc(2rem-1px)] absolute left-0">
+			class="h-[calc(2rem-2px)] w-[calc(2rem-2px)] absolute left-0">
 			</div>
 		
 	</div>
