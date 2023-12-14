@@ -1,8 +1,5 @@
 <script>
-	import SideConsole from './SideConsole.svelte';
-	import Piano from './Piano.svelte';
 	import BackgroundImg from '$lib/images/background.jpg';
-	export let data;
 </script>
 
 	<div
