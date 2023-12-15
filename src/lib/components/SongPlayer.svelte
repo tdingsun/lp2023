@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { currentEmbedCode, YTplayer, embedCodeList, currentYTStatus, entries, setCurrentSong, currentEntry } from '$lib/stores';
-	import { page } from '$app/stores';
+	import { currentEmbedCode, YTplayer, currentYTStatus, setCurrentSong, currentEntry } from '$lib/stores';
 	import Dog from '$lib/images/dog.svg';
 	import Song from './Song.svelte';
 	import type { SongEntry } from '$lib/types';

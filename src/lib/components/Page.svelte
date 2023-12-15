@@ -1,14 +1,8 @@
 <script lang="ts">
 	import Song from './Song.svelte';
-	import { page } from '$app/stores';
-	import type { Entry, SongEntry } from '$lib/types.js';
-	import { addToEmbedCodeList, getEmbedCodeList, currentEntry } from '$lib/stores';
+	import { currentEntry } from '$lib/stores';
 	$: entry = $currentEntry;
-	// if(!getEmbedCodeList($page.params.name)){
-	// 	let embedCodes = entry.songs.map((song: SongEntry) => song.link.split('v=').at(-1));
-	// 	addToEmbedCodeList($page.params.name, embedCodes);
-	// }
-	
+
 </script>
 
 {#if entry}

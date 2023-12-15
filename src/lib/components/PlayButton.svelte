@@ -1,5 +1,4 @@
 <script lang="ts">
-	import type { SongEntry } from '$lib/types.js';
 	import { currentEmbedCode, YTplayer, currentYTStatus, setCurrentSong } from '$lib/stores';
 	import { onMount } from 'svelte';
 	export let embedCode: string|undefined;
