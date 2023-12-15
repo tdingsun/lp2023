@@ -16,4 +16,9 @@
                 font-family: Microgramma;
                 src: url("./lib/fonts/Microgramma.otf");
         }
+
+        @font-face {
+                font-family: ArialRounded;
+                src: url("./lib/fonts/arialroundedbold.ttf")
+        }
 }

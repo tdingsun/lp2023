@@ -9,7 +9,7 @@
 		<div
 			class="w-full max-w-[calc((100vh-4rem)*0.773)] h-0 pb-[clamp(0px,129.4%,calc(100vh-4rem))] relative mx-auto"
 		>
-			<div class=" absolute left-0 right-0 top-0 bottom-0 flex flex-col bg-grey0 rounded-sm">
+			<div class=" absolute left-0 right-0 top-0 bottom-0 flex flex-col bg-[#f5f4ee] rounded-sm">
 				<slot />
 			</div>
 		</div>

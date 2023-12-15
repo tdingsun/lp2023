@@ -7,15 +7,25 @@
 <div class="flex flex-col w-[150px] flex-shrink-0 overflow-auto lg:flex-shrink lg:basis-1/4 lg:min-w-[300px] z-[2]">
 		{#each entries as entry}
 			<div
-				class="key-container border-grey4 border border-l-0 -mt-[1px] relative rounded-r-md bg-white"
+				class="key-container border-grey4 border border-l-0 -mt-[1px] relative rounded-r-md bg-[whitesmoke] group"
 			>
 				<a href="/{entry.slug}">
+						<div class="w-full h-full absolute group-hover:block
+						{entry.slug === $page.params.name ? "block" : "hidden"}">
+							<div class="h-10 aspect-square bg-[rgb(255,0,0)] absolute right-5 top-5 rounded-[10rem] blur-md -z-1 
+							"></div>
+						</div>
 					<div
-						class="h-20 flex justify-end pr-4 items-center hover:bg-grey0 rounded-r-md font-serif tracking-tighter text-xl text-grey6
-                        {entry.slug === $page.params.name ? 'bg-grey0' : ''}"
+						class="relative h-20 flex justify-end pr-8 items-center rounded-r-md  text-2xl lg:text-3xl text-grey6
+						font-arialrounded piano-name
+						"
                         >
-						{entry.name}
+						<p>
+							{entry.name}
+						</p>
+						
 					</div>
+					
 				</a>
 				<button
 					class="black-key h-10 bg-black absolute top-[3.75rem] w-1/2 z-10 rounded-r-md hover:bg-grey5"
@@ -30,4 +40,27 @@
 	.key-container:last-child .black-key {
 		display: none;
 	}
+
+	.key-container:nth-child(7n+1) .piano-name p::first-letter {
+		color: rgb(253, 51, 51)!important;
+	}
+	.key-container:nth-child(7n+2) .piano-name p::first-letter {
+		color: rgb(255, 132, 0)!important;
+	}
+	.key-container:nth-child(7n+3) .piano-name p::first-letter {
+		color: rgb(200, 177, 0)!important;
+	}
+	.key-container:nth-child(7n+4) .piano-name p::first-letter {
+		color: rgb(23, 154, 23)!important;
+	}
+	.key-container:nth-child(7n+5) .piano-name p::first-letter {
+		color: rgb(81, 81, 255)!important;
+	}
+	.key-container:nth-child(7n+6) .piano-name p::first-letter {
+		color: rgb(173, 81, 204)!important;
+	}
+	.key-container:nth-child(7n) .piano-name p::first-letter {
+		color: rgb(255, 71, 181)!important;
+	}
+
 </style>

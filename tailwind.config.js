@@ -18,7 +18,8 @@ export default {
       },
       fontFamily: {
         lores: "LoRes",
-        microgramma: "Microgramma"
+        microgramma: "Microgramma",
+        arialrounded: "ArialRounded"
       },
       keyframes: {
         "speakerpulse": {
