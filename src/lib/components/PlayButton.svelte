@@ -1,11 +1,10 @@
 <script lang="ts">
 	import type { SongEntry } from '$lib/types.js';
-	import { currentEmbedCode, YTplayer, currentYTStatus } from '$lib/stores';
+	import { currentEmbedCode, YTplayer, currentYTStatus, setCurrentSong } from '$lib/stores';
 	import { onMount } from 'svelte';
-	export let song: SongEntry;
+	export let embedCode: string|undefined;
 
 	let paused = true;
-	let embedCode = song.link.split('v=').at(-1);
 
 	$: $currentYTStatus, checkStatus();
 
@@ -31,6 +30,7 @@
 			}
 		} else {
 			currentEmbedCode.set(embedCode);
+			setCurrentSong(embedCode);
 			paused = false;
 		}
 	};

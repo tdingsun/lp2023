@@ -1,7 +1,7 @@
 <script>
-  import SideSpeaker from './SideSpeaker.svelte';
+  import SideSpeaker from './Speaker.svelte';
   import SongPlayer from './SongPlayer.svelte';
-  import SideInterface from './SideInterface.svelte';
+  import SideInterface from './Interface.svelte';
 
 </script>
 

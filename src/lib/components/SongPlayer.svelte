@@ -1,7 +1,9 @@
 <script lang="ts">
-	import { currentEmbedCode, YTplayer, embedCodeList, currentYTStatus } from '$lib/stores';
+	import { currentEmbedCode, YTplayer, embedCodeList, currentYTStatus, entries, setCurrentSong, currentEntry } from '$lib/stores';
 	import { page } from '$app/stores';
 	import Dog from '$lib/images/dog.svg';
+	import Song from './Song.svelte';
+	import type { SongEntry } from '$lib/types';
 	let w: number;
 	$: h = w * 0.5625;
 	$: changeVideo($currentEmbedCode);
@@ -46,13 +48,21 @@
 	function playerStateChange({ data }) {
 		currentYTStatus.set(data);
 		if (data == 0) {
-			if($embedCodeList && $embedCodeList[$page.params.name]) {
-				let currEmbedCodeList = $embedCodeList[$page.params.name];
-				let currIdx = currEmbedCodeList.findIndex((embedCode) => embedCode === $currentEmbedCode)
-				if (currIdx !== -1 && currIdx < currEmbedCodeList.length - 1) {
-					currentEmbedCode.set(currEmbedCodeList[currIdx + 1])
-				}
+			let songList = $currentEntry.songs;
+			let currIdx = songList.findIndex((song) => song.embedCode === $currentEmbedCode);
+			if(currIdx !== -1 && currIdx < songList.length - 1){
+				let nextEmbedCode = songList[currIdx + 1].embedCode;
+				currentEmbedCode.set(nextEmbedCode);
+				setCurrentSong(nextEmbedCode);
+
 			}
+			// if($embedCodeList && $embedCodeList[$page.params.name]) {
+			// 	let currEmbedCodeList = $embedCodeList[$page.params.name];
+			// 	let currIdx = currEmbedCodeList.findIndex((embedCode) => embedCode === $currentEmbedCode)
+			// 	if (currIdx !== -1 && currIdx < currEmbedCodeList.length - 1) {
+			// 		currentEmbedCode.set(currEmbedCodeList[currIdx + 1])
+			// 	}
+			// }
 		}
 	}
 </script>

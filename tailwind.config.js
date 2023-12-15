@@ -25,10 +25,20 @@ export default {
         "speakerpulse": {
           '0%, 100%': { transform: 'scale(1)' },
           '10%': { transform: 'scale(1.05)' },
+        },
+        "marquee": {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' }
+        },
+        "marquee2": {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(0%)' }
         }
       },
       animation: {
-        "speakerpulse": 'speakerpulse 1s ease infinite'
+        "speakerpulse": 'speakerpulse 1s ease infinite',
+        "marquee": 'marquee 15s linear infinite',
+        "marquee2": 'marquee2 15s linear infinite'
       }
     },
   },

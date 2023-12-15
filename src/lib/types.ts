@@ -11,6 +11,7 @@ export type SongEntry = {
     link: string
     description: string
     images: Image[]
+    embedCode?: string
 }
 
 export type Image = {

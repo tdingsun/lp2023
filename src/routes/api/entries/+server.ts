@@ -13,6 +13,9 @@ async function getEntries() {
 
         if (file && slug && typeof file === 'object' && 'default' in file ) {
             const entry = file.default as Omit<Entry, 'slug'>
+            entry.songs = entry.songs.map((song) => {
+                return {...song, embedCode: song.link.split('v=').at(-1)}
+            })
             entries.push({...entry, slug})
         }
        
