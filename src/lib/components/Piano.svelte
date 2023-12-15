@@ -1,12 +1,12 @@
 <script lang="ts">
 	import type { Entry } from '$lib/types';
-	export let entries: Entry[];
+	import { entries } from '$lib/stores';
     import { page } from '$app/stores';
 
 </script>
 
 <div class="flex flex-col w-[150px] flex-shrink-0 overflow-auto lg:flex-shrink lg:basis-1/4 lg:min-w-[300px] z-[2]">
-		{#each entries as entry}
+		{#each $entries as entry}
 			<div
 				class="key-container border-grey4 border border-l-0 -mt-[1px] relative rounded-r-md bg-[whitesmoke]"
 			>
