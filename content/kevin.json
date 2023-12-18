@@ -1,3 +1,70 @@
 {
+  "songs": [
+    {
+      "songname": "Wavewn",
+      "artistname": "Emil F.",
+      "link": "https://www.youtube.com/watch?v=TmbphPmvXn8"
+    },
+    {
+      "songname": "Driving",
+      "artistname": "Natural Wonder Beauty Concept",
+      "link": "https://www.youtube.com/watch?v=Y8z7VWciZjA"
+    },
+    {
+      "songname": "Amber Sun (Firefly Mix)",
+      "artistname": "ESP",
+      "link": "https://www.youtube.com/watch?v=8YMZU9fmx4w"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=Hf487OncN9o",
+      "artistname": "Caroline Polachek",
+      "songname": "Pretty In Possible"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=Zp7RzDPCnnE",
+      "artistname": "ML Buch",
+      "songname": "Flame shards goo"
+    },
+    {
+      "songname": "Good for Me",
+      "artistname": "Above and Beyond",
+      "link": "https://www.youtube.com/watch?v=F1KB7W05F0c"
+    },
+    {
+      "songname": "Virgo Oscura",
+      "artistname": "SSIEGE",
+      "link": "https://www.youtube.com/watch?v=LfILAe1eCXU"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=KqtzZx-SsnQ",
+      "artistname": "7038634357",
+      "songname": "Square Heart"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=_FnR9HHbNHs",
+      "artistname": "Aamourocean & Détente",
+      "songname": "Esperér"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=Zwow7VPbftA",
+      "artistname": "Susumu Yokota",
+      "songname": "Tayutafu"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=YiAleJfvRck",
+      "artistname": "J and the woolen stars",
+      "songname": "She Was a Friend to Me"
+    },
+    {
+      "songname": "Angel",
+      "artistname": "PinkPantheress",
+      "link": "https://www.youtube.com/watch?v=JVhqadzCgwE"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=Fb77jRwSky8",
+      "artistname": "Frou Frou",
+      "songname": "Flicks"
+    }
+  ],
   "name": "Kevin"
 }
