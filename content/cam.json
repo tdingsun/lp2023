@@ -1,0 +1,35 @@
+{
+  "name": "Cam",
+  "songs": [
+    {
+      "songname": "Suspended",
+      "artistname": "Sampha",
+      "link": "https://www.youtube.com/watch?v=3SlvAyvmEE8",
+      "description": "I’m a Sampha fan and glad he's finally made his triumphant return. The whole album is great, but Suspended is a standout, a mesmerizing, fluttering, glitched-out revelation. Sinking and floating at the same time under blue skies."
+    },
+    {
+      "description": "It doesn’t really matter where I am or what I’m doing, if I hear this song I get an uncontrollable urge to just hit a body roll. I’m not even good at dancing, unless this song is on, in which I suddenly can’t stop moving. Glossy futuristic superlight r&b. I feel like I should be on a space station’s nightclub bumping and grinding in zero-gravity to this.",
+      "link": "https://www.youtube.com/watch?v=zXOS2dDvwzI",
+      "songname": "Tinashe",
+      "artistname": "Uh Huh"
+    },
+    {
+      "description": "I lived in London for a while in 2019 but I regrettably stopped being as clued into music across the pond in the years since. Learning of Jim Legxacy’s music has been a revelation this year - a bittersweet, sentimental sun-drenched mixtape driven by Legxacy’s shapeshifting production and singing. “block hug” isn’t even a full three minutes, but morphs from a perishing ballad to steely drill like a calm sea turning to a riptide.",
+      "link": "https://www.youtube.com/watch?v=cO_33XL11kw",
+      "songname": "block hug",
+      "artistname": "Jim Legxacy"
+    },
+    {
+      "description": "Nation time - time stretching, shredding, time stolen, time lost, time gained. A black hole collapsing possible futures into something tangible. The soundtrack to a very uncertain year, and for what’s on the horizon. How do I tell what’s in store for us?",
+      "link": "https://www.youtube.com/watch?v=ELb9Kxtp2vM",
+      "artistname": "Slauson Malone 1",
+      "songname": "I Hear A New World"
+    },
+    {
+      "description": "I am biased because everyone in this band is very cool and good people and I have seen Jesus Piece probably more times than I can count. Remember when bands used to have “street teams” back in the days of LiveJournal and Myspace? If this was 2007, I’d be on the Jesus Piece Street Team. But it also helps they are tremendous musicians, best shown here — the rare heavy song that is life affirming as it is heavy. Unyielding, uncompromising love and care in the face of unimaginable loss — us against the world - that’s hardcore. Shoutouts Aaron, David, and listen to DJ LU2K.",
+      "link": "https://www.youtube.com/watch?v=2WJYbKveDAc",
+      "artistname": "Jesus Piece",
+      "songname": "Silver Lining"
+    }
+  ]
+}
