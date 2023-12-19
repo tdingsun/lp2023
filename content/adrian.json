@@ -1,0 +1,23 @@
+{
+  "name": "Adrian",
+  "songs": [
+    {
+      "link": "https://www.youtube.com/watch?v=m18Q3KkEKr8",
+      "songname": "Wichita Lineman",
+      "description": "Likely, this version appeared for me on Apple Music near the end of last year. A big part of this year’s musical diet and therefore the opening track.",
+      "artistname": "Jockstrap"
+    },
+    {
+      "description": "Of all the songs in Archie Shepp’s Goin’ Home, this one made the top this year.",
+      "link": "https://www.youtube.com/watch?v=uEKm26VhPlk",
+      "artistname": "Archie Shepp",
+      "songname": "My Lord What a Morning"
+    },
+    {
+      "description": "Excited to see others losing their minds over this album, actually, I am happy to lose it together.",
+      "artistname": "Kara Jackson",
+      "songname": "brain",
+      "link": "https://www.youtube.com/watch?v=2ObYvMCUw2A"
+    }
+  ]
+}
