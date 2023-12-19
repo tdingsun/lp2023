@@ -10,7 +10,12 @@
       "songname": "Driving",
       "artistname": "Natural Wonder Beauty Concept",
       "link": "https://www.youtube.com/watch?v=Y8z7VWciZjA",
-      "description": "Blue gummy at blue hour..."
+      "description": "Blue gummy at blue hour...",
+      "images": [
+        {
+          "image": "/images/gummy.png"
+        }
+      ]
     },
     {
       "songname": "Amber Sun (Firefly Mix)",
