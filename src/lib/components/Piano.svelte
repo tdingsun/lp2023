@@ -81,7 +81,7 @@
 		color: rgb(255, 132, 0)!important;
 	}
 	.key-container:nth-child(7n+3) .piano-name p::first-letter {
-		color: rgb(200, 177, 0)!important;
+		color: rgb(222, 177, 0)!important;
 	}
 	.key-container:nth-child(7n+4) .piano-name p::first-letter {
 		color: rgb(23, 154, 23)!important;
