@@ -8,7 +8,7 @@
       "artistname": "Jockstrap"
     },
     {
-      "description": "Of all the songs in Archie Shepp’s Goin’ Home, this one made the top this year.",
+      "description": "Of all the songs in Archie Shepp’s [Goin’ Home](https://en.wikipedia.org/wiki/Goin%27_Home_(Archie_Shepp_and_Horace_Parlan_album)), this one made the top this year.",
       "link": "https://www.youtube.com/watch?v=uEKm26VhPlk",
       "artistname": "Archie Shepp",
       "songname": "My Lord What a Morning"
@@ -18,6 +18,35 @@
       "artistname": "Kara Jackson",
       "songname": "brain",
       "link": "https://www.youtube.com/watch?v=2ObYvMCUw2A"
+    },
+    {
+      "description": "I am not into the Grateful Dead. Maybe one day that will change – this is as remote as we’d get this year.",
+      "link": "https://www.youtube.com/watch?v=iYX8h9mi9-U",
+      "artistname": "Grateful Dead",
+      "songname": "All I Ever Wanted"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=PDJgz1gYxNw",
+      "description": "The album to which this song belongs to was being played while shopping at [A-1 Records](https://www.a-1recordshop.com) (of course...). It makes me think of something out of [Midnight Cowboy](https://www.youtube.com/watch?v=q-W_rye752o) or [A Clockwork Orange](https://www.youtube.com/watch?v=8TTFSU0Kqng).",
+      "songname": "Here Come the Fleas",
+      "artistname": "White Noise"
+    },
+    {
+      "description": "This was a discovery. You can hear about it [here](https://youtu.be/Eg-PCEtmgaY?t=338).",
+      "songname": "Aerodynamic (Slum Village Remix)",
+      "artistname": "Daft Punk",
+      "link": "https://www.youtube.com/watch?v=ZEK8w1qV4x8"
+    },
+    {
+      "description": "Of all versions… and one of my played songs this year.",
+      "link": "https://www.youtube.com/watch?v=1wJYzspEbpQ",
+      "songname": "On Green Dolphin Street",
+      "artistname": "Joe Kennedy, Jr."
+    },
+    {
+      "artistname": "Rahsaan Roland Kirk",
+      "songname": "Fingers in the Wind",
+      "link": "https://www.youtube.com/watch?v=Y76-Ji500Jg"
     }
   ]
 }
