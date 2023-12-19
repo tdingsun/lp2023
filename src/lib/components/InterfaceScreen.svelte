@@ -10,7 +10,7 @@
 >
 	<div class="bg-gradient-to-r from-grey2 via-grey0 to-grey2 rounded-xl w-full h-full py-4 px-8">
 		<div class="gradient-border w-full h-full rounded-2xl p-1">
-			<div class="bg-orange rounded-xl font-lores text-xl h-full flex flex-col overflow-y-hidden {song ? 'py-2 justify-between' : 'items-center justify-center'}">
+			<div class="bg-orange rounded-xl font-lores text-xl h-full flex flex-col overflow-y-hidden items-center justify-center">
 				{#key song}
 
 				<div class="overflow-x-hidden relative flex gap-2 flex-shrink-0">
@@ -27,9 +27,12 @@
 							<span class="mx-2">NOW PLAYING: {song.songname} — {song.artistname}</span>
 							<span class="mx-2">***</span>
 						</div>
+					{:else}
+					<div class="text-center text-base">Welcome to LP</div>
+
 					{/if}
+
 				</div>
-				<div class="text-center text-base">Welcome to LP ÷)</div>
 
 				{/key}
 				
