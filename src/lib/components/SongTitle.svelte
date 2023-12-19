@@ -6,7 +6,7 @@
 
 <div class="text-2xl tracking-tight leading-6 border-b border-grey6 min-h-[calc(2rem-1px)] flex items-center i">
 	<p>
-		<span class="inline-block">{song.songname}</span> <span class="inline-block"><i>– {song.artistname}</i></span>
+		<span class="inline-block">{song.artistname}</span> <span class="inline-block"><i>– {song.songname}</i></span>
 	</p>
 </div>
 
