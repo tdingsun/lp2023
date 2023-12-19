@@ -47,6 +47,35 @@
       "artistname": "Rahsaan Roland Kirk",
       "songname": "Fingers in the Wind",
       "link": "https://www.youtube.com/watch?v=Y76-Ji500Jg"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=sXfRGpTXTbM",
+      "description": "Sometimes it is easy to forget this is a cover.",
+      "songname": "Norwegian Wood (This Bird Has Flown)",
+      "artistname": "Milton Nascimento"
+    },
+    {
+      "songname": "Silent Danish Girl",
+      "artistname": " John Tchicai",
+      "link": "https://www.youtube.com/watch?v=fHBxgCYMfuc"
+    },
+    {
+      "description": "Two days before I quit my job, I checked my email and saw that I had purchased tickets to see Jockstrap live months earlier. I had to go to the show, though my brain was fried, and as result the live version of this has stuck with me.",
+      "songname": "Glasgow",
+      "artistname": "Jockstrap",
+      "link": "https://www.youtube.com/watch?v=Xj9Gw0Sm1DM"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=IwyjxAWsUtM",
+      "description": "Exactly!",
+      "artistname": "Lil Yachty",
+      "songname": "IVE OFFICIALLY LOST ViSiON!!!!"
+    },
+    {
+      "description": "Looking back with today's resolution.",
+      "link": "https://soundcloud.com/makotoiwasa/for-aubrey-rough-edit",
+      "artistname": "RAPSTAR",
+      "songname": "For Aubrey (rough edit)"
     }
   ]
 }
