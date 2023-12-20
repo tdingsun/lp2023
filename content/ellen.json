@@ -1,0 +1,47 @@
+{
+  "name": "Ellen",
+  "songs": [
+    {
+      "songname": "Swing and Turn Jubilee",
+      "artistname": "The A’s",
+      "link": "https://www.youtube.com/watch?v=4dQTKC2kBmA",
+      "description": "I wanted to listen to something that reminded me of *Over the Garden Wall* but wasn’t a children’s soundtrack. The A’s are lovely and a little haunting which is a combination I enjoy."
+    },
+    {
+      "artistname": "The Japanese House",
+      "songname": "Spot Dog",
+      "link": "https://www.youtube.com/watch?v=DIofiusvX2g",
+      "description": "Spot Dog came on just as I wandered into a series of empty courtyards in Claremont, California. I listened to the whole album feeling like I was alone on another planet and it’s still one of my favorites."
+    },
+    {
+      "songname": "Ceilings",
+      "artistname": "Lizzy McAlpine",
+      "link": "https://www.youtube.com/watch?v=2bpMSpFTdzM",
+      "description": "A good song for driving home at the end of the day because it’s both cozy and cathartic."
+    },
+    {
+      "songname": "Angel",
+      "artistname": "PinkPantheress",
+      "link": "https://www.youtube.com/watch?v=JVhqadzCgwE",
+      "description": "A reminder that I am still putting off the perfect moment to watch the Barbie movie. Despite mixed reviews from friends, I am very excited."
+    },
+    {
+      "artistname": "Taylor Swift",
+      "songname": "Hits Different",
+      "link": "https://www.youtube.com/watch?v=_f4yoKJL7IQ",
+      "description": "Taylor Swift feels like a childhood friend and I just have to support everything she does now."
+    },
+    {
+      "songname": "Will Anybody Ever Love Me?",
+      "artistname": "Sufjan Stevens",
+      "link": "https://www.youtube.com/watch?v=OLeCIRC4taY",
+      "description": "It’s comforting when one of your favorite artists returns with a familiar sound in a new song."
+    },
+    {
+      "songname": "Kioque",
+      "artistname": "Akira Kosemura",
+      "link": "https://www.youtube.com/watch?v=nKl4VKBVF3g",
+      "description": "Akira Kosemura’s soft piano is for journaling, cleaning, sipping coffee, waking up slowly."
+    }
+  ]
+}
