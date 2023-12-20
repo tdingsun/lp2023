@@ -79,15 +79,5 @@
       "description": "'Til next time! Thank you so much to everyone who contributed, I'll see you all sometime soon."
     }
   ],
-  "miscimages": [
-    {
-      "image": "/images/2024.png"
-    },
-    {
-      "image": "/images/balcony.jpg"
-    },
-    {
-      "image": "/images/bridge.jpg"
-    }
-  ]
+  "miscimages": []
 }
