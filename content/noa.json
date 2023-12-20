@@ -55,6 +55,24 @@
       "artistname": "Sally Oldfield",
       "songname": "Blue Water",
       "link": "https://www.youtube.com/watch?v=Y0vQsfcm38c"
+    },
+    {
+      "songname": "Stolen Kiss of a Succubus",
+      "artistname": " Fatima Al Qadiri",
+      "link": "https://www.youtube.com/watch?v=IQbrFzhJ2hE"
+    },
+    {
+      "artistname": "Mura Masa, Tirzah",
+      "songname": "Today",
+      "link": "https://www.youtube.com/watch?v=1DZlCMUVMvk"
+    }
+  ],
+  "miscimages": [
+    {
+      "image": "/images/image.jpg"
+    },
+    {
+      "image": "/images/image.png"
     }
   ]
 }
