@@ -14,6 +14,12 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Name", name: "name", widget: "string"}
+      - {label: "Intro Text", name: "introtext", widget: "markdown", required: false}
+      - label: "Misc Images"
+        name: "miscimages"
+        widget: "list"
+        fields: 
+          - {label: Image, name: miscimage, widget: image, required: false, choose_url: true}
       - label: "Songs"
         name: "songs"
         widget: "list"
