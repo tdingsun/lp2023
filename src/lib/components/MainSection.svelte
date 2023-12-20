@@ -2,6 +2,7 @@
 	import BackgroundImg from '$lib/images/background.png';
 	import MusicStand from '$lib/images/musicstand.svg';
 	import Pencil from '$lib/images/pencil.svg';
+	
 </script>
 
 	<div
