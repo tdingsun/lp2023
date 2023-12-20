@@ -1,7 +1,8 @@
 export type Entry = {
     name: string
     slug: string
-    introtext: string
+    introtext?: string
+    miscimages: Image[]
     songs: SongEntry[]
 }
 

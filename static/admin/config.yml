@@ -19,7 +19,7 @@ collections:
         name: "miscimages"
         widget: "list"
         fields: 
-          - {label: Image, name: miscimage, widget: image, required: false, choose_url: true}
+          - {label: Image, name: image, widget: image, required: false, choose_url: true}
       - label: "Songs"
         name: "songs"
         widget: "list"
