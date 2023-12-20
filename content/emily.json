@@ -91,5 +91,19 @@
       "link": "https://www.youtube.com/watch?v=XIOoqJyx8E4",
       "songname": "Zero"
     }
+  ],
+  "miscimages": [
+    {
+      "image": "/images/emily1.jpeg"
+    },
+    {
+      "image": "/images/emily2.jpeg"
+    },
+    {
+      "image": "/images/emily3.jpeg"
+    },
+    {
+      "image": "/images/emily4.jpeg"
+    }
   ]
 }
