@@ -41,28 +41,48 @@
       "songname": "Christine",
       "artistname": "Christine and the Queens",
       "description": "July",
-      "link": "https://www.youtube.com/watch?v=rs40yxHjTxQ"
+      "link": "https://www.youtube.com/watch?v=rs40yxHjTxQ",
+      "images": [
+        {
+          "image": "/images/noah_7.jpg"
+        }
+      ]
     },
     {
       "artistname": "Jealous of the Birds",
       "link": "https://www.youtube.com/watch?v=aLNA1NX7I9Q",
       "songname": "Goji Berry Sunset",
-      "description": "Aug"
+      "description": "Aug",
+      "images": [
+        {
+          "image": "/images/noah_8.jpg"
+        }
+      ]
     },
     {
       "link": "https://www.youtube.com/watch?v=GLjCjMGRa-M",
       "songname": "Rainforest",
       "artistname": "Noname",
-      "description": "Sept"
+      "description": "Sept",
+      "images": [
+        {
+          "image": "/images/noah_9.jpg"
+        }
+      ]
     },
     {
       "description": "Oct",
       "link": "https://www.youtube.com/watch?v=oqVQ8YZ4dCg",
       "artistname": "J. J. Cale",
-      "songname": "Drifter's Wife"
+      "songname": "Drifter's Wife",
+      "images": [
+        {
+          "image": "/images/noah_10.jpg"
+        }
+      ]
     },
     {
-      "description": "Nov",
+      "description": "Nov\n\n![](/images/noah_11.jpg)",
       "artistname": "Santigold",
       "songname": "My Horror",
       "link": "https://www.youtube.com/watch?v=cPogPn35v4E"
@@ -71,7 +91,7 @@
       "songname": "The Writer",
       "artistname": "Meskerem Mees",
       "link": "https://www.youtube.com/watch?v=ceUPydB9uAI",
-      "description": "Dec"
+      "description": "Dec\n\n![](/images/noah_12.jpg)"
     }
   ]
 }
