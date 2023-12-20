@@ -103,5 +103,34 @@
       "artistname": "Lana Del Rey",
       "songname": "A&W"
     }
+  ],
+  "miscimages": [
+    {
+      "image": "/images/balcony.jpg"
+    },
+    {
+      "image": "/images/bike.jpg"
+    },
+    {
+      "image": "/images/blue.jpg"
+    },
+    {
+      "image": "/images/bridge.jpg"
+    },
+    {
+      "image": "/images/crystal.jpg"
+    },
+    {
+      "image": "/images/florida.jpg"
+    },
+    {
+      "image": "/images/hair.jpg"
+    },
+    {
+      "image": "/images/mirror.jpg"
+    },
+    {
+      "image": "/images/mosaic.jpg"
+    }
   ]
 }
