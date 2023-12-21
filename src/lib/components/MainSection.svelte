@@ -22,15 +22,12 @@
 	
 		
 		{#if stickyOpen}
-		<div class="font-pencil text-xs p-4 sticky-shadow bottom-[1vw] left-4 absolute w-[250px] aspect-square bg-yellow-100">
+		<div class="font-pencil text-sm p-4 sticky-shadow bottom-[1vw] left-4 absolute w-[320px] aspect-square bg-yellow-100">
 			<p class="mb-2">
-				LP [long play, listening party, little puppies...] was formed in 2018 as a college radio show >> music club >> and IRL zine project
-				today, it exists as an open-ended publishing platform dedicated to celebrating our personal connections to the music of our lives~
-				
+				LP [Long Play, Listening Party, Little Puppies…] was formed in 2018 as a college radio show, music club, and IRL zine project. today, it exists as an open-ended publishing platform dedicated to celebrating our personal connections to the music of our lives.
 			</p>
 			<p>
-				LP-2023 is a collaboration between tiger dingsun, kevin dong, and all who submitted their SOTYs :*
-
+				this third edition, LP-2023, is a collaboration between tiger dingsun, kevin dong, and all the Lovely People who submitted their SOTYs… thank you all!”
 			</p>
 		</div>
 		{/if}

@@ -101,8 +101,8 @@
 				}}
 			>
 				<div
-					class="w-full h-full absolute group-hover:block group-hover:shadow-[inset_0_0_50px_0px_red] black-key-hover:hidden
-						{entry.slug === $page.params.name ? 'active-key-glow block' : 'hidden'}"
+					class="w-full h-full absolute group-hover:block group-hover:bg-gradient-to-b group-hover:from-[whitesmoke] group-hover:to-red group-hover:via-lightred group-hover:via-85% group-hover:from-50% black-key-hover:hidden
+						{entry.slug === $page.params.name ? 'bg-gradient-to-b from-[whitesmoke] to-red via-lightred via-85% from-50% block' : 'hidden'}"
 				>
 					<div
 						class="h-11 aspect-square bg-[rgb(255,247,187)] absolute right-2 bottom-3 rounded-[10rem] blur-md -z-1
@@ -134,11 +134,7 @@
 		text-orientation: mixed;
 		writing-mode: vertical-rl;
 	}
-	.active-key-glow {
-		box-shadow: inset 0 0 80px 0px red;
-		z-index: 1;
-	}
-
+		
 	.black-key {
 		border-right: 7px inset;
 		border-bottom: 7px inset;

@@ -9,7 +9,7 @@
 	import HorizontalPiano from '$lib/components/HorizontalPiano.svelte';
 	import MobilePianoMenu from '$lib/components/MobilePianoMenu.svelte';
 	import Interface from '$lib/components/Interface.svelte';
-	import MainMobileSection from '$lib/components/MainMobileSection.svelte';
+	import MainMobileSection from '$lib/components/MobileMainSection.svelte';
 	entries.set(data.entries);
 	let screenWidth: number;
 	import { page } from '$app/stores';

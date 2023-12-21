@@ -19,8 +19,12 @@
 	let scplayer: any;
 	let showSCplayer = false;
 	const changeVideo = async (id: string | undefined) => {
-		scplayer?.pause();
-		ytplayer?.pauseVideo();
+		if(scplayer){
+			scplayer.pause();
+		}
+		if(ytplayer){
+			ytplayer.pauseVideo();
+		}
 		if (id) {
 
 			if ($currentSongIsSC) {

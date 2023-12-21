@@ -92,21 +92,15 @@
 	class="flex flex-col w-full flex-shrink-0 overflow-auto xl:flex-shrink xl:basis-1/4 xl:min-w-[300px] z-[3] relative overflow-x-visible"
 >
 	{#each $entries as entry, idx}
-		<div
-			class="key-container border-grey4 border border-l-0 -mt-[1px] relative rounded-r-md bg-[whitesmoke]
-				
-				"
-		>
-			<a
-				href="/{entry.slug}"
-				class="group"
+		<div class="key-container border-grey4 border border-l-0 -mt-[1px] relative rounded-r-md bg-[whitesmoke]">
+			<a href="/{entry.slug}" class="group"
 				on:click={() => {
 					playWhiteKey(idx);
 				}}
 			>
 				<div
-					class="w-full h-full absolute group-hover:block group-hover:shadow-[inset_0_0_50px_0px_red] black-key-hover:hidden
-						{entry.slug === $page.params.name ? 'active-key-glow block' : 'hidden'}"
+					class="w-full h-full absolute group-hover:block group-hover:bg-gradient-to-r group-hover:from-[whitesmoke] group-hover:to-red group-hover:via-lightred group-hover:via-85% group-hover:from-50% black-key-hover:hidden
+						{entry.slug === $page.params.name ? 'bg-gradient-to-r from-[whitesmoke] to-red via-lightred via-85% from-50% block' : 'hidden'}"
 				>
 					<div
 						class="h-14 aspect-square bg-[rgb(255,247,187)] absolute right-3 top-3 rounded-[10rem] blur-md -z-1
