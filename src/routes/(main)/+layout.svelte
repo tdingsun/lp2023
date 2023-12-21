@@ -1,12 +1,13 @@
-<script context='module'>
+<script context="module">
 	import Device from 'svelte-device-info';
 </script>
 
 <script lang="ts">
-  import PencilNubBackButton from '../../lib/components/PencilNubBackButton.svelte';
+  import MobileMainMenu from '../../lib/components/MobileMainMenu.svelte';
+
+	import PencilNubBackButton from '../../lib/components/PencilNubBackButton.svelte';
 
 	import MainSection from '../../lib/components/MainSection.svelte';
-	import BackgroundImg from '$lib/images/background.png';
 
 	import SideConsole from '../../lib/components/SideConsole.svelte';
 	import Piano from '../../lib/components/Piano.svelte';
@@ -14,12 +15,10 @@
 	import { entries } from '$lib/stores';
 	import HorizontalPiano from '$lib/components/HorizontalPiano.svelte';
 	import MobilePianoMenu from '$lib/components/MobilePianoMenu.svelte';
-	import MainMobileSection from '$lib/components/MobileMainSection.svelte';
+	import MobileMainSection from '$lib/components/MobileMainSection.svelte';
 	entries.set(data.entries);
 	let screenWidth: number;
 	import { page } from '$app/stores';
-	import MobileInterface from '$lib/components/MobileInterface.svelte';
-
 </script>
 
 <svelte:window bind:innerWidth={screenWidth} />
@@ -28,18 +27,10 @@
 	{#if Device.isPhone}
 		{#if $page.params.name}
 			<div class="w-full h-full">
-				<MainMobileSection {data}></MainMobileSection>
+				<MobileMainSection {data}></MobileMainSection>
 			</div>
 		{:else}
-			<div
-				style="background-image: url({BackgroundImg})"
-				class="w-full h-full flex flex-col absolute bg-cover bg-center"
-			>
-				<MobileInterface></MobileInterface>
-				<div class="basis-full flex-grow overflow-scroll">
-					<MobilePianoMenu></MobilePianoMenu>
-				</div>
-			</div>
+			<MobileMainMenu></MobileMainMenu>
 		{/if}
 	{:else}
 		<div class="w-screen h-screen flex absolute">
@@ -60,19 +51,16 @@
 					{#if $page.params.name}
 						<div class="flex flex-col h-full w-full">
 							<div class="h-full w-full">
-								<slot/>
+								<slot />
 							</div>
 							<PencilNubBackButton></PencilNubBackButton>
 						</div>
-					
-				{:else}
-					<MobilePianoMenu></MobilePianoMenu>
-				{/if}
+					{:else}
+						<MobilePianoMenu></MobilePianoMenu>
+					{/if}
 				</div>
-				
 			{/if}
 			<SideConsole></SideConsole>
 		</div>
 	{/if}
-	
 {/if}

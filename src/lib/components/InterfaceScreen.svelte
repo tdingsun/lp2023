@@ -28,7 +28,7 @@
 							<span class="mx-2">***</span>
 						</div>
 					{:else}
-					<div class="text-center text-base">Welcome to LP</div>
+					<div class="text-center text-base">{'<< Welcome to LP >>'}</div>
 
 					{/if}
 

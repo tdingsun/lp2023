@@ -1,11 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import InterfaceScreen from './InterfaceScreen.svelte';
-	import PresetButton from './PresetButton.svelte';
 	import PencilNubBackButton from './PencilNubBackButton.svelte';
 	import SongPlayer from './SongPlayer.svelte';
 	import { currentSong } from '$lib/stores';
-	import BackgroundImg from '$lib/images/background.png';
 	import Song from './Song.svelte';
 	import { currentEntry } from '$lib/stores';
 	import type { Entry } from '$lib/types';
@@ -78,4 +75,6 @@
 			theme('colors.grey0') 100%
 		);
 	}
+
+	
 </style>

@@ -14,5 +14,3 @@
   </div>
   <div class="bg-gradient-to-t from-grey6  via-grey4 to-grey5 basis-2"></div>
 </div>
-
-
