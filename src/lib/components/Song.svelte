@@ -11,15 +11,18 @@
 	export let idx: number;
 </script>
 
-<div id="{$page.params.name}-{idx}" class="border-b border-grey6 text-grey6 last:border-b-0">
-	<div class="flex justify-evenly border-b border-inherit relative">
-		<NumberLabel number={idx + 1}></NumberLabel>
-		<PlayButton embedCode={song.embedCode}></PlayButton>
-		<SongThumbnail {song}></SongThumbnail>
+<div class="border-b border-grey6 text-grey6 last:border-b-0">
+	<div id="{$page.params.name}-{idx}" class="border-inherit">
+		<div class="flex justify-evenly border-b border-inherit relative">
+			<NumberLabel number={idx + 1}></NumberLabel>
+			<PlayButton embedCode={song.embedCode}></PlayButton>
+			<SongThumbnail {song}></SongThumbnail>
+		</div>
+		<div class="font-serif">
+			<SongTitle {song}></SongTitle>
+		</div>
 	</div>
-	<div class="font-serif">
-		<SongTitle {song}></SongTitle>
-	</div>
+	
 	<div class=" font-serif flex gap-4 flex-wrap min-h-[calc(4rem-2px)] pb-4">
 		<div class="pt-2 flex-shrink-0 markdown-element text-sm w-fit max-w-md tracking-[-0.02rem]">
 			<SvelteMarkdown source={song.description} />

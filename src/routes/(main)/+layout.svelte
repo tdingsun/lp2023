@@ -50,7 +50,7 @@
 				<div class="flex-grow h-full overflow-auto">
 					{#if $page.params.name}
 						<div class="flex flex-col h-full w-full">
-							<div class="h-full w-full">
+							<div class="h-full w-full flex-shrink">
 								<slot />
 							</div>
 							<PencilNubBackButton></PencilNubBackButton>
