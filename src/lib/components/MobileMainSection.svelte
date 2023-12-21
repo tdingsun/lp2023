@@ -20,21 +20,17 @@
 	console.log(playerHeight)
 </script>
 
+<div class="z-10 w-full fixed bg-[#f5f4ee]">
+	<h1 class=" text-grey6 text-4xl font-serif text-center pt-1 z-10">{entry.name}</h1>
+</div>
 
-	<div bind:clientHeight={playerHeight} class="block gradient-border fixed top-0 left-0 w-full z-20 {song ? '' : 'h-0 overflow-hidden'}">
-		<div class="max-w-[calc(50vh)] mx-auto">
+	<div bind:clientHeight={playerHeight} class="block gradient-border fixed top-[36px] left-0 w-full z-20 {song ? '' : 'h-0 overflow-hidden'}">
+		<div class="max-w-[calc(50vh)] mx-auto p-1">
 			<SongPlayer></SongPlayer>
 		</div>
 	</div>
 
-	<div 
-	style="padding-top:{playerHeight}px"
-	
-	class="z-10 w-full fixed bg-[#f5f4ee]">
-		<h1 class=" text-grey6 text-4xl font-serif text-center pt-1 z-10">{entry.name}</h1>
-		<hr class="border-grey6 mx-4 -mt-2" />
-		
-	</div>
+
 
 	<div style="padding-top:{playerHeight + 37}px"
 	class="bg-[#f5f4ee] z-0  ">
