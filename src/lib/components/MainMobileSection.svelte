@@ -16,7 +16,7 @@
 	class="bg-cover bg-center w-full h-full flex flex-col"
 >
 		<div class="gradient-border {song ? 'block' : 'hidden'}">
-			<div class="p-2 gradient-border max-w-[calc(50vh)] mx-auto">
+			<div class="gradient-border max-w-[calc(50vh)] mx-auto">
 				<SongPlayer></SongPlayer>
 			</div>
 		</div>
