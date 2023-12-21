@@ -12,7 +12,6 @@
 	import { entries } from '$lib/stores';
 	import HorizontalPiano from '$lib/components/HorizontalPiano.svelte';
 	import MobilePianoMenu from '$lib/components/MobilePianoMenu.svelte';
-	import Interface from '$lib/components/Interface.svelte';
 	import MainMobileSection from '$lib/components/MobileMainSection.svelte';
 	entries.set(data.entries);
 	let screenWidth: number;
@@ -25,7 +24,7 @@
 <svelte:window bind:innerWidth={screenWidth} />
 
 {#if screenWidth}
-	{#if !Device.isPhone}
+	{#if Device.isPhone}
 		{#if $page.params.name}
 			<div class="w-full h-full">
 				<MainMobileSection {data}></MainMobileSection>

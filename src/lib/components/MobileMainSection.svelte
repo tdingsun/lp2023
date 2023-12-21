@@ -20,10 +20,7 @@
 	console.log(playerHeight)
 </script>
 
-<div
-	style="background-image: url({BackgroundImg})"
-	class="bg-cover bg-center relative"
->
+
 	<div bind:clientHeight={playerHeight} class="block px-4 gradient-border fixed top-0 left-0 w-full z-20 {song ? '' : 'h-0 overflow-hidden'}">
 		<div class="gradient-border max-w-[calc(50vh)] mx-auto">
 			<SongPlayer></SongPlayer>
@@ -120,7 +117,6 @@
 			</div>
 		</div>
 	</div> -->
-</div>
 
 <style>
 	.gradient-border {
