@@ -93,8 +93,8 @@
 >
 	{#each $entries as entry, idx}
 		<div
-			class="key-container border-grey4 border border-l-0 -mt-[1px] relative rounded-r-md bg-[whitesmoke]
-				
+			class="key-container border-grey4 border border-l-0 -mt-[1px] relative rounded-r-md 
+				bg-[whitesmoke]
 				"
 		>
 			<a
@@ -105,16 +105,16 @@
 				}}
 			>
 				<div
-					class="w-full h-full absolute group-hover:block group-hover:shadow-[inset_0_0_50px_0px_red] black-key-hover:hidden
-						{entry.slug === $page.params.name ? 'active-key-glow block' : 'hidden'}"
+					class="rounded-r-[5px] w-full h-full absolute group-hover:block group-hover:bg-gradient-to-r group-hover:from-[whitesmoke] group-hover:to-red group-hover:via-lightred group-hover:via-85% group-hover:from-50% black-key-hover:hidden
+						{entry.slug === $page.params.name ? 'bg-gradient-to-r from-[whitesmoke] to-red via-lightred via-85% from-50% block' : 'hidden'}"
 				>
 					<div
-						class="h-14 aspect-square bg-[rgb(255,247,187)] absolute right-3 top-3 rounded-[10rem] blur-md -z-1
+						class="h-14 aspect-square bg-[rgb(255,247,187)] absolute right-3 top-3 rounded-[10rem] blur-md
 							"
 					></div>
 				</div>
 				<div
-					class="relative h-20 flex justify-end pr-4 xl:pr-8 items-center rounded-r-md text-2xl xl:text-3xl text-grey6
+					class=" relative h-20 flex justify-end pr-4 xl:pr-8 items-center rounded-r-md text-2xl xl:text-3xl text-grey6
 						font-arialrounded piano-name
 						"
 				>
@@ -134,11 +134,6 @@
 </div>
 
 <style>
-	.active-key-glow {
-		box-shadow: inset 0 0 80px 0px red;
-		z-index: 1;
-	}
-
 	.black-key {
 		border-right: 7px inset;
 		border-bottom: 7px inset;
