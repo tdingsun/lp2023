@@ -16,24 +16,31 @@
 	if(!entry?.songs.includes($currentSong)){
 		$currentSong = undefined;
 	}
+	$: playerHeight = 0;
+	console.log(playerHeight)
 </script>
 
 <div
 	style="background-image: url({BackgroundImg})"
 	class="bg-cover bg-center relative"
 >
-	<div class="px-4 gradient-border fixed top-0 left-0 w-full z-20 {song ? 'block' : 'hidden'}">
+	<div bind:clientHeight={playerHeight} class="block px-4 gradient-border fixed top-0 left-0 w-full z-20 {song ? '' : 'h-0 overflow-hidden'}">
 		<div class="gradient-border max-w-[calc(50vh)] mx-auto">
 			<SongPlayer></SongPlayer>
 		</div>
 	</div>
-	<div class="z-10 w-full fixed {song ? 'pt-[256px]' : ''} bg-[#f5f4ee]">
+
+	<div 
+	style="padding-top:{playerHeight}px"
+	
+	class="z-10 w-full fixed bg-[#f5f4ee]">
 		<h1 class=" text-grey6 text-4xl font-serif text-center pt-1 z-10">{entry.name}</h1>
 		<hr class="border-grey6 mx-4 -mt-2" />
 		
 	</div>
 
-	<div class="bg-[#f5f4ee] z-0 {song ? 'pt-[293px]' : 'pt-[37px]'} ">
+	<div style="padding-top:{playerHeight + 37}px"
+	class="bg-[#f5f4ee] z-0  ">
 		{#if entry}
 
 			<div class="overflow-auto px-4">

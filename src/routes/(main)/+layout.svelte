@@ -25,7 +25,7 @@
 <svelte:window bind:innerWidth={screenWidth} />
 
 {#if screenWidth}
-	{#if Device.isPhone}
+	{#if !Device.isPhone}
 		{#if $page.params.name}
 			<div class="w-full h-full">
 				<MainMobileSection {data}></MainMobileSection>
