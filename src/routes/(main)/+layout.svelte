@@ -8,7 +8,7 @@
 	entries.set(data.entries);
 </script>
 
-<div class="w-screen h-screen flex">
+<div class="w-screen h-screen flex absolute">
 	<Piano></Piano>
     <MainSection>
         <slot />

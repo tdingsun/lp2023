@@ -1,19 +1,20 @@
 <script lang="ts">
-	import type { Entry } from '$lib/types';
 	import { entries } from '$lib/stores';
     import { page } from '$app/stores';
 
 </script>
 
-<div class="flex flex-col w-[150px] flex-shrink-0 overflow-auto lg:flex-shrink lg:basis-1/4 lg:min-w-[300px] z-[2]">
+<div class="flex flex-col w-[150px] flex-shrink-0 overflow-auto lg:flex-shrink lg:basis-1/4 lg:min-w-[300px] z-[3] relative overflow-x-visible">
 		{#each $entries as entry}
 			<div
-				class="key-container border-grey4 border border-l-0 -mt-[1px] relative rounded-r-md bg-[whitesmoke]"
+				class="key-container border-grey4 border border-l-0 -mt-[1px] relative rounded-r-md bg-[whitesmoke]
+				{entry.slug === $page.params.name ? "active-key-glow" : ""}
+				"
 			>
 				<a href="/{entry.slug}" class="group">
 						<div class="w-full h-full absolute group-hover:block black-key-hover:hidden
 						{entry.slug === $page.params.name ? "block" : "hidden"}">
-							<div class="h-10 aspect-square bg-[rgb(255,120,90)] absolute right-5 top-5 rounded-[10rem] blur-md -z-1 
+							<div class="h-14 aspect-square bg-[rgb(255,247,187)] absolute right-3 top-3 rounded-[10rem] blur-md -z-1 
 							"></div>
 						</div>
 					<div
@@ -36,6 +37,13 @@
 </div>
 
 <style>
+	.active-key-glow {
+		box-shadow: inset 0 0 80px 0px red;
+		z-index: 1;
+	}
+	.key-container:hover {
+		box-shadow: inset 0 0 50px 0px theme('colors.red');
+	}
 	.black-key {
 		border-right: 7px inset;
 		border-bottom: 7px inset;
