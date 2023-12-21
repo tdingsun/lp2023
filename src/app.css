@@ -3,36 +3,41 @@
 @tailwind utilities;
 
 .markdown-element p {
-        margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 
 .markdown-element a {
-        text-decoration: underline;
+	text-decoration: underline;
 }
 
 .markdown-element a:hover {
-        text-decoration: none;
+	text-decoration: none;
 }
 
 @layer base {
-        @font-face {
-                font-family: LoRes;
-                src: url("./lib/fonts/LoRes12OT-Regular.ttf");
-        }
+	@font-face {
+		font-family: LoRes;
+		src: url('./lib/fonts/LoRes12OT-Regular.ttf');
+	}
 
-        @font-face {
-                font-family: Microgramma;
-                src: url("./lib/fonts/Microgramma.otf");
-        }
+	@font-face {
+		font-family: Microgramma;
+		src: url('./lib/fonts/Microgramma.otf');
+	}
 
-        @font-face {
-                font-family: ArialRounded;
-                src: url("./lib/fonts/arialroundedbold.ttf")
-        }
-        @font-face {
-                font-family: Pencil;
-                src: url("./lib/fonts/thinpencil.otf")
+	@font-face {
+		font-family: ArialRounded;
+		src: url('./lib/fonts/arialroundedbold.ttf');
+	}
+	@font-face {
+		font-family: Pencil;
+		src: url('./lib/fonts/thinpencil.otf');
 
-                /* src: url("./lib/fonts/KGMakesYouStronger.ttf") */
-        }
+		/* src: url("./lib/fonts/KGMakesYouStronger.ttf") */
+	}
+}
+
+html,
+body {
+	height: 100%;
 }

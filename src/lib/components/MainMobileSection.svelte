@@ -12,7 +12,7 @@
 </script>
 
 <div  style="background-image: url({BackgroundImg})"
-class="bg-cover bg-center w-full h-screen flex flex-col">
+class="bg-cover bg-center w-full h-full flex flex-col">
     <div class="gradient-border">
         <div class="p-2 gradient-border max-w-[calc(50vh)] mx-auto">
             <SongPlayer></SongPlayer>
