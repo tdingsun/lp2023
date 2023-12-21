@@ -5,81 +5,65 @@
       "songname": "Abracadabra",
       "artistname": "Qveen Herby",
       "link": "https://www.youtube.com/watch?v=wvOSl80H0nM",
-      "description": "Jan"
+      "description": "Jan\n\n![](/images/pxl_20230115_124101273.jpg)"
     },
     {
       "songname": "Bach",
       "artistname": "Dan Reeder",
       "link": "https://www.youtube.com/watch?v=-zbyXR43KZ0",
-      "description": "Feb"
+      "description": "Feb\n\n![](/images/pxl_20230208_155858141.jpg)"
     },
     {
       "artistname": "Leikeli47",
       "songname": "Tic Boom",
       "link": "https://www.youtube.com/watch?v=45rDN6Opjas",
-      "description": "March"
+      "description": "March\n\n![](/images/pxl_20230315_182715315.jpg)"
     },
     {
       "songname": "Kamali",
       "artistname": "Priya Ragu",
       "link": "https://www.youtube.com/watch?v=QaEr9G8r7so",
-      "description": "April"
+      "description": "April\n\n![](/images/pxl_20230430_150505860.jpg)"
     },
     {
       "artistname": "Royce Wood Junior",
       "songname": "Slush",
-      "description": "May",
+      "description": "May\n\n![](/images/pxl_20230528_164730296.jpg)",
       "link": "https://www.youtube.com/watch?v=KrO7BlJYXRM"
     },
     {
       "artistname": "Janelle Monaé",
       "songname": "Lipstick Lover",
       "link": "https://www.youtube.com/watch?v=Y7S6wLP_vsY",
-      "description": "June"
+      "description": "June\n\n![](/images/pxl_20230616_170954670.jpg)"
     },
     {
       "songname": "Christine",
       "artistname": "Christine and the Queens",
-      "description": "July",
+      "description": "July\n\n![](/images/noah_7.jpg)",
       "link": "https://www.youtube.com/watch?v=rs40yxHjTxQ",
-      "images": [
-        {
-          "image": "/images/noah_7.jpg"
-        }
-      ]
+      "images": []
     },
     {
       "artistname": "Jealous of the Birds",
       "link": "https://www.youtube.com/watch?v=aLNA1NX7I9Q",
       "songname": "Goji Berry Sunset",
-      "description": "Aug",
-      "images": [
-        {
-          "image": "/images/noah_8.jpg"
-        }
-      ]
+      "description": "Aug\n\n![](/images/noah_8.jpg)",
+      "images": []
     },
     {
       "link": "https://www.youtube.com/watch?v=GLjCjMGRa-M",
       "songname": "Rainforest",
       "artistname": "Noname",
-      "description": "Sept",
-      "images": [
-        {
-          "image": "/images/noah_9.jpg"
-        }
-      ]
+      "description": "Sept\n\n![](/images/noah_9.jpg)",
+      "images": []
     },
     {
-      "description": "Oct",
+      "description": "Oct\n\n![](/images/noah_10.jpg)",
       "link": "https://www.youtube.com/watch?v=oqVQ8YZ4dCg",
       "artistname": "J. J. Cale",
       "songname": "Drifter's Wife",
-      "images": [
-        {
-          "image": "/images/noah_10.jpg"
-        }
-      ]
+      "images": []
     },
     {
       "description": "Nov\n\n![](/images/noah_11.jpg)",
