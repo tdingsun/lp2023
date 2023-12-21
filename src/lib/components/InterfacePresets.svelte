@@ -38,7 +38,7 @@
   </div>
 </div>
 {#if showSticky}
-<div class="font-pencil text-xs p-4 sticky-shadow top-[260px] left-0 absolute w-[250px] aspect-square bg-yellow-100 z-10">
+<div class="font-pencil font-bold text-xs p-4 sticky-shadow top-[260px] left-0 absolute w-[250px] aspect-square bg-yellow-100 z-10">
 	<p class="mb-2">
 		LP [long play, listening party, little puppies...] was formed in 2018 as a college radio show >> music club >> and IRL zine project
 		today, it exists as an open-ended publishing platform dedicated to celebrating our personal connections to the music of our lives~
