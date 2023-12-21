@@ -4,7 +4,7 @@
 	import InterfaceScreen from './InterfaceScreen.svelte';
 	let showSticky = false;
 	const onEvilButtonClicked = () => {};
-	const onAboutButtonClicked = () => {showSticky = !showSticky};
+	const onInfoButtonClicked = () => {showSticky = !showSticky};
 </script>
 
 <div class="flex items-center text-sm pt-2 pb-1">
@@ -32,8 +32,8 @@
   <div class="md:hidden">
 	<PresetButton
 	on:click={() => {
-		onAboutButtonClicked();
-	}}>ABOUT</PresetButton
+		onInfoButtonClicked();
+	}}>INFO</PresetButton
 >
   </div>
 </div>
