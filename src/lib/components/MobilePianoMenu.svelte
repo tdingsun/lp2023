@@ -114,7 +114,7 @@
 					></div>
 				</div>
 				<div
-					class="relative h-20 flex justify-end pr-4 xl:pr-8 items-center rounded-r-md text-2xl xl:text-3xl text-grey6
+					class="relative h-20 flex justify-end pr-4 xl:pr-8 items-center rounded-r-md text-3xl xl:text-3xl text-grey6
 						font-arialrounded piano-name
 						"
 				>
