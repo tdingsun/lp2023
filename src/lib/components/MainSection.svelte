@@ -12,7 +12,7 @@
 
 	<div
 		style="background-image: url({BackgroundImg})"
-		class="bg-cover bg-center flex-grow flex-shrink h-full w-full lg:w-0 lg:-ml-1 px-4 lg:pr-8 pt-8 lg:pl-9 pb-[2%] lg:pb-[1%] flex justify-center items-end relative z-0"
+		class="bg-cover bg-center flex-grow flex-shrink h-full w-full lg:w-0 lg:-ml-1 px-4 lg:pr-8 pt-8 lg:pl-9 pb-[2%] lg:pb-[1%] flex justify-center items-end relative z-0 -mt-1 lg:mt-0" 
 	>
 		<div>
 			<img src={MusicStand} class="w-full absolute bottom-0 left-0 right-0"/>
