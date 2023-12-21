@@ -1,7 +1,6 @@
 <script>
 	import PresetButton from './PresetButton.svelte';
-
-	import InterfaceScreen from './InterfaceScreen.svelte';
+	import { chooseRandomSong } from '$lib/stores';
 	let showSticky = false;
 	const onEvilButtonClicked = () => {};
 	const onInfoButtonClicked = () => {showSticky = !showSticky};
@@ -15,18 +14,23 @@
 	<div class="h-[1px] border-b border-darkred flex-grow"></div>
 </div>
 <div class="flex justify-normal items-end gap-4 px-1">
-	<PresetButton
+	<a href="https://open.spotify.com/playlist/4stX2DW5rYLxcKsyXRyfdq?si=8905397c377741db" target="_blank">
+		<PresetButton
 		on:click={() => {
 			onEvilButtonClicked();
 		}}>EVIL</PresetButton
-	>
-	<PresetButton
+		>
+	</a>
+	
+	<a href="https://tdingsun.github.io/lp20x20/index" target="_blank">
+		<PresetButton
 		on:click={() => {
 			onEvilButtonClicked();
 		}}>20x20</PresetButton
-	>
+		>
+	</a>
   <div class="h-12 p-1 rounded-xl gradient-border flex-grow max-w-[9rem]">
-    <button class="w-full h-full bg-gradient-to-r from-red via-lightred to-red hover:from-lightred hover:via-red hover:to-lightred red-shadow rounded-xl font-microgramma tracking-wider text-grey6">
+    <button on:click={() => {chooseRandomSong()}} class="w-full h-full bg-gradient-to-r from-red via-lightred to-red hover:from-lightred hover:via-red hover:to-lightred red-shadow rounded-xl font-microgramma tracking-wider text-grey6">
       MEGAMIX
     </button>
   </div>

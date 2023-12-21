@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from '$app/stores';
   import SongThumbnail from './SongThumbnail.svelte';
 
 	import PlayButton from './PlayButton.svelte';
@@ -14,7 +15,7 @@
 	export let idx: number;
 </script>
 
-<div class="border-b border-grey6 text-grey6 last:border-b-0">
+<div id="{$page.params.name}-{idx}" class="border-b border-grey6 text-grey6 last:border-b-0">
 	<div class="flex justify-evenly border-b border-inherit relative">
 		<NumberLabel number={idx + 1}></NumberLabel>
 		<PlayButton embedCode={song.embedCode}></PlayButton>
