@@ -26,10 +26,10 @@
 	<div class="font-serif">
 		<SongTitle {song}></SongTitle>
 	</div>
-	<div class=" font-serif flex gap-2 flex-wrap min-h-[calc(4rem-2px)] pt-2 pb-4">
-		<div class="flex-shrink-0 markdown-element text-sm w-fit max-w-md tracking-[-0.02rem]">
+	<div class=" font-serif flex gap-4 flex-wrap min-h-[calc(4rem-2px)] pb-4">
+		<div class="pt-2 flex-shrink-0 markdown-element text-sm w-fit max-w-md tracking-[-0.02rem]">
 			<SvelteMarkdown source={song.description} />
 		</div>
-		<SongImages {song}></SongImages>
+			<SongImages {song}></SongImages>
 	</div>
 </div>
