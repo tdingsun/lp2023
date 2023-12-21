@@ -1,14 +1,10 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-  import SongThumbnail from './SongThumbnail.svelte';
-
+  	import SongThumbnail from './SongThumbnail.svelte';
 	import PlayButton from './PlayButton.svelte';
-
 	import SongImages from './SongImages.svelte';
-
 	import SongTitle from './SongTitle.svelte';
 	import NumberLabel from './NumberLabel.svelte';
-
 	import SvelteMarkdown from 'svelte-markdown';
 	import type { SongEntry } from '$lib/types.js';
 	export let song: SongEntry;
@@ -19,11 +15,8 @@
 	<div class="flex justify-evenly border-b border-inherit relative">
 		<NumberLabel number={idx + 1}></NumberLabel>
 		<PlayButton embedCode={song.embedCode}></PlayButton>
-
 		<SongThumbnail {song}></SongThumbnail>
-		
 	</div>
-
 	<div class="font-serif">
 		<SongTitle {song}></SongTitle>
 	</div>

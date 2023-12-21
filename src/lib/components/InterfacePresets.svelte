@@ -41,8 +41,5 @@
   .red-shadow {
     box-shadow: 0 0 10px 4px theme('colors.red');
   }
-  .sticky-shadow {
-		box-shadow: 2px -2px 5px -1px rgba(0,0,0,0.1);
-	}
 </style>
 

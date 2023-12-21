@@ -79,7 +79,9 @@
 		sciframe.height = '100%';
 		sciframe.allow = 'autoplay';
 		sciframe.src = `https://w.soundcloud.com/player/?url=${url}`;
-		scContainer?.replaceChildren(sciframe);
+		if(scContainer){
+			scContainer.replaceChildren(sciframe);
+		}
 		scplayer = SC.Widget(sciframe);
 		SCplayer.set(scplayer);
 

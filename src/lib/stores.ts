@@ -36,8 +36,7 @@ export const chooseRandomSong = () => {
         let slug = randomEntry.slug;
         let randomSongIdx =  Math.floor((Math.random() * randomEntry.songs.length))
         let randomSong = randomEntry.songs[randomSongIdx]
-        goto(`/${slug}`, {replaceState: false}).then(() => {
-            currentEntry.set(randomEntry);
+        goto(`/${slug}`).then(() => {
             setCurrentSong(randomSong.embedCode);
             let songElement = document.getElementById(`${slug}-${randomSongIdx}`);
             if(songElement){
