@@ -22,7 +22,7 @@
 	
 		
 		{#if stickyOpen}
-		<div class="font-pencil text-sm p-4 sticky-shadow bottom-[1vw] left-4 absolute w-[320px] aspect-square bg-yellow-100">
+		<div class="font-pencil text-sm p-4 sticky-shadow bottom-[1vw] left-3 lg:left-4 absolute w-[320px] aspect-square bg-yellow-100">
 			<p class="mb-2">
 				LP [Long Play, Listening Party, Little Puppies…] was formed in 2018 as a college radio show, music club, and IRL zine project. today, it exists as an open-ended publishing platform dedicated to celebrating our personal connections to the music of our lives.
 			</p>
