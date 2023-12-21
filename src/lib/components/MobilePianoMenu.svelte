@@ -89,7 +89,7 @@
 </script>
 
 <div
-	class="flex flex-col w-[150px] flex-shrink-0 overflow-auto xl:flex-shrink xl:basis-1/4 xl:min-w-[300px] z-[3] relative overflow-x-visible"
+	class="flex flex-col w-full flex-shrink-0 overflow-auto xl:flex-shrink xl:basis-1/4 xl:min-w-[300px] z-[3] relative overflow-x-visible"
 >
 	{#each $entries as entry, idx}
 		<div

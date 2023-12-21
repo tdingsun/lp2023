@@ -8,7 +8,7 @@
 </script>
 
 <div
-	class="w-full max-w-[calc((100vh-4rem)*0.773)] h-0 pb-[clamp(0px,129.4%,calc(100vh-4rem))] relative mx-auto"
+	class="h-full aspect-[8.5/11] max-w-full md:max-w-[calc((100vh-4rem-150px)*0.773)] md:pb-[clamp(0px,129.4%,calc(100vh-4rem-150px))] lg:max-w-[calc((100vh-4rem)*0.773)] md:h-0 lg:pb-[clamp(0px,129.4%,calc(100vh-4rem))] relative mx-auto"
 >
 	<div class=" absolute left-0 right-0 top-0 bottom-0 flex flex-col bg-[#f5f4ee]">
 		{#if entry}

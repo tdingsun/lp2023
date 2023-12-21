@@ -44,15 +44,19 @@
 					`
 					scplayer.load(src, {
 						callback: () => {
-							$SCplayer.play();
+							scplayer.play();
 						}
 					});
 
 				} else {
-					createSCPlayer(id);
+					if (window.SC) {
+						createSCPlayer(id);
+					} else {
+						console.log('no sc');
+					}
 				}
 			} else {
-				$SCplayer.pause();
+				scplayer.pause();
 
 				if (player) {
 					player.loadVideoById(id);
@@ -76,7 +80,7 @@
 		sciframe.width = '100%';
 		sciframe.height = '100%';
 		sciframe.allow = 'autoplay';
-		sciframe.src = `https://w.soundcloud.com/player/?url=${url}&auto_play=true&hide_related=true&visual=true`;
+		sciframe.src = `https://w.soundcloud.com/player/?url=${url}&hide_related=true`;
 		scContainer?.append(sciframe);
 		scplayer = SC.Widget(sciframe);
 		SCplayer.set(scplayer);
@@ -135,7 +139,14 @@
 	}
 
 	onMount(() => {
-		createSCPlayer(defaultSCsource);
+		let SCScriptLoadInterval = setInterval(() => {
+			if(window.SC){
+				createSCPlayer(defaultSCsource);
+				clearInterval(SCScriptLoadInterval)
+			} else {
+				console.log('no sc');
+			}
+		}, 250);
 	});
 
 </script>

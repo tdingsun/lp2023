@@ -25,7 +25,7 @@
 		'C3', 'B2', 'A2', 'G2', 'F2', 'E2', 'D2',
 		'C2', 'B1', 'A1', 'G1', 'F1', 'E1', 'D1',
 		'C1'
-	];
+	].reverse();
 
 	let blackNotesInOrder = [
 		'',
@@ -66,9 +66,9 @@
 		'',
 		'Eb1',
 		'Db1',
+		'',
 
-		''
-	];
+	].reverse();
 
 	const playWhiteKey = (idx) => {
 		synth.triggerAttackRelease(notesInOrder[idx % notesInOrder.length], '2n');
@@ -89,17 +89,13 @@
 </script>
 
 <div
-	class="flex flex-col w-[150px] flex-shrink-0 overflow-auto xl:flex-shrink xl:basis-1/4 xl:min-w-[300px] z-[3] relative overflow-x-visible"
+	class="flex h-[150px] w-full overflow-auto z-[3] relative flex-shrink-0"
 >
 	{#each $entries as entry, idx}
 		<div
-			class="key-container border-grey4 border border-l-0 -mt-[1px] relative rounded-r-md bg-[whitesmoke]
-				
-				"
+			class="w-16 flex-shrink-0 key-container border-grey4 border border-t-0 -mr-[1px] relative rounded-b-md bg-[whitesmoke]"
 		>
-			<a
-				href="/{entry.slug}"
-				class="group"
+			<a href="/{entry.slug}" class="group"
 				on:click={() => {
 					playWhiteKey(idx);
 				}}
@@ -109,13 +105,13 @@
 						{entry.slug === $page.params.name ? 'active-key-glow block' : 'hidden'}"
 				>
 					<div
-						class="h-14 aspect-square bg-[rgb(255,247,187)] absolute right-3 top-3 rounded-[10rem] blur-md -z-1
+						class="h-11 aspect-square bg-[rgb(255,247,187)] absolute right-2 bottom-3 rounded-[10rem] blur-md -z-1
 							"
 					></div>
 				</div>
 				<div
-					class="relative h-20 flex justify-end pr-4 xl:pr-8 items-center rounded-r-md text-2xl xl:text-3xl text-grey6
-						font-arialrounded piano-name
+					class="h-full w-full relative flex justify-start items-center rounded-r-md text-2xl text-grey6
+						font-arialrounded piano-name pb-2 pt-4 rotate-180
 						"
 				>
 					<p>
@@ -127,13 +123,17 @@
 				on:click={() => {
 					playBlackKey(idx);
 				}}
-				class="black-key h-10 absolute top-[3.75rem] w-1/2 z-10 rounded-r-md pointer-events-auto"
+				class="black-key h-1/2 absolute top-0 -right-4 w-8 z-10 rounded-b-md pointer-events-auto"
 			></button>
 		</div>
 	{/each}
 </div>
 
 <style>
+	.piano-name {
+		text-orientation: mixed;
+		writing-mode: vertical-rl;
+	}
 	.active-key-glow {
 		box-shadow: inset 0 0 80px 0px red;
 		z-index: 1;
@@ -156,8 +156,8 @@
 		border-bottom: 5px inset black;
 	}
 
-	.key-container:nth-child(7n + 5) .black-key,
-	.key-container:nth-child(7n + 1) .black-key,
+	.key-container:nth-child(7n + 3) .black-key,
+	.key-container:nth-child(7n) .black-key,
 	.key-container:last-child .black-key {
 		display: none;
 	}

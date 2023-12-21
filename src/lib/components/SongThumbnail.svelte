@@ -4,7 +4,7 @@
 	export let song: SongEntry;
 	$: SCArtUrl = '';
 
-	onMount(() => {
+	const setSCArt = () => {
 		if (song?.embedCode?.includes('soundcloud')) {
 			if (song?.scArtUrl) {
 				SCArtUrl = song.scArtUrl;
@@ -12,16 +12,34 @@
 				let iframe = document.createElement('iframe');
 				iframe.src = `https://w.soundcloud.com/player/?url=${song.embedCode}`;
 				document.getElementById('iframe-container')?.append(iframe);
-				let player = SC.Widget(iframe);
-				player.bind(SC.Widget.Events.READY, () => {
-					player.getCurrentSound((sound) => {
-						SCArtUrl = sound.artwork_url;
-						song.scArtUrl = SCArtUrl;
-						console.log(SCArtUrl);
+				if(window.SC){
+					let player = SC.Widget(iframe);
+					player.bind(SC.Widget.Events.READY, () => {
+						player.getCurrentSound((sound) => {
+							SCArtUrl = sound.artwork_url;
+							song.scArtUrl = SCArtUrl;
+							console.log(SCArtUrl);
+						});
 					});
-				});
+				} else {
+					console.log('no sc');
+				}
+				
 			}
 		}
+	}
+
+	onMount(() => {
+		let SCScriptLoadInterval = setInterval(() => {
+			if(window.SC){
+				setSCArt();
+				clearInterval(SCScriptLoadInterval)
+			} else {
+				console.log('no sc');
+			}
+		}, 250);
+		
+		
 	});
 </script>
 

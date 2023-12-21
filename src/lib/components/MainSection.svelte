@@ -12,7 +12,7 @@
 
 	<div
 		style="background-image: url({BackgroundImg})"
-		class="bg-cover bg-center flex-grow w-1/2 basis-1/2 h-full -ml-1 pr-8 pt-8 pl-9 pb-[1%] flex justify-center items-end relative z-0"
+		class="bg-cover bg-center flex-grow flex-shrink h-full w-full lg:w-0 lg:-ml-1 pr-8 pt-8 pl-9 pb-[1%] flex justify-center items-end relative z-0"
 	>
 		<div>
 			<img src={MusicStand} class="w-full absolute bottom-0 left-0 right-0"/>
@@ -35,7 +35,7 @@
 		</div>
 		{/if}
 		<button on:click={() => {clickPencil()}}>
-			<img src={Pencil} class="w-[66%] absolute bottom-[0.8vw] mx-auto left-0 right-0 hover:pb-[2px]"/>
+			<img src={Pencil} class="w-[66%] min-w-[450px] absolute bottom-[0.8vw] mx-auto left-0 right-0 hover:pb-[2px]"/>
 		</button>
 	</div>
 
