@@ -19,13 +19,12 @@
 	let scplayer: any;
 	let showSCplayer = false;
 	const changeVideo = async (id: string | undefined) => {
-		console.log('in change video: ', id);
-		console.log($currentSongIsSC)
+		scplayer?.pause();
+		ytplayer?.pauseVideo();
 		if (id) {
+
 			if ($currentSongIsSC) {
-				if(ytplayer) {
-					ytplayer.pauseVideo();
-				}
+
 
 				let src = `${id}
 					&auto_play=true
@@ -53,10 +52,6 @@
 					});
 				}
 			} else {
-				if(scplayer) {
-					scplayer.pause();
-				}
-
 				if (ytplayer) {
 					ytplayer.loadVideoById(id);
 				} else {
@@ -87,6 +82,7 @@
 
 		scplayer.bind(SC.Widget.Events.READY, () => {
 			scplayer.play();
+			scplayer.pause();
 
 			scplayer.bind(SC.Widget.Events.FINISH, () => {
 				$isSCPlayerPlaying = false;
@@ -138,7 +134,7 @@
 			setCurrentSong(nextEmbedCode);
 		}
 	}
-	let defaultSCsource = "https://soundcloud.com/goodgruel/twiddlesome";
+	let defaultSCsource = "https://soundcloud.com/goodgruel/twiddlesome&auto_play=false";
 
 	onMount(() => {
 		let limit = 4;

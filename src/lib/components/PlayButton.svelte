@@ -19,50 +19,27 @@
 		if (!($currentSong?.embedCode === embedCode)) {
 			paused = true;
 		} else {
-			if($currentSongIsSC){
-				paused = !$isSCPlayerPlaying
-			} else {
-				paused = !$isYTPlayerPlaying
-
-			}
+			paused = $currentSongIsSC ? !$isSCPlayerPlaying : !$isYTPlayerPlaying
 		}
 	};
 
 	const playSong = () => {
+		//hack to get soundcloud to autoplay
 		if ($SCfirstPlay) {
-
-
 			if($SCplayer){
-				console.log('in setup')
-				//setup SC player
 				$SCplayer.setVolume(0);
 				$SCplayer.play();
 				$SCplayer.pause();
-				$SCplayer.setVolume(100);
 				SCfirstPlay.set(false);
 			}
 		}
-		console.log('HERE');
-		console.log(embedCode);
-		console.log($currentSong?.embedCode);
 		if ($currentSong?.embedCode === embedCode) {
-			console.log('current button');
 			//song associated with button is currently playing
 			if(paused) {
-				console.log('paused');
-				if ($currentSongIsSC) {
-					console.log('paused sc song');
-					$SCplayer.play();
-				} else {
-					$YTplayer.playVideo();
-				}
+				$currentSongIsSC ? $SCplayer.play() : $YTplayer.playVideo()
 				paused = false;
 			} else {
-				if ($currentSongIsSC) {
-					$SCplayer.pause();
-				} else {
-					$YTplayer.pauseVideo();
-				}
+				$currentSongIsSC ? $SCplayer.pause() : $YTplayer.pauseVideo()
 				paused = true;
 
 			}
