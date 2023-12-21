@@ -15,18 +15,19 @@
 	$: changeVideo($currentSong?.embedCode);
 	$: musicStarted = false;
 
-	let player: any;
+	let ytplayer: any;
 	let scplayer: any;
-	let defaultSCsource = "https://soundcloud.com/goodgruel/twiddlesome";
+	let showSCplayer = false;
 	const changeVideo = async (id: string | undefined) => {
+		console.log('in change video: ', id);
+		console.log($currentSongIsSC)
 		if (id) {
 			if ($currentSongIsSC) {
-				if($YTplayer) {
-					$YTplayer.pauseVideo();
+				if(ytplayer) {
+					ytplayer.pauseVideo();
 				}
 
-				if (scplayer) {
-					let src = `${id}
+				let src = `${id}
 					&auto_play=true
 					&buying=false
 					&sharing=false
@@ -42,24 +43,22 @@
 					&liking=false
 					&visual=true
 					`
+
+				if (scplayer) {
 					scplayer.load(src, {
 						callback: () => {
+							showSCplayer = true;
 							scplayer.play();
 						}
 					});
-
-				} else {
-					if (window.SC) {
-						createSCPlayer(id);
-					} else {
-						console.log('no sc');
-					}
 				}
 			} else {
-				scplayer.pause();
+				if(scplayer) {
+					scplayer.pause();
+				}
 
-				if (player) {
-					player.loadVideoById(id);
+				if (ytplayer) {
+					ytplayer.loadVideoById(id);
 				} else {
 					if (window.YT) {
 						createYTplayer();
@@ -80,13 +79,15 @@
 		sciframe.width = '100%';
 		sciframe.height = '100%';
 		sciframe.allow = 'autoplay';
-		sciframe.src = `https://w.soundcloud.com/player/?url=${url}&hide_related=true`;
-		scContainer?.append(sciframe);
+		sciframe.src = `https://w.soundcloud.com/player/?url=${url}`;
+		scContainer?.replaceChildren(sciframe);
 		scplayer = SC.Widget(sciframe);
 		SCplayer.set(scplayer);
 
 
 		scplayer.bind(SC.Widget.Events.READY, () => {
+			scplayer.play();
+
 			scplayer.bind(SC.Widget.Events.FINISH, () => {
 				$isSCPlayerPlaying = false;
 				setNextSong();
@@ -102,7 +103,7 @@
 	}
 
 	function createYTplayer() {
-		player = new YT.Player('ytplayer', {
+		ytplayer = new YT.Player('ytplayer', {
 			height: '100%',
 			width: '100%',
 			videoId: $currentSong?.embedCode,
@@ -115,7 +116,7 @@
 				onStateChange: ytPlayerStatechange
 			}
 		});
-		YTplayer.set(player);
+		YTplayer.set(ytplayer);
 	}
 	
 	function ytPlayerStatechange({ data }) {
@@ -137,14 +138,21 @@
 			setCurrentSong(nextEmbedCode);
 		}
 	}
+	let defaultSCsource = "https://soundcloud.com/goodgruel/twiddlesome";
 
 	onMount(() => {
+		let limit = 4;
+		let count = 0;
 		let SCScriptLoadInterval = setInterval(() => {
+			if(count > limit){
+				clearInterval(SCScriptLoadInterval)
+			}
 			if(window.SC){
 				createSCPlayer(defaultSCsource);
 				clearInterval(SCScriptLoadInterval)
 			} else {
 				console.log('no sc');
+				count++;
 			}
 		}, 250);
 	});
@@ -163,9 +171,10 @@
 	>
 		<div
 			id="sciframecontainer"
-			style="display: {$currentSongIsSC ? 'block' : 'none'}"
+			style="display: {$currentSongIsSC && showSCplayer ? 'block' : 'none'}"
 			class="relative z-10 w-full h-full "
-		></div>
+		>
+		</div>
 
 
 		<div style="display: {$currentSongIsSC ? 'none' : 'block'}" class="z-10 relative w-full h-full">

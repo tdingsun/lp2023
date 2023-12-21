@@ -9,9 +9,7 @@
 		isYTPlayerPlaying,
 		isSCPlayerPlaying,
 	} from '$lib/stores';
-	import { onMount } from 'svelte';
 	export let embedCode: string | undefined;
-	import PauseSVG from '$lib/images/pause.svg';
 
 	$: $isYTPlayerPlaying, $isSCPlayerPlaying, checkStatus();
 
@@ -32,6 +30,8 @@
 
 	const playSong = () => {
 		if ($SCfirstPlay) {
+
+
 			if($SCplayer){
 				console.log('in setup')
 				//setup SC player
@@ -42,11 +42,16 @@
 				SCfirstPlay.set(false);
 			}
 		}
-
+		console.log('HERE');
+		console.log(embedCode);
+		console.log($currentSong?.embedCode);
 		if ($currentSong?.embedCode === embedCode) {
+			console.log('current button');
 			//song associated with button is currently playing
 			if(paused) {
+				console.log('paused');
 				if ($currentSongIsSC) {
+					console.log('paused sc song');
 					$SCplayer.play();
 				} else {
 					$YTplayer.playVideo();
@@ -67,17 +72,7 @@
 			paused = false;
 		}
 	};
-	// onMount(() => {
-	// 	if ($currentSong?.embedCode === embedCode) {
-	// 		if ($currentSongIsSC) {
-	// 			$SCplayer.isPaused((isPaused) => {
-	// 				$paused = isPaused;
-	// 			});
-	// 		} else {
-	// 			$paused = $currentYTStatus !== 1;
-	// 		}
-	// 	}
-	// });
+
 </script>
 
 <button
@@ -100,6 +95,5 @@
 			</div>
 		</div>
 	
-		<!-- <img src={PauseSVG} class="p-[7px] -ml-0.5"/> -->
 	{/if}
 </button>

@@ -17,6 +17,7 @@
 
 <svelte:window bind:innerWidth={screenWidth} />
 
+{#if screenWidth }
 {#if screenWidth > 1024}
 	<div class="w-screen h-screen flex absolute">
 		<Piano></Piano>
@@ -58,3 +59,5 @@
 	{/if}
 	
 {/if}
+{/if}
+
