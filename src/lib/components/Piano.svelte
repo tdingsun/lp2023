@@ -79,11 +79,12 @@
 	};
 
 	onMount(() => {
+		const vol = new Tone.Volume(-8).toDestination();
 		synth = new Tone.Sampler({
 			urls: {
 				C1, C2, C3, C4, C5, C6, G1, G2, G3, G4, G5
 			}
-		}).toDestination();
+		}).connect(vol);
 	});
 </script>
 
