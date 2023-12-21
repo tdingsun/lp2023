@@ -1,5 +1,5 @@
 <script>
-	import { currentYTStatus } from '$lib/stores';
+	import { isMusicPlaying } from '$lib/stores';
 </script>
 
 <div class=" basis-[400px] max-h-[400px] min-h-[200px] flex-shrink flex flex-col">
@@ -98,8 +98,9 @@
 							class="absolute h-full aspect-square bg-gradient-to-t from-grey0 via-grey1 to-grey5 rounded-[50rem]"
 						></div>
 						<div
-							class="{$currentYTStatus === 1 ? 'animate-speakerpulse' : ''} absolute aspect-square h-[80%] bg-grey5 rounded-[50rem] inner-shadow"
+							class="{$isMusicPlaying ? 'animate-speakerpulse' :  ''} absolute aspect-square h-[80%] bg-grey5 rounded-[50rem] inner-shadow"
 						></div>
+						
 						<div
 							class="absolute aspect-square h-[60%] radial-gradient-2 outer-shadow rounded-[50rem]"
 						></div>

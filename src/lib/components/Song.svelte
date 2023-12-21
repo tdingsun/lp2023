@@ -7,8 +7,7 @@
 	import NumberLabel from './NumberLabel.svelte';
 
 	import SvelteMarkdown from 'svelte-markdown';
-	import type { Entry, SongEntry } from '$lib/types.js';
-	import { currentEmbedCode } from '$lib/stores'
+	import type { SongEntry } from '$lib/types.js';
 	export let song: SongEntry;
 	export let idx: number;
 </script>

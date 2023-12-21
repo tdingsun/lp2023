@@ -17,7 +17,7 @@
 			
 			<div class="overflow-auto px-4">
 				{#if entry.introtext}
-				<div class="py-2 font-serif text-sm w-fit max-w-md tracking-[-0.02rem]">
+				<div class="markdown-element py-2 font-serif text-sm w-fit max-w-md tracking-[-0.02rem]">
 					<SvelteMarkdown source={entry.introtext}></SvelteMarkdown>
 				</div>
 				<hr class="border-grey6" />
@@ -29,11 +29,11 @@
 					{/each}
 				{/if}
 				{#if entry.miscimages}
-				<div class="pb-8">
-					{#each entry.miscimages as image}
-					<img src={image.image} alt="" class="pb-2">
-				{/each}
-				</div>
+					<div class="pb-8 flex flex-wrap flex-shrink flex-grow basis-0 min-w-[120px] gap-2 items-start justify-center">
+						{#each entry.miscimages as image}
+						<img src={image.image} alt="" class="pb-2">
+						{/each}
+					</div>
 					
 				{/if}
 			</div>

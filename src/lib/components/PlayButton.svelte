@@ -1,43 +1,80 @@
 <script lang="ts">
-	import { currentEmbedCode, YTplayer, currentYTStatus, setCurrentSong } from '$lib/stores';
+	import {
+		YTplayer,
+		setCurrentSong,
+		SCplayer,
+		SCfirstPlay,
+		currentSongIsSC,
+		currentSong,
+		isYTPlayerPlaying,
+		isSCPlayerPlaying,
+	} from '$lib/stores';
 	import { onMount } from 'svelte';
-	export let embedCode: string|undefined;
+	export let embedCode: string | undefined;
 
-	let paused = true;
 
-	$: $currentYTStatus, checkStatus();
+	$: $isYTPlayerPlaying, $isSCPlayerPlaying, checkStatus();
 
-    const checkStatus = () => {
-        if ($currentEmbedCode === embedCode) {
-			if ($currentYTStatus === 1) {
-				paused = false;
-			} else if ($currentYTStatus === 2) {
-				paused = true;
+	$: paused = true;
+
+	const checkStatus = () => {
+		if (!($currentSong?.embedCode === embedCode)) {
+			paused = true;
+		} else {
+			if($currentSongIsSC){
+				paused = !$isSCPlayerPlaying
+			} else {
+				paused = !$isYTPlayerPlaying
+
 			}
-        } else {
-            paused = true;
-        }
-    }
+		}
+	};
+
 	const playSong = () => {
-		if ($currentEmbedCode === embedCode) {
-			if ($currentYTStatus === 1) {
-				$YTplayer.pauseVideo();
-				paused = true;
-			} else if ($currentYTStatus === 2) {
-				$YTplayer.playVideo();
+		if ($SCfirstPlay) {
+			//setup SC player
+			$SCplayer.setVolume(0);
+			$SCplayer.pause();
+			$SCplayer.setVolume(100);
+			SCfirstPlay.set(false);
+		}
+
+		if ($currentSong?.embedCode === embedCode) {
+			//song associated with button is currently playing
+			console.log('current song embed code = embed code')
+			if(paused) {
+				if ($currentSongIsSC) {
+					$SCplayer.play();
+				} else {
+					$YTplayer.playVideo();
+				}
 				paused = false;
+			} else {
+				if ($currentSongIsSC) {
+					$SCplayer.pause();
+				} else {
+					$YTplayer.pauseVideo();
+				}
+				paused = true;
+
 			}
 		} else {
-			currentEmbedCode.set(embedCode);
+			//play the new song
 			setCurrentSong(embedCode);
 			paused = false;
 		}
 	};
-	onMount(() => {
-		if ($currentEmbedCode === embedCode) {
-			paused = $currentYTStatus !== 1;
-		}
-	});
+	// onMount(() => {
+	// 	if ($currentSong?.embedCode === embedCode) {
+	// 		if ($currentSongIsSC) {
+	// 			$SCplayer.isPaused((isPaused) => {
+	// 				$paused = isPaused;
+	// 			});
+	// 		} else {
+	// 			$paused = $currentYTStatus !== 1;
+	// 		}
+	// 	}
+	// });
 </script>
 
 <button

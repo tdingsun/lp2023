@@ -1,60 +1,130 @@
 <script lang="ts">
-	import { currentEmbedCode, YTplayer, currentYTStatus, setCurrentSong, currentEntry } from '$lib/stores';
+	import {
+		YTplayer,
+		setCurrentSong,
+		currentEntry,
+		SCplayer,
+		currentSongIsSC,
+		currentSong,
+		isSCPlayerPlaying,
+		isYTPlayerPlaying
+	} from '$lib/stores';
 	import Dog from '$lib/images/dog.svg';
-	let w: number;
-	$: h = w * 0.5625;
-	$: changeVideo($currentEmbedCode);
-	$: musicStarted = false;
-	let player: any;
+	import { onMount } from 'svelte';
 
-	const changeVideo = (id: string|undefined) => {
+	$: changeVideo($currentSong?.embedCode);
+	$: musicStarted = false;
+	
+	let player: any;
+	let scplayer: any;
+	let defaultSCsource = "https://soundcloud.com/goodgruel/twiddlesome";
+	const changeVideo = async (id: string | undefined) => {
 		if (id) {
-			if (player) {
-				player.loadVideoById(id);
-			} else {
-				if (window.YT) {
-					load();
-				} else {
-					window.onYouTubeIframeAPIReady = load;
+			if ($currentSongIsSC) {
+				if($YTplayer) {
+					$YTplayer.pauseVideo();
 				}
+
+				if (scplayer) {
+					scplayer.load(id, {
+						callback: () => {
+							$SCplayer.play();
+						}
+					});
+				} else {
+					createSCPlayer(id);
+				}
+			} else {
+				$SCplayer.pause();
+
+				if (player) {
+					player.loadVideoById(id);
+				} else {
+					if (window.YT) {
+						createYTplayer();
+					} else {
+						window.onYouTubeIframeAPIReady = createYTplayer;
+					}
+				}
+				musicStarted = true;
 			}
-            musicStarted = true;
 		}
 	};
 
-	function load() {
+	
+
+	function createSCPlayer(url: string) {
+		let scContainer = document.getElementById('sciframecontainer');
+		let sciframe = document.createElement('iframe');
+		sciframe.width = '100%';
+		sciframe.height = '100%';
+		sciframe.allow = 'autoplay';
+		sciframe.src = `https://w.soundcloud.com/player/?url=${url}&auto_play=true`;
+		scContainer?.append(sciframe);
+		scplayer = SC.Widget(sciframe);
+		SCplayer.set(scplayer);
+
+		scplayer.bind(SC.Widget.Events.READY, () => {
+			scplayer.bind(SC.Widget.Events.FINISH, () => {
+				$isSCPlayerPlaying = false;
+				setNextSong();
+			});
+			scplayer.bind(SC.Widget.Events.PLAY, () => {
+				$isSCPlayerPlaying = true;
+			});
+			scplayer.bind(SC.Widget.Events.PAUSE, () => {
+				$isSCPlayerPlaying = false;
+
+			});
+		});
+	}
+
+	function createYTplayer() {
 		player = new YT.Player('ytplayer', {
 			height: '100%',
 			width: '100%',
-			videoId: $currentEmbedCode,
-			playerVars: { 
-                autoplay: 1,
-                color: "white",
-                playsinline: 1
-            },
+			videoId: $currentSong?.embedCode,
+			playerVars: {
+				autoplay: 1,
+				color: 'white',
+				playsinline: 1
+			},
 			events: {
-				onStateChange: playerStateChange
+				onStateChange: ytPlayerStatechange
 			}
 		});
-        YTplayer.set(player);
+		YTplayer.set(player);
 	}
-
-	function playerStateChange({ data }) {
-		currentYTStatus.set(data);
-		if (data == 0) {
-			let songList = $currentEntry.songs;
-			let currIdx = songList.findIndex((song) => song.embedCode === $currentEmbedCode);
-			if(currIdx !== -1 && currIdx < songList.length - 1){
-				let nextEmbedCode = songList[currIdx + 1].embedCode;
-				currentEmbedCode.set(nextEmbedCode);
-				setCurrentSong(nextEmbedCode);
-			}
+	
+	function ytPlayerStatechange({ data }) {
+		if (data === 0) {
+			setNextSong();
+		}
+		if (data === 1) {
+			$isYTPlayerPlaying = true;
+		} else {
+			$isYTPlayerPlaying = false;
 		}
 	}
+
+	function setNextSong() {
+		let songList = $currentEntry.songs;
+		let currIdx = songList.findIndex((song) => song.embedCode === $currentSong?.embedCode);
+		if (currIdx !== -1 && currIdx < songList.length - 1) {
+			let nextEmbedCode = songList[currIdx + 1].embedCode;
+			setCurrentSong(nextEmbedCode);
+		}
+	}
+
+	onMount(() => {
+		createSCPlayer(defaultSCsource);
+	});
+
 </script>
 
 <svelte:head>
 	<script src="https://www.youtube.com/iframe_api"></script>
+	<script src="https://w.soundcloud.com/player/api.js"></script>
 </svelte:head>
 
 <div class="w-full pb-[56.25%] relative">
@@ -62,8 +132,22 @@
 		class="absolute top-0 bottom-0 right-0 left-0
     bg-gradient-to-tr from-black via-grey6 to-grey5 flex"
 	>
-		<div id="ytplayer"></div>
+		<div
+			id="sciframecontainer"
+			style="display: {$currentSongIsSC ? 'block' : 'none'}"
+			class="relative z-10 w-full h-full "
+		></div>
+
+
+		<div style="display: {$currentSongIsSC ? 'none' : 'block'}" class="z-10 relative w-full h-full">
+			<div id="ytplayer" ></div>
+		</div>
+
 	</div>
 
-	<img src={Dog} alt="dog sillhouette" class="{musicStarted ? 'hidden' : ''} h-full pt-[20%] absolute -z-1" />
+	<img
+		src={Dog}
+		alt="dog sillhouette"
+		class="{musicStarted ? 'hidden' : ''} h-full pt-[20%] absolute -z-1"
+	/>
 </div>

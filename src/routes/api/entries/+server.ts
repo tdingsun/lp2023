@@ -14,7 +14,14 @@ async function getEntries() {
         if (file && slug && typeof file === 'object' && 'default' in file ) {
             const entry = file.default as Omit<Entry, 'slug'>
             entry.songs = entry.songs.map((song) => {
-                return {...song, embedCode: song.link.split('v=').at(-1)}
+                let embedCode;
+                if(song.link.includes('youtube')) {
+                    embedCode = song.link.split('v=').at(-1);
+                }
+                if(song.link.includes('soundcloud')) {
+                    embedCode = song.link;
+                }
+                return {...song, embedCode}
             })
             entries.push({...entry, slug})
         }
