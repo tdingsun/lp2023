@@ -5,7 +5,12 @@
       "songname": "Abracadabra",
       "artistname": "Qveen Herby",
       "link": "https://www.youtube.com/watch?v=wvOSl80H0nM",
-      "description": "Jan\n\n![](/images/pxl_20230115_124101273.jpg)"
+      "description": "Jan\n\n![](/images/pxl_20230115_124101273.jpg)",
+      "images": [
+        {
+          "image": "/images/pxl_20230115_124101273.jpg"
+        }
+      ]
     },
     {
       "songname": "Bach",
