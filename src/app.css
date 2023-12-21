@@ -40,5 +40,5 @@
 html,
 body {
 	height: 100%;
-    background-color: theme('colors.grey4');
+    background-color: theme('colors.grey3');
 }
