@@ -29,4 +29,10 @@
                 font-family: ArialRounded;
                 src: url("./lib/fonts/arialroundedbold.ttf")
         }
+        @font-face {
+                font-family: Pencil;
+                src: url("./lib/fonts/thinpencil.otf")
+
+                /* src: url("./lib/fonts/KGMakesYouStronger.ttf") */
+        }
 }

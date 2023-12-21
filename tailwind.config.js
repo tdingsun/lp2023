@@ -19,7 +19,8 @@ export default {
       fontFamily: {
         lores: "LoRes",
         microgramma: "Microgramma",
-        arialrounded: "ArialRounded"
+        arialrounded: "ArialRounded",
+        pencil: "Pencil"
       },
       keyframes: {
         "speakerpulse": {
