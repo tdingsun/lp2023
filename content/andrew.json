@@ -12,13 +12,15 @@
       "songname": "METE BALA TE AMO <3",
       "artistname": " ICQ BABY",
       "link": "https://soundcloud.com/icqbaby/icq-baby-mete-balah-3",
-      "description": "02 (Fire)"
+      "description": "02 (Fire)",
+      "scArtUrl": "https://i1.sndcdn.com/artworks-0xs1IgxKjpS7fGsu-gNDtzw-large.jpg"
     },
     {
       "artistname": "Ouri",
       "songname": "Ironic",
       "link": "https://soundcloud.com/kaltblutmagazine/premiere-ouri-ironic",
-      "description": "03 (Fire)"
+      "description": "03 (Fire)",
+      "scArtUrl": "https://i1.sndcdn.com/artworks-uEcR7hxYuRjUMAlj-pyO1lg-large.jpg"
     },
     {
       "link": "https://www.youtube.com/watch?v=qH1Instc7js",
@@ -60,7 +62,8 @@
       "songname": "Uze",
       "artistname": "Vic Bang",
       "link": "https://soundcloud.com/moonglyph/vic-bang-uze",
-      "description": "14 (Earth)"
+      "description": "14 (Earth)",
+      "scArtUrl": "https://i1.sndcdn.com/artworks-acZDwTBQzIA6hhGn-sHNUJA-large.jpg"
     },
     {
       "songname": "Lost Horizon",
