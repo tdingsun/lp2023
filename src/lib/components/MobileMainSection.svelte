@@ -20,20 +20,24 @@
 	console.log(playerHeight)
 </script>
 
-<div class="z-10 w-full fixed bg-[#f5f4ee]">
-	<h1 class=" text-grey6 text-4xl font-serif text-center pt-1 z-10">{entry.name}</h1>
+<div class="z-10 w-full fixed bg-[#f5f4ee] flex flex-col justify-center">
+	<h1 class=" text-grey6 text-4xl font-serif text-center z-10 -mb-1">{entry.name}</h1>
+	<hr class="border-grey5 {playerHeight > 0 ? "-mt-1" : ""}"/>
+
 </div>
 
 	<div bind:clientHeight={playerHeight} class="block gradient-border fixed top-[36px] left-0 w-full z-20 {song ? '' : 'h-0 overflow-hidden'}">
-		<div class="max-w-[calc(50vh)] mx-auto p-1">
+		<div class="mx-auto p-1">
 			<SongPlayer></SongPlayer>
 		</div>
+		<hr class="border-grey5" />
+
 	</div>
 
 
-
 	<div style="padding-top:{playerHeight + 37}px"
-	class="bg-[#f5f4ee] z-0  ">
+	class="bg-[#f5f4ee] z-0">
+
 		{#if entry}
 
 			<div class="overflow-auto px-4">
