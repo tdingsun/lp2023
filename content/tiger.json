@@ -47,7 +47,12 @@
       "songname": "F*ck My Life",
       "artistname": "SEVENTEEN",
       "link": "https://www.youtube.com/watch?v=9kpuOoIh3wU",
-      "description": "I was flirting with carat-hood before, but this is the song that officially got me obsessed. I just love the unexpected frisson of a k-pop song being named 'fuck my life.' I mean, obviously, since it's k-pop, there has to be several contrived layers of meaning -- for SEVENTEEN, 'FML' also stands for 'faded mono life', 'fight for my life', and 'fallen, misfit, lost'. Oh well. The lyrics are still pretty epic, ex. \"In this fucking world, I'm the only idiot.\" Sooooo true. It's so delicious having pessimism validated by k-pop."
+      "description": "I was flirting with carat-hood before, but this is the song that officially got me obsessed. I just love the unexpected frisson of a k-pop song being named 'fuck my life.' I mean, obviously, since it's k-pop, there has to be several contrived layers of meaning -- for SEVENTEEN, 'FML' also stands for 'faded mono life', 'fight for my life', and 'fallen, misfit, lost'. Oh well. The lyrics are still pretty epic, ex. \"In this fucking world, I'm the only idiot.\" Sooooo true. It's so delicious having pessimism validated by k-pop.",
+      "images": [
+        {
+          "image": "/images/img_8169.jpg"
+        }
+      ]
     },
     {
       "songname": "A Headache and a Black Eye",
@@ -62,7 +67,7 @@
       "description": " I’ve always called Brakence the epitome of ‘boy music’ — spiky, swaggy, nihilistic, and virtuosic (synth nerd from the suburbs). Above all, its abrasively sincere, daring the listener to understand how it feels to be misunderstood. Even when the lyrics feel deliberately obtuse, there is still some singular, clarifying, brute-force truth that pierces through the emotional complications. A dumb boy who has no idea how to describe his emotions (or — worse, needs an Infinite Jest amount of words to do so), but then suddenly says the most truest, clearest, simplest thing you’ve ever heard. \n\n  ‘introvert’ is the penultimate track and thesis statement of the entire album. It’s a very sweet song. It shows off the best parts of his music — the melodic left-turns, the bisexual angst, the contrast between his deeper vocal range and his effortless falsetto. It’s also the perfect lead-in to the more stripped down final track on the album, ‘hypochondriac’, possibly the only song on the album in which all of Brakence’s walls are finally down. When the album ends, all the posturing has fallen apart. No more hiding behind overly pretentious ideas of high art.  \n\nThe first time I listened to ‘introvert’, I rolled my eyes at the overly complex interlude. It felt like an infinitely unfolding fractal curve that technically has no dimension. But in the context of the album, the cloying meta-ness of the interlude feels like it’s meant to feel empty. In the interlude, amidst of hyper-kinetic flurry of memetic references and sound bites, some larger entity (DMT machine elves, lol) supposedly eradicates Brakence, and then every falls away. Hiding behind ‘art qua art’ was always a cover, a necessary defense — *(if I keep talkin’ in circles / we could treat it like a joke)*. Only when the overworked yet underdeveloped frame narrative falls away, can he say the dumbest, realest things. *(oh baby i only wanted you / i couldnt say it so im typing it on a cue)*. I think i get it. The truth is never able to be articulated easily, and if it is, then it’s probably not the truth. You have to work at it. You have to take the circuitous route. You can’t just name it… but you can point to it. Hopefully there’s someone out there willing to listen.\n\n  In that spirit, i’ll admit that I’m not willing to be fully sincere about how clairvoyantly relateable this song means to me. Listening to this song throughout the year has felt like a tiktok tarot card reading — so accurate, that i’m sure i’m being conned.",
       "images": [
         {
-          "image": "/images/dragoncurve_950.svg"
+          "image": "/images/length.png"
         }
       ]
     },
@@ -70,13 +75,23 @@
       "songname": "Never Meant",
       "artistname": "American Football",
       "link": "https://www.youtube.com/watch?v=_NfnXdXpjL0",
-      "description": "New England Octobers, staring out the car window, the calculus of past sadnesses weighed against past happinesses. Everything keeps changing, which means everything keeps ending. The biting cold of rain. The warmth of candles."
+      "description": "New England Octobers, staring out of car windows, the calculus of past sadnesses weighed against past happinesses. The biting cold of rain. The warmth of candles.",
+      "images": [
+        {
+          "image": "/images/50ec1a35-9270-4426-b3bb-39a5068de975_1_105_c.jpeg"
+        }
+      ]
     },
     {
       "songname": "See You Soon",
       "artistname": "Theodore Cale Schafer",
       "link": "https://www.youtube.com/watch?v=-Z64I_ZSD-8",
-      "description": "'Til next time! Thank you so much to everyone who contributed, I'll see you all sometime soon."
+      "description": "Can't wait until next time. Thank you for everything!",
+      "images": [
+        {
+          "image": "/images/7b446035-5da5-402e-bdc6-a7c5473883b5.png"
+        }
+      ]
     }
   ],
   "miscimages": []
