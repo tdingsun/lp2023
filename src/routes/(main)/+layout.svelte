@@ -28,9 +28,7 @@
 	{#if Device.isPhone}
 		{#if $page.params.name}
 			<div class="w-full h-full">
-				<MainMobileSection>
-					<slot />
-				</MainMobileSection>
+				<MainMobileSection {data}></MainMobileSection>
 			</div>
 		{:else}
 			<div

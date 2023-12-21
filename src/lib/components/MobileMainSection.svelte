@@ -5,24 +5,64 @@
 	import SongPlayer from './SongPlayer.svelte';
 	import { currentSong } from '$lib/stores';
 	import BackgroundImg from '$lib/images/background.png';
-
+	import Song from './Song.svelte';
+	import { currentEntry } from '$lib/stores';
+	import type { Entry } from '$lib/types';
+	import SvelteMarkdown from 'svelte-markdown';
+	export let data;
+	$: entry = data.entries.find((entry: Entry) => entry.slug === $page.params.name);
+	$: currentEntry.set(entry);
 	$: song = $currentSong;
-	let w: number;
-	$: speed = w / 30;
+	if(!entry?.songs.includes($currentSong)){
+		$currentSong = undefined;
+	}
 </script>
 
 <div
 	style="background-image: url({BackgroundImg})"
-	class="bg-cover bg-center w-full h-full flex flex-col"
+	class="bg-cover bg-center relative"
 >
-		<div class="px-4 gradient-border {song ? 'block' : 'hidden'}">
-			<div class="gradient-border max-w-[calc(50vh)] mx-auto">
-				<SongPlayer></SongPlayer>
-			</div>
+	<div class="px-4 gradient-border fixed top-0 left-0 w-full z-20 {song ? 'block' : 'hidden'}">
+		<div class="gradient-border max-w-[calc(50vh)] mx-auto">
+			<SongPlayer></SongPlayer>
 		</div>
+	</div>
+	<div class="z-10 w-full fixed {song ? 'pt-[256px]' : ''} bg-[#f5f4ee]">
+		<h1 class=" text-grey6 text-4xl font-serif text-center pt-1 z-10">{entry.name}</h1>
+		<hr class="border-grey6 mx-4 -mt-2" />
+		
+	</div>
+
+	<div class="bg-[#f5f4ee] z-0 {song ? 'pt-[293px]' : 'pt-[37px]'} ">
+		{#if entry}
+
+			<div class="overflow-auto px-4">
+				{#if entry.introtext}
+				<div class="markdown-element py-2 font-serif text-sm w-fit max-w-md tracking-[-0.02rem]">
+					<SvelteMarkdown source={entry.introtext}></SvelteMarkdown>
+				</div>
+				<hr class="border-grey6" />
+
+				{/if}
+				{#if entry.songs.length > 0}
+					{#each entry.songs as song, idx}
+						<Song {song} {idx}></Song>
+					{/each}
+				{/if}
+				{#if entry.miscimages}
+					<div class="pb-8 flex flex-wrap flex-shrink flex-grow basis-0 min-w-[120px] gap-2 items-start justify-center">
+						{#each entry.miscimages as image}
+						<img src={image.image} alt="" class="pb-2">
+						{/each}
+					</div>
+					
+				{/if}
+			</div>
+		{/if}
+	</div>
+
 	
 
-	<slot />
 
 	<!-- <div
 		class="gradient-border w-full px-2 py-[6px] flex-shrink flex-grow basis-0 max-h-[10rem] relative text-sm"
