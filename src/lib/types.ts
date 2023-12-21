@@ -13,6 +13,7 @@ export type SongEntry = {
     description: string
     images: Image[]
     embedCode?: string
+    scArtUrl?: string
 }
 
 export type Image = {

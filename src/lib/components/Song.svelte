@@ -1,7 +1,9 @@
 <script lang="ts">
-  import PlayButton from './PlayButton.svelte';
+  import SongThumbnail from './SongThumbnail.svelte';
 
-  import SongImages from './SongImages.svelte';
+	import PlayButton from './PlayButton.svelte';
+
+	import SongImages from './SongImages.svelte';
 
 	import SongTitle from './SongTitle.svelte';
 	import NumberLabel from './NumberLabel.svelte';
@@ -16,13 +18,8 @@
 	<div class="flex justify-evenly border-b border-inherit relative">
 		<NumberLabel number={idx + 1}></NumberLabel>
 		<PlayButton embedCode={song.embedCode}></PlayButton>
-			<div 
-			style="background-image: url(http://i.ytimg.com/vi/{song.embedCode}/default.jpg);
-			background-position: center center;
-			background-size: 180%;
-			"
-			class="h-[calc(2rem-2px)] w-[calc(2rem-2px)] absolute left-0">
-			</div>
+
+		<SongThumbnail {song}></SongThumbnail>
 		
 	</div>
 
@@ -34,7 +31,5 @@
 			<SvelteMarkdown source={song.description} />
 		</div>
 		<SongImages {song}></SongImages>
-
 	</div>
-		
 </div>

@@ -14,7 +14,7 @@
 
 	$: changeVideo($currentSong?.embedCode);
 	$: musicStarted = false;
-	
+
 	let player: any;
 	let scplayer: any;
 	let defaultSCsource = "https://soundcloud.com/goodgruel/twiddlesome";
@@ -26,11 +26,28 @@
 				}
 
 				if (scplayer) {
-					scplayer.load(id, {
+					let src = `${id}
+					&auto_play=true
+					&buying=false
+					&sharing=false
+					&download=false
+					&show_playcount=false
+					&show_artwork=true
+					&hide_related=true
+					&show_comments=false
+					&show_reposts=false
+					&show_teaser=false
+					&color=7f7d7a
+					&show_user=false
+					&liking=false
+					&visual=true
+					`
+					scplayer.load(src, {
 						callback: () => {
 							$SCplayer.play();
 						}
 					});
+
 				} else {
 					createSCPlayer(id);
 				}
@@ -59,10 +76,11 @@
 		sciframe.width = '100%';
 		sciframe.height = '100%';
 		sciframe.allow = 'autoplay';
-		sciframe.src = `https://w.soundcloud.com/player/?url=${url}&auto_play=true`;
+		sciframe.src = `https://w.soundcloud.com/player/?url=${url}&auto_play=true&hide_related=true&visual=true`;
 		scContainer?.append(sciframe);
 		scplayer = SC.Widget(sciframe);
 		SCplayer.set(scplayer);
+
 
 		scplayer.bind(SC.Widget.Events.READY, () => {
 			scplayer.bind(SC.Widget.Events.FINISH, () => {
