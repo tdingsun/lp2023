@@ -18,13 +18,13 @@
 						<div bind:clientWidth={w} 
 						style="animation-duration: {speed}s"
 						class="animate-marquee whitespace-nowrap marquee-content">
-							<span class="mx-2">NOW PLAYING: {song.songname} — {song.artistname}</span>
+							<span class="mx-2">NOW PLAYING: {song.artistname} — {song.songname}</span>
 							<span class="mx-2">***</span>
 						</div>
 						<div aria-hidden="true" 
 						style="animation-duration: {speed}s"
 						class="absolute top-0 animate-marquee2 whitespace-nowrap marquee-content">
-							<span class="mx-2">NOW PLAYING: {song.songname} — {song.artistname}</span>
+							<span class="mx-2">NOW PLAYING: {song.artistname} — {song.songname}</span>
 							<span class="mx-2">***</span>
 						</div>
 					{:else}
