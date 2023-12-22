@@ -57,7 +57,11 @@
 				}
 			} else {
 				if (ytplayer) {
-					ytplayer.loadVideoById(id);
+					if(id === 'XIrzVifmRx8') {
+						ytplayer.loadVideoById({'videoId': 'XIrzVifmRx8', 'startSeconds': 3492})
+					} else {
+						ytplayer.loadVideoById(id);
+					}
 				} else {
 					if (window.YT) {
 						createYTplayer();
