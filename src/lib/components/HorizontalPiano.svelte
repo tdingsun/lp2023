@@ -54,11 +54,11 @@
 	});
 </script>
 
-<div
+<div 
 	class="flex h-[150px] w-full overflow-auto z-[3] relative flex-shrink-0"
 >
 	{#each $entries as entry, idx}
-		<div
+		<div id="entry-{idx}"
 			class="w-16 flex-shrink-0 key-container border-grey4 border border-t-0 -mr-[1px] relative rounded-b-md bg-[whitesmoke]"
 		>
 			<a href="/{entry.slug}" class="group"

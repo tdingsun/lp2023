@@ -56,7 +56,9 @@
 	class="flex flex-col w-full flex-shrink-0 overflow-auto xl:flex-shrink xl:basis-1/4 xl:min-w-[300px] z-[3] relative overflow-x-visible"
 >
 	{#each $entries as entry, idx}
-		<div class="key-container border-grey4 border border-l-0 -mt-[1px] relative rounded-r-md bg-[whitesmoke]">
+	
+		<div id="entry-{idx}"
+		 class="key-container border-grey4 border border-l-0 -mt-[1px] relative rounded-r-md bg-[whitesmoke]">
 			<a href="/{entry.slug}" class="group"
 				on:click={() => {
 					playWhiteKey(idx);

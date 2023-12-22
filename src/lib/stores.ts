@@ -50,6 +50,10 @@ export const chooseRandomSong = () => {
                     songElement.style.backgroundColor = '';
                 }, 2000);
             }
+            let pianoElement = document.getElementById(`entry-${randomIdx}`);
+            if(pianoElement){
+                pianoElement.scrollIntoView();
+            }
         }
 
         )
