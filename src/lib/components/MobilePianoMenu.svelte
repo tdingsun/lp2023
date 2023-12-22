@@ -94,11 +94,6 @@
 </div>
 
 <style>
-	.active-key-glow {
-		box-shadow: inset 0 0 80px 0px red;
-		z-index: 1;
-	}
-
 	.black-key {
 		border-right: 7px inset;
 		border-bottom: 7px inset;
