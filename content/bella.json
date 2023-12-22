@@ -1,0 +1,54 @@
+{
+  "name": "Bella",
+  "songs": [
+    {
+      "link": "https://www.youtube.com/watch?v=vDlaPbJqkl0",
+      "artistname": "Vince Guaraldi Trio",
+      "songname": "Oh, Good Grief",
+      "description": "opening"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=VbCWfRcCIOw",
+      "songname": "Apparition",
+      "artistname": "Dorothy Carlos",
+      "description": "the foil"
+    },
+    {
+      "songname": "Martian Man",
+      "link": "https://www.youtube.com/watch?v=AiGUcPGIOfY",
+      "artistname": "Essential Logic",
+      "scArtUrl": "",
+      "description": "the mentor"
+    },
+    {
+      "description": "the confidant",
+      "artistname": "Drew McDowall",
+      "link": "https://www.youtube.com/watch?v=NjWYGjRKyi0",
+      "songname": "Inters"
+    },
+    {
+      "songname": "Olde Joy",
+      "artistname": "Slauson Malone 1",
+      "description": "the hero",
+      "link": "https://www.youtube.com/watch?v=_TPBDGtgdbg"
+    },
+    {
+      "songname": "The First Wave – Birth Of Venus",
+      "artistname": "Suzanne Ciani",
+      "link": "https://www.youtube.com/watch?v=RusmM57kAJ4",
+      "description": "the innocent"
+    },
+    {
+      "songname": "Sour",
+      "artistname": "Baggie",
+      "link": "https://www.youtube.com/watch?v=cvD6Yt6k7jw",
+      "description": "the love interest"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=ZG_pldVXij8",
+      "artistname": "Ludus",
+      "songname": "Redress",
+      "description": "the antagonist"
+    }
+  ]
+}
