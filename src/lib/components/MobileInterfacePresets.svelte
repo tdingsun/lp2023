@@ -31,7 +31,7 @@
 	</a>
   <div class="h-12 p-1 rounded-xl gradient-border flex-grow max-w-[9rem]">
     <button on:click={() => {chooseRandomSong()}} class="w-full h-full bg-gradient-to-r from-red via-lightred to-red hover:from-lightred hover:via-red hover:to-lightred red-shadow rounded-xl font-microgramma tracking-wider text-grey6">
-      MEGAMIX
+      SHUFFLE
     </button>
   </div>
   <div class="md:hidden">
