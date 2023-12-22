@@ -15,12 +15,3 @@ import { currentEntry } from '$lib/stores';
 		<Page></Page>
 	{/key}
 {/if}
-
-<style>
-:global(body) {
-	background-color: #f5f4ee;
-}
-:global(html) {
-	background-color: #f5f4ee;
-}
-</style>
