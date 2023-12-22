@@ -19,55 +19,19 @@
 
 	let synth;
 	let notesInOrder = [
-		'C6', 'B5', 'A5', 'G5', 'F5', 'E5', 'D5',
-		'C5', 'B4', 'A4', 'G4', 'F4', 'E4', 'D4',
-		'C4', 'B3', 'A3', 'G3', 'F3', 'E3', 'D3',
-		'C3', 'B2', 'A2', 'G2', 'F2', 'E2', 'D2',
-		'C2', 'B1', 'A1', 'G1', 'F1', 'E1', 'D1',
-		'C1'
+		'B5', 'A5', 'G5', 'F5', 'E5', 'D5', 'C5', 
+		'B4', 'A4', 'G4', 'F4', 'E4', 'D4', 'C4', 
+		'B3', 'A3', 'G3', 'F3', 'E3', 'D3', 'C3', 
+		'B2', 'A2', 'G2', 'F2', 'E2', 'D2', 'C2', 
+		'B1', 'A1', 'G1', 'F1', 'E1', 'D1', 'C1'
 	];
 
 	let blackNotesInOrder = [
-		'',
-		'Bb5',
-		'Ab5',
-		'Gb5',
-		'',
-		'Eb5',
-		'Db5',
-
-		'',
-		'Bb4',
-		'Ab4',
-		'Gb4',
-		'',
-		'Eb4',
-		'Db4',
-
-		'',
-		'Bb3',
-		'Ab3',
-		'Gb3',
-		'',
-		'Eb3',
-		'Db3',
-		'',
-		'Bb2',
-		'Ab2',
-		'Gb2',
-		'',
-		'Eb2',
-		'Db2',
-		
-		'',
-		'Bb1',
-		'Ab1',
-		'Gb1',
-		'',
-		'Eb1',
-		'Db1',
-
-		''
+		'Bb5', 'Ab5', 'Gb5', '', 'Eb5', 'Db5', '',
+		'Bb4', 'Ab4', 'Gb4', '', 'Eb4', 'Db4', '',
+		'Bb3', 'Ab3', 'Gb3', '', 'Eb3', 'Db3', '',
+		'Bb2', 'Ab2', 'Gb2', '', 'Eb2', 'Db2', '',
+		'Bb1', 'Ab1', 'Gb1', '', 'Eb1', 'Db1', ''
 	];
 
 	const playWhiteKey = (idx) => {
@@ -150,8 +114,8 @@
 		border-bottom: 5px inset black;
 	}
 
-	.key-container:nth-child(7n + 5) .black-key,
-	.key-container:nth-child(7n + 1) .black-key,
+	.key-container:nth-child(7n + 4) .black-key,
+	.key-container:nth-child(7n) .black-key,
 	.key-container:last-child .black-key {
 		display: none;
 	}
