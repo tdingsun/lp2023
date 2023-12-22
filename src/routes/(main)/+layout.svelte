@@ -3,19 +3,14 @@
 </script>
 
 <script lang="ts">
-  import MobileMainMenu from '../../lib/components/MobileMainMenu.svelte';
-
+	import MobileMainMenu from '../../lib/components/MobileMainMenu.svelte';
 	import PencilNubBackButton from '../../lib/components/PencilNubBackButton.svelte';
-
 	import MainSection from '../../lib/components/MainSection.svelte';
-
 	import SideConsole from '../../lib/components/SideConsole.svelte';
 	import Piano from '../../lib/components/Piano.svelte';
+	import MobileMainSection from '$lib/components/MobileMainSection.svelte';
 	export let data;
 	import { entries } from '$lib/stores';
-	import HorizontalPiano from '$lib/components/HorizontalPiano.svelte';
-	import MobilePianoMenu from '$lib/components/MobilePianoMenu.svelte';
-	import MobileMainSection from '$lib/components/MobileMainSection.svelte';
 	entries.set(data.entries);
 	let screenWidth: number;
 	import { page } from '$app/stores';
@@ -33,15 +28,21 @@
 			<MobileMainMenu></MobileMainMenu>
 		{/if}
 	{:else}
-		<div class="w-screen h-screen flex absolute">
+		<div class="w-full h-full flex">
 			{#if screenWidth >= 1024}
-				<Piano></Piano>
+				<div
+					class="z-[1] flex-shrink-0 overflow-auto w-[300px] xl:flex-shrink xl:basis-1/4 xl:min-w-[300px]"
+				>
+					<Piano horizontal={false}></Piano>
+				</div>
 				<MainSection>
 					<slot />
 				</MainSection>
 			{:else if screenWidth >= 768}
-				<div class="w-0 h-full flex-shrink flex-grow relative flex flex-col">
-					<HorizontalPiano></HorizontalPiano>
+				<div class="w-0 h-full flex-grow relative flex flex-col">
+					<div class="flex z-[1] flex-shrink-0 overflow-auto h-[265px] w-full">
+						<Piano horizontal={true}></Piano>
+					</div>
 					<MainSection>
 						<slot />
 					</MainSection>
@@ -56,7 +57,9 @@
 							<PencilNubBackButton></PencilNubBackButton>
 						</div>
 					{:else}
-						<MobilePianoMenu></MobilePianoMenu>
+						<div class="flex relative flex-shrink-0 overflow-auto flex-col w-full">
+							<Piano horizontal={false}></Piano>
+						</div>
 					{/if}
 				</div>
 			{/if}

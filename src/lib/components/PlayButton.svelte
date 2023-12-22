@@ -1,4 +1,6 @@
 <script lang="ts">
+  import PauseSymbol from './PauseSymbol.svelte';
+
 	import {
 		YTplayer,
 		setCurrentSong,
@@ -53,24 +55,12 @@
 </script>
 
 <button
-	class="w-8 h-8 flex-shrink-0 -my-[1px] rounded-[8rem] border-inherit border flex justify-center items-center pl-0.5 text-xl
-			hover:bg-grey6 hover:text-grey0 group
-		"
-	on:click={() => {
-		playSong();
-	}}
+	class="w-8 h-8 flex-shrink-0 -my-[1px] rounded-[8rem] border-inherit border flex justify-center items-center pl-0.5 text-xl hover:bg-grey6 hover:text-grey0 group"
+	on:click={() => {playSong();}}
 >
 	{#if paused}
 		▶
 	{:else}
-		<div class="w-[14px] h-[24px] flex justify-between items-center mr-[1px]">
-			<div class='w-[5px] h-[14px] bg-black rounded-[1px] group-hover:bg-grey0'>
-
-			</div>
-			<div class='w-[5px] h-[14px] bg-black rounded-[1px] group-hover:bg-grey0'>
-	
-			</div>
-		</div>
-	
+		<PauseSymbol></PauseSymbol>
 	{/if}
 </button>

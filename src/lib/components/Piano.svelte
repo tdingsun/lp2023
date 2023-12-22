@@ -15,9 +15,18 @@
 	import G3 from '$lib/audio/G3.wav';
 	import G4 from '$lib/audio/G4.wav';
 	import G5 from '$lib/audio/G5.wav';
+	import G6 from '$lib/audio/G5.wav';
 
+	import B1 from '$lib/audio/B1.wav';
+	import B2 from '$lib/audio/B2.wav';
+	import B3 from '$lib/audio/B3.wav';
+	import B4 from '$lib/audio/B4.wav';
+	import B5 from '$lib/audio/B5.wav';
+	import B6 from '$lib/audio/B5.wav';
 
-	let synth;
+	export let horizontal:boolean = false;
+
+	let synth: any;
 	let notesInOrder = [
 		'B5', 'A5', 'G5', 'F5', 'E5', 'D5', 'C5', 
 		'B4', 'A4', 'G4', 'F4', 'E4', 'D4', 'C4', 
@@ -26,6 +35,7 @@
 		'B1', 'A1', 'G1', 'F1', 'E1', 'D1', 'C1'
 	];
 
+	
 	let blackNotesInOrder = [
 		'Bb5', 'Ab5', 'Gb5', '', 'Eb5', 'Db5', '',
 		'Bb4', 'Ab4', 'Gb4', '', 'Eb4', 'Db4', '',
@@ -34,11 +44,18 @@
 		'Bb1', 'Ab1', 'Gb1', '', 'Eb1', 'Db1', ''
 	];
 
-	const playWhiteKey = (idx) => {
+	if(horizontal){
+		if($entries) {
+			notesInOrder = notesInOrder.slice(0, 34 - ($entries.length % 7)).reverse()
+			blackNotesInOrder = blackNotesInOrder.slice(0, 33 - ($entries.length % 7)).reverse()
+		}
+	}
+
+	const playWhiteKey = (idx: number) => {
 		synth.triggerAttackRelease(notesInOrder[idx % notesInOrder.length], '1n');
 	};
 
-	const playBlackKey = (idx) => {
+	const playBlackKey = (idx: number) => {
 		synth.triggerAttackRelease(blackNotesInOrder[idx % blackNotesInOrder.length], '1n');
 	};
 
@@ -46,21 +63,16 @@
 		const vol = new Tone.Volume(-8).toDestination();
 		synth = new Tone.Sampler({
 			urls: {
-				C1, C2, C3, C4, C5, C6, G1, G2, G3, G4, G5
+				C1, C2, C3, C4, C5, C6, G1, G2, G3, G4, G5, G6, B1, B2, B3, B4, B5, B6
 			}
 		}).connect(vol);
 	});
 </script>
 
-<div
-	class="flex flex-col w-[150px] flex-shrink-0 overflow-auto xl:flex-shrink xl:basis-1/4 xl:min-w-[300px] z-[3] relative overflow-x-visible"
->
+{#if $entries}
 	{#each $entries as entry, idx}
 		<div id="entry-{idx}"
-			class="key-container border-grey4 border border-l-0 -mt-[1px] relative rounded-r-md 
-				bg-[whitesmoke]
-				"
-		>
+			class="bg-[whitesmoke] key-container border-grey4 border relative {horizontal ? 'w-20 flex-shrink-0 border-t-0 -mr-[1px] rounded-b-md ' : ' border-l-0 -mt-[1px] rounded-r-md'}">
 			<a
 				href="/{entry.slug}"
 				class="group"
@@ -69,17 +81,24 @@
 				}}
 			>
 				<div
-					class="rounded-r-[5px] w-full h-full absolute group-hover:block group-hover:bg-gradient-to-r group-hover:from-[whitesmoke] group-hover:to-red group-hover:via-lightred group-hover:via-85% group-hover:from-50% black-key-hover:hidden
-						{entry.slug === $page.params.name ? 'bg-gradient-to-r from-[whitesmoke] to-red via-lightred via-85% from-50% block' : 'hidden'}"
+					class="w-full h-full absolute group-hover:block group-hover:from-[whitesmoke] group-hover:to-red group-hover:via-lightred group-hover:via-85% group-hover:from-50% black-key-hover:hidden
+					{horizontal ? `group-hover:bg-gradient-to-b rounded-b-[5px] ${entry.slug === $page.params.name ? 'bg-gradient-to-b from-[whitesmoke] to-red via-lightred via-85% from-50% block' : 'hidden'}`
+					 : `rounded-r-[5px]   group-hover:bg-gradient-to-r ${entry.slug === $page.params.name ? 'bg-gradient-to-r from-[whitesmoke] to-red via-lightred via-85% from-50% block' : 'hidden'}`
+					}"
 				>
 					<div
-						class="h-14 aspect-square bg-[rgb(255,247,187)] absolute right-3 top-3 rounded-[10rem] blur-md
-							"
+						class="bg-[rgb(255,247,187)] aspect-square absolute rounded-[10rem]  blur-md
+						{horizontal ? 
+						'h-11 right-2 bottom-3' : 
+						'h-14 right-3 top-3'} 
+						"
 					></div>
 				</div>
 				<div
-					class=" relative h-20 flex justify-end pr-4 xl:pr-8 items-center rounded-r-md text-2xl xl:text-3xl text-grey6
-						font-arialrounded piano-name
+					class="{horizontal ? 
+					'h-full w-full justify-start  pb-2 pt-4 rotate-180 vertical-text' : 
+					'h-20 justify-end pr-4 xl:pr-8   xl:text-3xl'} 
+					relative flex items-center rounded-r-md text-2xl text-grey6 font-arialrounded piano-name
 						"
 				>
 					<p>
@@ -91,13 +110,18 @@
 				on:click={() => {
 					playBlackKey(idx);
 				}}
-				class="black-key h-10 absolute top-[3.75rem] w-1/2 z-10 rounded-r-md pointer-events-auto"
+				class="{horizontal ? 'h-1/2 top-0 -right-4 w-8 rounded-b-md ' : 'h-10 top-[3.75rem] w-1/2 rounded-r-md'} black-key absolute pointer-events-auto z-10"
 			></button>
 		</div>
 	{/each}
-</div>
+{/if}
 
 <style>
+	.vertical-text {
+		text-orientation: mixed;
+		writing-mode: vertical-rl;
+	}
+
 	.black-key {
 		border-right: 7px inset;
 		border-bottom: 7px inset;

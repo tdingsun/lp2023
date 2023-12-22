@@ -11,6 +11,7 @@
 	} from '$lib/stores';
 	import Dog from '$lib/images/dog.svg';
 	import { onMount } from 'svelte';
+	import type { SongEntry } from '$lib/types';
 
 	$: changeVideo($currentSong?.embedCode);
 	$: musicStarted = false;
@@ -18,6 +19,8 @@
 	let ytplayer: any;
 	let scplayer: any;
 	let showSCplayer = false;
+	let defaultSCsource = "https://soundcloud.com/goodgruel/twiddlesome&auto_play=false";
+
 	const changeVideo = async (id: string | undefined) => {
 		if(scplayer){
 			scplayer.pause();
@@ -73,8 +76,6 @@
 			}
 		}
 	};
-
-	
 
 	function createSCPlayer(url: string) {
 		let scContainer = document.getElementById('sciframecontainer');
@@ -137,14 +138,16 @@
 	}
 
 	function setNextSong() {
-		let songList = $currentEntry.songs;
+		let songList: SongEntry[] = [];
+		if($currentEntry){
+			songList = $currentEntry.songs;
+		}
 		let currIdx = songList.findIndex((song) => song.embedCode === $currentSong?.embedCode);
 		if (currIdx !== -1 && currIdx < songList.length - 1) {
 			let nextEmbedCode = songList[currIdx + 1].embedCode;
 			setCurrentSong(nextEmbedCode);
 		}
 	}
-	let defaultSCsource = "https://soundcloud.com/goodgruel/twiddlesome&auto_play=false";
 
 	onMount(() => {
 		let limit = 4;

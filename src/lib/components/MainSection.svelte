@@ -2,7 +2,7 @@
 	import BackgroundImg from '$lib/images/background.png';
 	import MusicStand from '$lib/images/musicstand.svg';
 	import Pencil from '$lib/images/pencil.svg';
-	
+	import StickyNoteContent from './StickyNoteContent.svelte';
 	let stickyOpen = false;
 	const clickPencil = () => {
 		stickyOpen = !stickyOpen
@@ -18,13 +18,15 @@
 	<div
 		bind:clientWidth={containerWidth}
 		style="background-image: url({BackgroundImg})"
-		class="bg-cover bg-center flex-grow flex-shrink h-full w-full lg:w-0 lg:-ml-1 px-4 lg:pr-8 pt-8 lg:pl-9 pb-[2%] lg:pb-[1%] flex justify-center items-end relative z-0 -mt-1 lg:mt-0" 
+		class="bg-cover bg-center flex-grow flex-shrink h-0 lg:h-full w-full lg:w-0 lg:-ml-1 px-4 lg:pr-4 pt-8 lg:pl-5 flex justify-center items-end relative z-0 -mt-1  lg:mt-0" 
 	>
 		<div>
-			<img src={MusicStand} class="w-full absolute bottom-0 left-0 right-0"/>
+			<img src={MusicStand} alt="music stand background" class="w-full absolute bottom-0 left-0 right-0"/>
 		
 		</div>
-		<slot />
+		<div class="pb-[2%] flex-grow">
+			<slot />
+		</div>
 	
 		
 		{#if stickyOpen}
@@ -32,16 +34,11 @@
 			style="bottom: {Math.max(((containerWidth * 0.48) - 330), 48)}px"
 			class="font-pencil text-sm p-4 sticky-shadow left-[calc(50%-160px)] absolute w-[320px] aspect-square bg-yellow-100">
 				<button on:click={() => {closeStickyNote()}} class="absolute top-0 right-2 text-xl">x</button>
-				<p class="mb-2">
-					LP [Long Play, Listening Party, Little Puppies…] was formed in 2018 as a college radio show, music club, and IRL zine project. today, it exists as an open-ended publishing platform dedicated to celebrating our personal connections to the music of our lives.
-				</p>
-				<p>
-					this third edition, LP-2023, is a collaboration between tiger dingsun, kevin dong, and all the Lovely People who submitted their SOTYs… thank you all!
-				</p>
+				<StickyNoteContent></StickyNoteContent>
 			</div>
 		{/if}
 		<button on:click={() => {clickPencil()}}>
-			<img src={Pencil} class="w-[75%] min-w-[450px] max-h-[24px] absolute bottom-[1.2vw] lg:bottom-[0.8vw] mx-auto left-0 right-0 hover:mb-[2px]"/>
+			<img src={Pencil} alt="pencil" class="w-[75%] min-w-[450px] max-h-[24px] absolute bottom-[1.2vw] lg:bottom-[0.8vw] mx-auto left-0 right-0 hover:mb-[2px]"/>
 		</button>
 	</div>
 

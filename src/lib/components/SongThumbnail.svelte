@@ -18,13 +18,9 @@
 						player.getCurrentSound((sound) => {
 							SCArtUrl = sound.artwork_url;
 							song.scArtUrl = SCArtUrl;
-							console.log(SCArtUrl);
 						});
 					});
-				} else {
-					console.log('no sc');
 				}
-				
 			}
 		}
 	}

@@ -7,6 +7,7 @@
 		<a href="/" class="cursor-pointer h-full">
 			<img
 				src={Pencilnub}
+				alt="pencil"
 				class="pb-3 w-[90%] max-w-[20rem] mx-auto h-full rotate-3 hover:rotate-0"
 			/>
 		</a>
