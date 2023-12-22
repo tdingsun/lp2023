@@ -1,22 +1,28 @@
 <script lang="ts">
 	import Song from './Song.svelte';
 	import { currentEntry } from '$lib/stores';
-	import type { Entry } from '$lib/types';
 	import SvelteMarkdown from 'svelte-markdown';
-	import DogEar from '$lib/images/dog-ear.svg'
-	// let entry: Entry;
 	$: entry = $currentEntry;
+	let inCorner = false;
+	const onMouseOverCorner = () => {
+		console.log('over');
+		inCorner = true;
+	}
+	const onMouseLeaveCorner = () => {
+		console.log('leave');
+		inCorner = false;
+	}
 </script>
 
 <div
 	class="h-full w-full max-w-full md:max-w-[calc((100vh-4rem-150px)*0.773)] md:pb-[clamp(0px,129.4%,calc(100vh-4rem-150px))] lg:max-w-[calc((100vh-4rem)*0.773)] md:h-0 lg:pb-[clamp(0px,129.4%,calc(100vh-4rem))] relative mx-auto"
 >
-<a href='/' class="absolute top-0 right-0 w-8 h-8 hover:w-9 z-10 hidden md:block">
-	<img src={DogEar} class=""/>
-</a>
 
-	<div class="clipped-corner absolute left-0 right-0 top-0 bottom-0 flex flex-col bg-[#f5f4ee]">
-		
+
+	<div class="{inCorner ? 'clipped-corner-big' : 'clipped-corner'} absolute left-0 right-0 top-0 bottom-0 flex flex-col bg-[#f5f4ee]">
+		<a href='/' on:mouseover={() => {onMouseOverCorner()}} on:mouseleave={() => {onMouseLeaveCorner()}} class="group absolute top-0 right-0 w-12 h-12 hover:w-14 hover:h-14 z-10 hidden md:block">
+			<div class="w-0 h-0 border-b-[3rem] group-hover:border-b-[3.5rem] group-hover:border-r-[3.5rem] border-b-[#f5f4ee] border-r-[3rem] border-r-[transparent] shadow-[-3px_3px_10px_0px_#9b9888]"></div>
+		</a>
 	
 		{#if entry}
 			<h1 class="text-grey6 text-4xl font-serif text-center pt-1 z-10 relative pointer-events-none">{entry.name}</h1>
@@ -52,10 +58,14 @@
 <style>
 	@media (min-width: 768px) {
 		.clipped-corner {
-		-webkit-clip-path: polygon(0% 0%, calc(100% - 32px) 0%, 100% 30px, 100%  100%, 0% 100%);
+			-webkit-clip-path: polygon(0% 0%, calc(100% - 48px) 0%, 100% 48px, 100%  100%, 0% 100%);
+  			clip-path: polygon(0% 0%, calc(100% - 48px) 0%, 100% 48px, 100%  100%, 0% 100%);
+		}
 
-  		clip-path: polygon(0% 0%, calc(100% - 32px) 0%, 100% 30px, 100%  100%, 0% 100%);
-	}
+		.clipped-corner-big {
+			-webkit-clip-path: polygon(0% 0%, calc(100% - 56px) 0%, 100% 56px, 100%  100%, 0% 100%);
+  			clip-path: polygon(0% 0%, calc(100% - 56px) 0%, 100% 56px, 100%  100%, 0% 100%);
+		}
 	}
 	
 </style>
