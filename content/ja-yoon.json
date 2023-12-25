@@ -1,0 +1,71 @@
+{
+  "name": "Ja Yoon",
+  "songs": [
+    {
+      "songname": "Palace",
+      "artistname": "Sam Smith",
+      "link": "https://www.youtube.com/watch?v=z9Ulgb5_grA",
+      "description": "Sam Smith Christmas songs are my favorite Sam Smith songs and favorite Christmas songs. Much to the name of the album, \\[A Lonely Christmas], it's not the most cheery. But probably the best companion when in retrospect of relationships or even the year."
+    },
+    {
+      "songname": "Kiwi",
+      "artistname": "Harry Styles",
+      "link": "https://www.youtube.com/watch?v=9wg3v-01yKQ",
+      "description": "According to Spotify...my most played song of 2023...😉"
+    },
+    {
+      "songname": "Hype Boy",
+      "artistname": "NewJeans",
+      "link": "https://www.youtube.com/watch?v=11cta61wi0g",
+      "description": "뉴진스의 하입보이요."
+    },
+    {
+      "songname": "20 Something",
+      "artistname": "SZA",
+      "description": "For some reason I kind of enjoy all the songs of this SZA album ( CTRL), but I guess as I turned 27 this year, this song stands out a bit more.",
+      "link": "https://www.youtube.com/watch?v=Azqv46WFxZE"
+    },
+    {
+      "songname": "뱅버스",
+      "artistname": "250",
+      "link": "https://www.youtube.com/watch?v=aunbwaZ7Q1o",
+      "description": "I'm sure everyone knows at this point that 250 is the artist behind the most popular NewJeans songs - From my short knowledge he produced Hype Boy, Attention, Ditto, Hurt etc. His own album mostly consists of this uniquely Korean genre of music called \\[뽕짝]. I feel like I should know more about this genre but I don't...so anyway didn't listen to it a whole lot but it's a fun song! Personally, a bit more special as I learned all of the above through an article from one of my favorite columnists."
+    },
+    {
+      "songname": "Daydreamer",
+      "artistname": "Adele",
+      "description": "Who knows why but I think I was singing this song to myself the most this year.",
+      "link": "https://www.youtube.com/watch?v=NZRkLC9REx8"
+    },
+    {
+      "songname": " Pluto Projector",
+      "artistname": "Rex Orange County",
+      "description": "Every year there's always a good few weeks I listen to Rex Orange County - Pluto Projector is usually the start.",
+      "link": "https://www.youtube.com/watch?v=Pi9J4epTWGM"
+    },
+    {
+      "songname": "My Hair is Green",
+      "artistname": "015B, 유라",
+      "description": "I'm usually not super happy with my spotify recommendations, but this one made the list. This year I didn't listen to 유라 as much as I did last year, but if K-indie is your thing she is a must (and you probably already know her)",
+      "link": "https://www.youtube.com/watch?v=vgWWNNwc7RE"
+    },
+    {
+      "artistname": "Olivia Rodrigo",
+      "songname": "the grudge",
+      "link": "https://www.youtube.com/watch?v=pEi1ZWy5-QE",
+      "description": "Soooo Olivia Rodrigo is my most listened artist according to Spotify...fight me"
+    },
+    {
+      "songname": "Regent's Park",
+      "artistname": "Bruno Major",
+      "link": "https://www.youtube.com/watch?v=sSvAFjpLaGA",
+      "description": "The song that personally marked the start of an era"
+    },
+    {
+      "artistname": "Earth, Wind & Fire",
+      "songname": "September",
+      "description": "A ChatGPT recommendation! :0 Also my birthday month!",
+      "link": "https://www.youtube.com/watch?v=Gs069dndIYk"
+    }
+  ]
+}
