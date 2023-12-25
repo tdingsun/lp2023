@@ -1,0 +1,213 @@
+{
+  "name": "Phil",
+  "introtext": "This year, I traveled across the country and then moved from Philadelphia to Santa Fe. Most of the year was filled with adventure and fun but also inconsistency and large changes. When I look back on what I was listening to most, I see that music primarily served as my comfort food. I found most of these songs in years past, and I listened to them for their familiarity.\n\nAlso, sometimes I like to play a single song on repeat for hours when I drive or write code. It makes time sort of melt away. Many of these songs served that purpose.",
+  "songs": [
+    {
+      "songname": "Introspection",
+      "artistname": "MGMT",
+      "link": "https://www.youtube.com/watch?v=8gp7xk665ys",
+      "description": "I listened to this song on repeat last year when I cathartically cleaned my apartment for many hours while having a beautiful moment of self-reflection. I listened to it a lot this year to channel that feeling.",
+      "images": [
+        {
+          "image": "/images/introspection.jpg"
+        }
+      ]
+    },
+    {
+      "songname": "Alright",
+      "artistname": "Supergrass",
+      "link": "https://www.youtube.com/watch?v=Bzsa8aktlcM",
+      "images": [
+        {
+          "image": "/images/alright.jpg"
+        }
+      ]
+    },
+    {
+      "songname": "Bam Bam",
+      "artistname": "Sister Nancy",
+      "link": "https://www.youtube.com/watch?v=a9OopCd1gpE",
+      "images": [
+        {
+          "image": "/images/bam_bam.jpg"
+        }
+      ]
+    },
+    {
+      "songname": "Ready Steady Go",
+      "description": "I listened to this on repeat last year when I decided to quit my previous job. I heard my excitement reflected in the eager and aggressive guitar licks. I listened to it for the same reason this year when I embarked on my trip and when I decided to move.",
+      "artistname": "Generation X",
+      "link": "https://www.youtube.com/watch?v=5dkbnjzHrWE",
+      "images": [
+        {
+          "image": "/images/ready_steady_go.jpg"
+        }
+      ]
+    },
+    {
+      "songname": "Crimson and Clover",
+      "artistname": "A.G. Cook",
+      "link": "https://www.youtube.com/watch?v=Z6hd9BkDwPM",
+      "images": [
+        {
+          "image": "/images/crimson_and_clover.jpg"
+        }
+      ]
+    },
+    {
+      "songname": "San Tropez",
+      "artistname": "Pink Floyd",
+      "link": "https://www.youtube.com/watch?v=mjNYO-OI2Fo",
+      "images": [
+        {
+          "image": "/images/san_tropez.jpg"
+        }
+      ]
+    },
+    {
+      "songname": "Part Time Punks",
+      "artistname": "Television Personalities",
+      "link": "https://www.youtube.com/watch?v=VxVZaqExeV4",
+      "images": [
+        {
+          "image": "/images/part_time_punks.jpg"
+        }
+      ]
+    },
+    {
+      "songname": "Whole Wide World",
+      "artistname": "Wreckless Eric",
+      "link": "https://www.youtube.com/watch?v=qHEPHPHuNis",
+      "images": [
+        {
+          "image": "/images/whole_wide_world.jpg"
+        }
+      ]
+    },
+    {
+      "songname": "Hammered",
+      "artistname": "Richard In Your Mind",
+      "link": "https://www.youtube.com/watch?v=kMyxjFAyLMU",
+      "images": [
+        {
+          "image": "/images/hammered.jpg"
+        }
+      ]
+    },
+    {
+      "songname": "The Big Country",
+      "description": "I listened to this song a lot as I grew tired of living in big cities and longed to move somewhere with easier access to \"big nature.\"",
+      "link": "https://www.youtube.com/watch?v=6JQiMIrAsYo",
+      "artistname": "Talking Heads",
+      "images": [
+        {
+          "image": "/images/the_big_country.jpg"
+        }
+      ]
+    },
+    {
+      "songname": "Country Calling",
+      "description": "I used to listen to this song and others by Edward Sharp and the Magnetic Zeros a lot in high school. I would watch their (in hindsight kitschy) music videos depicting hippies wandering through the desert. I'd watch these videos in my childhood bed with wanderlust. This year I spent a lot of weeks living out of my car, in deserts and mountains. I listened to this song a lot this year with the part-amusing part-tacky notion that my younger self would be impressed that I was \"living my dream.\"",
+      "artistname": "Edward Sharpe & the Magnetic Zeros",
+      "link": "https://www.youtube.com/watch?v=Cmk5cgo8WyE",
+      "images": [
+        {
+          "image": "/images/country_calling.jpg"
+        }
+      ]
+    },
+    {
+      "songname": "Something About Us",
+      "artistname": "Daft Punk",
+      "link": "https://www.youtube.com/watch?v=em0MknB6wFo",
+      "images": [
+        {
+          "image": "/images/something_about_us.jpg"
+        }
+      ]
+    },
+    {
+      "songname": "King of the Beach",
+      "artistname": "Wavves",
+      "link": "https://www.youtube.com/watch?v=uDKh61eMMuE",
+      "images": [
+        {
+          "image": "/images/king_of_the_beach.jpg"
+        }
+      ]
+    },
+    {
+      "songname": "Raingurl",
+      "link": "https://www.youtube.com/watch?v=SaSCEruseZs",
+      "artistname": "Yaeji",
+      "images": [
+        {
+          "image": "/images/raingurl.jpg"
+        }
+      ]
+    },
+    {
+      "songname": "I Fought the Law",
+      "artistname": "The Clash",
+      "link": "https://www.youtube.com/watch?v=of0bTx2YAcs",
+      "images": [
+        {
+          "image": "/images/i_fought_the_law.jpg"
+        }
+      ]
+    },
+    {
+      "songname": "Ladyfingers",
+      "artistname": "Herb Alpert & The Tijuana Brass",
+      "description": "The album art for this song was on a skateboard that my cousin gave me when I was quite young. I tried to keep it hidden from my parents. I no longer have the skateboard but I was pleased this year when I stumbled upon this album. The song is quite beautiful and I found it funny that it had an album artwork from my childhood skateboard.",
+      "link": "https://www.youtube.com/watch?v=l6U1JB7z-I8",
+      "images": [
+        {
+          "image": "/images/ladyfingers.jpg"
+        }
+      ]
+    },
+    {
+      "songname": "Some Things Last a Long Time",
+      "link": "https://www.youtube.com/watch?v=HryaTRxiSzw",
+      "artistname": "Daniel Johnston",
+      "description": "I find this to be a hauntingly beautiful song. Daniel Johnston's slightly off-key voice delivers the simple, sentimental lyrics with candor. The haunting and melancholy piano tune plods along through the song. I listened to this a lot when I was processing some emotional and challenging moments from this year.",
+      "images": [
+        {
+          "image": "/images/some_things_last_a_long_time.jpg"
+        }
+      ]
+    },
+    {
+      "songname": "Yer So Bad",
+      "link": "https://www.youtube.com/watch?v=WdRViFCvvUo",
+      "artistname": "Tom Petty",
+      "images": [
+        {
+          "image": "/images/yer_so_bad.jpg"
+        }
+      ]
+    },
+    {
+      "songname": "Summertime Clothes",
+      "link": "https://www.youtube.com/watch?v=GxhaRgJUMl8",
+      "artistname": "Animal Collective",
+      "images": [
+        {
+          "image": "/images/summertime_clothes.jpg"
+        }
+      ]
+    },
+    {
+      "songname": "5ft7",
+      "link": "https://www.youtube.com/watch?v=ALY8SQacuAQ",
+      "artistname": "Tonstartssbandht",
+      "description": "A song similar to this song played in the background of a snowboarding game for Wii I used to play as a kid. I like how this song sounds and it makes me feel vaguely nostalgic.",
+      "images": [
+        {
+          "image": "/images/5ft7.jpg"
+        }
+      ]
+    }
+  ]
+}
