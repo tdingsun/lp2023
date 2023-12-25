@@ -109,9 +109,13 @@
       "link": "https://www.youtube.com/watch?v=R2HenJMa3N4",
       "artistname": "Howling Brothers",
       "images": [
-        {}
-      ],
-      "description": "![](/images/cd4cb513-48b0-4702-8295-97f943d0917a_1_105_c.jpeg)\n\n![](/images/739d2979-2f06-4cea-9ffe-c49aaee29070_1_105_c.jpeg)"
+        {
+          "image": "/images/cd4cb513-48b0-4702-8295-97f943d0917a_1_105_c.jpeg"
+        },
+        {
+          "image": "/images/739d2979-2f06-4cea-9ffe-c49aaee29070_1_105_c.jpeg"
+        }
+      ]
     }
   ],
   "miscimages": []

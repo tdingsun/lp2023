@@ -19,10 +19,10 @@
 	{/if}
 	{#if entry && entry.miscimages}
 		<div
-			class="pb-8 flex flex-wrap flex-shrink flex-grow basis-0 min-w-[120px] gap-2 items-start justify-center"
+			class="pb-10 flex flex-wrap flex-shrink flex-grow basis-0 min-w-[120px] gap-4 items-start justify-center"
 		>
 			{#each entry.miscimages as image}
-				<img src={image.image} alt="" class="pb-2" />
+				<img src={image.image} alt="" />
 			{/each}
 		</div>
 	{/if}
