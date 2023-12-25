@@ -2,10 +2,10 @@
   "name": "Tiger",
   "songs": [
     {
-      "songname": "Super Shy",
+      "songname": "MMA2023 Performance",
       "artistname": "NewJeans",
-      "link": "https://www.youtube.com/watch?v=ArmDp-zijuc",
-      "description": "Obviously world domination"
+      "link": "https://www.youtube.com/watch?v=MfO1FenJbKI",
+      "description": "Uhhhhh yeah. That happened. XD"
     },
     {
       "songname": "precipice (4)",
@@ -116,6 +116,12 @@
           "image": "/images/4b9bb9ad-e0ac-4056-aa27-a959347a3ba4_1_105_c.jpeg"
         }
       ]
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=nDlNPbPnMUU",
+      "artistname": "NewJeans",
+      "songname": "2023 MMA Dance Practice",
+      "description": "You know what? Listen to these damn remixes again. XD"
     }
   ],
   "miscimages": []
