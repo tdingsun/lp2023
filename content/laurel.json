@@ -1,0 +1,51 @@
+{
+  "name": "Laurel",
+  "songs": [
+    {
+      "songname": "Organic Steps",
+      "artistname": "Yoshio Ojima",
+      "link": "https://www.youtube.com/watch?v=Zw0qrIfDquM"
+    },
+    {
+      "songname": "Paradise",
+      "artistname": "Sade",
+      "link": "https://www.youtube.com/watch?v=SLbvyz_Hk9E"
+    },
+    {
+      "songname": "Panorama",
+      "artistname": "Art of Trance",
+      "link": "https://www.youtube.com/watch?v=9EZZ4bS4wL8"
+    },
+    {
+      "songname": "7 Seasons (Ariana Grande x Vivaldi bdstf Blend)",
+      "artistname": "bdstf",
+      "link": "https://soundcloud.com/bdstf/7-seasons-ariana-grande-x-vivaldi-bdstf-blend",
+      "scArtUrl": "https://i1.sndcdn.com/artworks-oVLq4VLOrbWxP5b1-M2OWOg-t500x500.jpg"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=bp2QXsgNvA8",
+      "songname": "Timing",
+      "artistname": "Blue Gene Tyranny"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=QbAQYTARqQA",
+      "songname": "Kagerou",
+      "artistname": "Yukihiro Takahashi"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=KDGMU6sdVBE",
+      "songname": "Eyes on Me",
+      "artistname": "Faye Wong"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=18QOYwkA-cs",
+      "artistname": "Natural Wonder Beauty Concept",
+      "songname": "Sword"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=FvlyttLEQlk",
+      "songname": "Movement 1",
+      "artistname": "Floating Points, Pharoah Sanders & The London Symphony Orchestra"
+    }
+  ]
+}
