@@ -1,0 +1,101 @@
+{
+  "name": "Rohan",
+  "songs": [
+    {
+      "songname": "Rinsed (feat. TYSON)",
+      "artistname": "Dean Blunt",
+      "link": "https://www.youtube.com/watch?v=D4ojYQr2WXk"
+    },
+    {
+      "songname": "OMG PluggNB Flip",
+      "artistname": "NewJeans",
+      "link": "https://www.youtube.com/watch?v=R-pIccHGMg8"
+    },
+    {
+      "songname": "FreakyT",
+      "artistname": "TiaCorine",
+      "link": "https://www.youtube.com/watch?v=3-5UzUUIARE"
+    },
+    {
+      "songname": "California Dreamin’",
+      "artistname": "The Mamas & The Papas",
+      "link": "https://www.youtube.com/watch?v=N-aK6JnyFmk"
+    },
+    {
+      "songname": "Best in Show",
+      "artistname": "bar italia",
+      "link": "https://www.youtube.com/watch?v=XlLFHxowga8"
+    },
+    {
+      "songname": "Saudade",
+      "artistname": "Thievery Corporation",
+      "link": "https://www.youtube.com/watch?v=s2FhVi5REo0"
+    },
+    {
+      "songname": "No Sweat",
+      "artistname": "Double Virgo",
+      "link": "https://www.youtube.com/watch?v=7A8krbq_gqU"
+    },
+    {
+      "songname": "Cupid (Twin ver.)",
+      "artistname": "FIFTY FIFTY (피프티피프티)",
+      "link": "https://www.youtube.com/watch?v=6uvUTu716rU"
+    },
+    {
+      "songname": "City Girl",
+      "artistname": "Kevin Shields",
+      "link": "https://www.youtube.com/watch?v=tmlVD-q3nqU"
+    },
+    {
+      "songname": "Clocks",
+      "artistname": "Coldplay",
+      "link": "https://www.youtube.com/watch?v=PFW2uSCZ0uE"
+    },
+    {
+      "songname": "M.E",
+      "artistname": "Gary Numan",
+      "link": "https://www.youtube.com/watch?v=JeucohIa5LQ"
+    },
+    {
+      "songname": "Kamisamano Iutoori",
+      "artistname": "Junji Ishiwatari",
+      "link": "https://www.youtube.com/watch?v=0_qh3Cs14ig"
+    },
+    {
+      "songname": "Maserati",
+      "artistname": "Namasenda",
+      "link": "https://www.youtube.com/watch?v=JmhNCQ6ivKI"
+    },
+    {
+      "songname": "Ça Va",
+      "artistname": "Nation & Ecco2k",
+      "link": "https://www.youtube.com/watch?v=vri73H698HM"
+    },
+    {
+      "songname": "A Horse with No Name",
+      "artistname": "America",
+      "link": "https://www.youtube.com/watch?v=na47wMFfQCo"
+    },
+    {
+      "songname": "Dead Horse",
+      "artistname": "NINA",
+      "link": "https://www.youtube.com/watch?v=HxNLbrg5WzQ"
+    },
+    {
+      "songname": "Pretty in Possible",
+      "artistname": "Caroline Polachek",
+      "link": "https://www.youtube.com/watch?v=Hf487OncN9o"
+    },
+    {
+      "songname": "Nation Feeling",
+      "artistname": "Nation",
+      "link": "https://www.youtube.com/watch?v=mnWFkwKktdE"
+    }
+  ],
+  "miscimages": [
+    {
+      "image": "/images/rc_2023_music.jpg"
+    }
+  ],
+  "introtext": "![](/images/rc_2023_music.jpg)"
+}
