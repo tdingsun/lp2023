@@ -15,19 +15,18 @@
 	import G3 from '$lib/audio/G3.wav';
 	import G4 from '$lib/audio/G4.wav';
 	import G5 from '$lib/audio/G5.wav';
-	import G6 from '$lib/audio/G5.wav';
 
 	import B1 from '$lib/audio/B1.wav';
 	import B2 from '$lib/audio/B2.wav';
 	import B3 from '$lib/audio/B3.wav';
 	import B4 from '$lib/audio/B4.wav';
 	import B5 from '$lib/audio/B5.wav';
-	import B6 from '$lib/audio/B5.wav';
 
 	export let horizontal:boolean = false;
 
 	let synth: any;
 	let notesInOrder = [
+		'B6', 'A6', 'G6', 'F6', 'E6', 'D6', 'C6', 
 		'B5', 'A5', 'G5', 'F5', 'E5', 'D5', 'C5', 
 		'B4', 'A4', 'G4', 'F4', 'E4', 'D4', 'C4', 
 		'B3', 'A3', 'G3', 'F3', 'E3', 'D3', 'C3', 
@@ -37,6 +36,7 @@
 
 	
 	let blackNotesInOrder = [
+		'Bb6', 'Ab6', 'Gb6', '', 'Eb6', 'Db6', '',
 		'Bb5', 'Ab5', 'Gb5', '', 'Eb5', 'Db5', '',
 		'Bb4', 'Ab4', 'Gb4', '', 'Eb4', 'Db4', '',
 		'Bb3', 'Ab3', 'Gb3', '', 'Eb3', 'Db3', '',
@@ -63,7 +63,7 @@
 		const vol = new Tone.Volume(-8).toDestination();
 		synth = new Tone.Sampler({
 			urls: {
-				C1, C2, C3, C4, C5, C6, G1, G2, G3, G4, G5, G6, B1, B2, B3, B4, B5, B6
+				C1, C2, C3, C4, C5, C6, G1, G2, G3, G4, G5, B1, B2, B3, B4, B5
 			}
 		}).connect(vol);
 	});
