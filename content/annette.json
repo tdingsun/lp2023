@@ -1,0 +1,78 @@
+{
+  "name": "Annette",
+  "songs": [
+    {
+      "songname": "soso",
+      "artistname": "Omah Lay",
+      "link": "https://www.youtube.com/watch?v=k6eE3c70hgg",
+      "description": "Lagos"
+    },
+    {
+      "songname": "Jupiter",
+      "artistname": "Gustav Holst",
+      "link": "https://www.youtube.com/watch?v=Gu77Vtja30c",
+      "description": "Via the Queer Urban Orchestra in NYC"
+    },
+    {
+      "songname": "Cupid",
+      "description": "Summer romance",
+      "artistname": "Fifty Fifty",
+      "link": "https://www.youtube.com/watch?v=Qc7_zRjH808"
+    },
+    {
+      "artistname": "李玟 CoCo Lee",
+      "songname": "Di Da Di",
+      "link": "https://www.youtube.com/watch?v=zUnkE09Yrv8",
+      "description": "Taiwanese Wave tribute"
+    },
+    {
+      "description": "Summer",
+      "songname": "Sunshine",
+      "artistname": "Steve Lacy ft. Fousheé",
+      "link": "https://www.youtube.com/watch?v=RC8u7RJe-TE"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=tVIXY14aJms",
+      "artistname": "NewJeans",
+      "songname": "Hurt",
+      "description": "WFH days"
+    },
+    {
+      "description": "Fav gen z phenomena",
+      "songname": "Boy's a liar pt. 2",
+      "artistname": "Pinkpantheress, Ice Spice",
+      "link": "https://www.youtube.com/watch?v=oftolPu9qp4"
+    },
+    {
+      "description": "Surrealist blues enlightenment",
+      "songname": "why my love",
+      "artistname": "aja monet",
+      "link": "https://www.youtube.com/watch?v=k3cgfawh0vQ"
+    },
+    {
+      "description": "Brooklyn birthday",
+      "songname": "Childs Play",
+      "artistname": "Drake",
+      "link": "https://www.youtube.com/watch?v=nStnuCH9G9Q"
+    },
+    {
+      "description": "SAD",
+      "songname": "憂愁 (melancholy)",
+      "artistname": "蘇打綠 (sodagreen)",
+      "link": "https://www.youtube.com/watch?v=Gnue6Ue2mK8"
+    },
+    {
+      "songname": "The Sentinel",
+      "artistname": "Birsa Chatterjee",
+      "link": "https://www.youtube.com/watch?v=squEBGpUhMU",
+      "description": "Fall jazz awe"
+    },
+    {
+      "songname": "Last Dance",
+      "artistname": "Wu Bai & China Blue",
+      "description": "Taiwan, here to stay",
+      "link": "https://www.youtube.com/watch?v=7jYDYon4sGQ"
+    }
+  ],
+  "introtext": "![](/images/al.jpg)"
+}
