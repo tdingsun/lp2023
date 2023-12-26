@@ -1,0 +1,30 @@
+{
+  "name": "Aedan",
+  "songs": [
+    {
+      "artistname": "Sufjan Stevens",
+      "songname": "Will Anybody Ever Love Me?",
+      "link": "https://www.youtube.com/watch?v=OLeCIRC4taY"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=GrIG9LxHM9w",
+      "artistname": "Crosby, Stills, Nash & Young",
+      "songname": "Only Love Can Break Your Heart (Live)"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=ca7zUSNpL70",
+      "artistname": "yuele",
+      "songname": "sulky baby"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=DzIG6NjPX_Q",
+      "artistname": "Bon Iver",
+      "songname": "The Wolves (Act I and II)"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=zxu9ZWZxnPs",
+      "artistname": "MJ Lenderman",
+      "songname": "Catholic Priest (Live)"
+    }
+  ]
+}
