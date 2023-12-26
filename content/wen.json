@@ -1,0 +1,20 @@
+{
+  "name": "Wen",
+  "songs": [
+    {
+      "artistname": "The Cure",
+      "songname": "Just Like Heaven",
+      "link": "https://www.youtube.com/watch?v=n3nPiBai66M"
+    },
+    {
+      "artistname": "Lana Del Rey",
+      "songname": "Margaret",
+      "link": "https://www.youtube.com/watch?v=2xtKhqbNBoY"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=j4jtIDaeaWI",
+      "artistname": "Suzanne Vega",
+      "songname": "Tom's Diner"
+    }
+  ]
+}
