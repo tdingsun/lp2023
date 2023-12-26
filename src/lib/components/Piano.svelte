@@ -122,8 +122,8 @@
 				<div
 					class="{horizontal ? 
 					'h-full w-full justify-start  pb-2 pt-4 rotate-180 vertical-text' : 
-					'h-20 justify-end pr-4 xl:pr-8   xl:text-3xl'} 
-					relative flex items-center rounded-r-md text-2xl text-grey6 font-arialrounded piano-name
+					'h-20 justify-end pr-8'} 
+					relative flex items-center rounded-r-md text-3xl text-grey6 font-arialrounded piano-name
 						"
 				>
 				
