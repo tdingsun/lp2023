@@ -66,6 +66,9 @@
 
 	];
 
+	let KeyLabelMapping = ['C', 'D', 'E', 'F', 'G', 'A', 'B']
+	let reverseKeyLabelMapping = ['F', 'G', 'A', 'B', 'C', 'D', 'E']
+
 
 
 
@@ -133,8 +136,15 @@
 					
 				</div>
 			</a>
-			<div class=" {horizontal ? 'top-1 left-6' : 'right-0 top-6'} absolute  w-8 h-8 flex justify-center items-center  border-grey4 text-grey4 rounded-[10rem]">
-				{idx + 1}
+			<div class=" 
+			{entry.slug === $page.params.name ? 'text-black' : 'text-grey4'}
+			{horizontal ? 'top-1 left-0 w-20 h-8' : 'right-0 top-0 w-8 h-20'} absolute text-xs tracking-wide  flex justify-center items-center rounded-[10rem]">
+				{#if horizontal}
+				{notesInOrderReverse[idx % notesInOrder.length]}
+
+				{:else}
+				{notesInOrder[idx % notesInOrder.length]}
+				{/if}
 			</div>
 			<button
 				on:click={() => {
