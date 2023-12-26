@@ -31,23 +31,48 @@
 		'B4', 'A4', 'G4', 'F4', 'E4', 'D4', 'C4', 
 		'B3', 'A3', 'G3', 'F3', 'E3', 'D3', 'C3', 
 		'B2', 'A2', 'G2', 'F2', 'E2', 'D2', 'C2', 
-		'B1', 'A1', 'G1', 'F1', 'E1', 'D1', 'C1'
+		'B1', 'A1', 'G1', 'F1', 'E1', 'D1', 'C1',
+		'B0', 'A0', 'G0', 'F0', 'E0', 'D0', 'C0'
 	];
 
-	
 	let blackNotesInOrder = [
 		'Bb6', 'Ab6', 'Gb6', '', 'Eb6', 'Db6', '',
 		'Bb5', 'Ab5', 'Gb5', '', 'Eb5', 'Db5', '',
 		'Bb4', 'Ab4', 'Gb4', '', 'Eb4', 'Db4', '',
 		'Bb3', 'Ab3', 'Gb3', '', 'Eb3', 'Db3', '',
 		'Bb2', 'Ab2', 'Gb2', '', 'Eb2', 'Db2', '',
-		'Bb1', 'Ab1', 'Gb1', '', 'Eb1', 'Db1', ''
+		'Bb1', 'Ab1', 'Gb1', '', 'Eb1', 'Db1', '',
+		'Bb0', 'Ab0', 'Gb0', '', 'Eb0', 'Db0', ''
 	];
+
+	let notesInOrderReverse = [
+		'F1', 'G1', 'A1', 'B1', 
+		'C2', 'D2', 'E2', 'F2', 'G2', 'A2', 'B2',
+		'C3', 'D3', 'E3', 'F3', 'G3', 'A3', 'B3',
+		'C4', 'D4', 'E4', 'F4', 'G4', 'A4', 'B4',
+		'C5', 'D5', 'E5', 'F5', 'G5', 'A5', 'B5',
+		'C6', 'D6', 'E6', 'F6', 'G6', 'A6', 'B6',
+		'C7', 'D7', 'E7'
+	];
+
+	let blackNotesInOrderReverse = [
+		'Gb1', 'Ab1', 'Bb1', 
+		'', 'Db2', 'Eb2', '', 'Gb2', 'Ab2', 'Bb2',
+		'', 'Db3', 'Eb3', '', 'Gb3', 'Ab3', 'Bb3',
+		'', 'Db4', 'Eb4', '', 'Gb4', 'Ab4', 'Bb4',
+		'', 'Db5', 'Eb5', '', 'Gb5', 'Ab5', 'Bb5',
+		'', 'Db6', 'Eb6', '', 'Gb6', 'Ab6', 'Bb6',
+		'', 'Db7', 'Eb7', ''
+
+	];
+
+
+
 
 	if(horizontal){
 		if($entries) {
-			notesInOrder = notesInOrder.slice(0, 34 - ($entries.length % 7)).reverse()
-			blackNotesInOrder = blackNotesInOrder.slice(0, 33 - ($entries.length % 7)).reverse()
+			notesInOrder = notesInOrderReverse;
+			blackNotesInOrder = blackNotesInOrderReverse;
 		}
 	}
 
