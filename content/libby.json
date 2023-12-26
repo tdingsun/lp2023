@@ -1,0 +1,55 @@
+{
+  "name": "Libby",
+  "songs": [
+    {
+      "artistname": "Portishead",
+      "songname": "The Rip",
+      "link": "https://www.youtube.com/watch?v=kBOaLjtR4mw"
+    },
+    {
+      "artistname": "Lucio Battisti",
+      "songname": "Soli",
+      "link": "https://www.youtube.com/watch?v=V_Qq5fW4OLw"
+    },
+    {
+      "artistname": "Bad Bunny",
+      "songname": "Aguacero",
+      "link": "https://www.youtube.com/watch?v=iBYndEtOVv4"
+    },
+    {
+      "artistname": "Lil Peep",
+      "songname": "PRINCESS",
+      "link": "https://www.youtube.com/watch?v=YzkTFFwxtXI"
+    },
+    {
+      "artistname": "Travis Scott",
+      "songname": "STARGAZING",
+      "link": "https://www.youtube.com/watch?v=2a8PgqWrc_4"
+    },
+    {
+      "songname": "Famous Blue Raincoat",
+      "artistname": "Leonard Cohen",
+      "link": "https://www.youtube.com/watch?v=qNM2YE2OE70"
+    },
+    {
+      "artistname": "Poison Girl Friend",
+      "songname": "Secret Track",
+      "link": "https://www.youtube.com/watch?v=fLsly2hJ6wI"
+    },
+    {
+      "artistname": "Lana Del Rey",
+      "songname": "Get Free",
+      "link": "https://www.youtube.com/watch?v=axRMZqUNVEw"
+    },
+    {
+      "artistname": "Double Virgo",
+      "songname": "No Sweat",
+      "link": "https://www.youtube.com/watch?v=xNvsoIYWHSg"
+    },
+    {
+      "artistname": "Playboi Carti",
+      "songname": "Different Day",
+      "link": "https://www.youtube.com/watch?v=8VOGJYZxDjA"
+    }
+  ]
+}
