@@ -1,0 +1,60 @@
+{
+  "name": "Aayushi",
+  "songs": [
+    {
+      "songname": "Lilac Wine",
+      "artistname": "Nina Simone",
+      "link": "https://www.youtube.com/watch?v=o7TuGz5H7kE"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=j0kGswFhNuc",
+      "songname": "Piano Concerto No. 1",
+      "artistname": "Tchaikovsky"
+    },
+    {
+      "songname": "I'd Like To Walk Around In Your Mind",
+      "link": "https://www.youtube.com/watch?v=aJCJKhUXe60",
+      "artistname": "Vashti Bunyan"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=115Q89NSskw",
+      "artistname": "Eartheater",
+      "songname": "Chop Suey"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=7tnepMjjVzU",
+      "songname": "Pavane pour une infante défunte",
+      "artistname": "Ravel"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=ijmHannC8sY",
+      "artistname": "Madonna",
+      "songname": "Justify My Love"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=Jf313bHVxyk",
+      "artistname": "Diana Ross",
+      "songname": "I Still Believe"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=tdIQTEYXDP4",
+      "songname": "The Sun Can't Compare (Long Version)",
+      "artistname": "Larry Heard & Mr. White"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=1ST9TZBb9v8",
+      "artistname": "Joan Baez",
+      "songname": "Diamonds and Rust "
+    },
+    {
+      "songname": "You're Not Alone (feat. Erika De Casier & August Rosenbaum)",
+      "link": "https://www.youtube.com/watch?v=vWwjo6aNeHM",
+      "artistname": "Courtesy"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=gMMV_tBvJ9Q",
+      "songname": "Indoctrinate (Original Mix)",
+      "artistname": "Castle Trancelott"
+    }
+  ]
+}
