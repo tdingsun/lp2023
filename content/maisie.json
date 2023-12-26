@@ -1,0 +1,69 @@
+{
+  "name": "Maisie",
+  "introtext": "This year I listened to the album Something by Chairlift almost exclusively.\n\n![](/images/img_5215.jpg)",
+  "miscimages": [
+    {}
+  ],
+  "songs": [
+    {
+      "artistname": "Chairlift",
+      "songname": "Sidewalk Safari",
+      "link": "https://www.youtube.com/watch?v=GrM5SOGw9T8"
+    },
+    {
+      "songname": "Wrong Opinion",
+      "link": "https://www.youtube.com/watch?v=wk0WHOM-acU",
+      "artistname": "Chairlift"
+    },
+    {
+      "songname": "I Belong in Your Arms",
+      "artistname": "Chairlift",
+      "link": "https://www.youtube.com/watch?v=3e8Ql9qFA2o"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=HS9XuAR0DDI",
+      "songname": "Take it Out On Me",
+      "artistname": "Chairlift"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=3NkqtSMb-IE",
+      "songname": "Ghost Tonight",
+      "artistname": "Chairlift"
+    },
+    {
+      "songname": "Cool As a Fire",
+      "link": "https://www.youtube.com/watch?v=2-JWIuEmaV4",
+      "artistname": "Chairlift"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=98XRKr19jIE",
+      "songname": "Amanaemonesia",
+      "artistname": "Chairlift"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=atKuhrPnLq8",
+      "songname": "Met Before",
+      "artistname": "Chairlift"
+    },
+    {
+      "songname": "Frigid Spring",
+      "artistname": "Chairlift",
+      "link": "https://www.youtube.com/watch?v=LmK3aNT1eyg"
+    },
+    {
+      "songname": "Turning",
+      "artistname": "Chairlift",
+      "link": "https://www.youtube.com/watch?v=kPsbApXUqsI"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=KoB3_HmBFjU",
+      "songname": "Guilty As Charged",
+      "artistname": "Chairlift"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=weBOTomMqAM",
+      "songname": "Grown Up Blues",
+      "artistname": "Chairlift"
+    }
+  ]
+}
