@@ -126,11 +126,16 @@
 					relative flex items-center rounded-r-md text-2xl text-grey6 font-arialrounded piano-name
 						"
 				>
+				
 					<p>
 						{entry.name}
 					</p>
+					
 				</div>
 			</a>
+			<div class=" {horizontal ? 'top-1 left-6' : 'right-0 top-6'} absolute  w-8 h-8 flex justify-center items-center  border-grey4 text-grey4 rounded-[10rem]">
+				{idx + 1}
+			</div>
 			<button
 				on:click={() => {
 					playBlackKey(idx);
