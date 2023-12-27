@@ -26,51 +26,50 @@
 
 	let synth: any;
 	let notesInOrder = [
+		'B7', 'A7', 'G7', 'F7', 'E7', 'D7', 'C7', 
 		'B6', 'A6', 'G6', 'F6', 'E6', 'D6', 'C6', 
 		'B5', 'A5', 'G5', 'F5', 'E5', 'D5', 'C5', 
 		'B4', 'A4', 'G4', 'F4', 'E4', 'D4', 'C4', 
 		'B3', 'A3', 'G3', 'F3', 'E3', 'D3', 'C3', 
 		'B2', 'A2', 'G2', 'F2', 'E2', 'D2', 'C2', 
 		'B1', 'A1', 'G1', 'F1', 'E1', 'D1', 'C1',
-		'B0', 'A0', 'G0', 'F0', 'E0', 'D0', 'C0'
+		'B0', 'A0'
 	];
 
 	let blackNotesInOrder = [
+		'Bb7', 'Ab7', 'Gb7', '', 'Eb7', 'Db7', '',
 		'Bb6', 'Ab6', 'Gb6', '', 'Eb6', 'Db6', '',
 		'Bb5', 'Ab5', 'Gb5', '', 'Eb5', 'Db5', '',
 		'Bb4', 'Ab4', 'Gb4', '', 'Eb4', 'Db4', '',
 		'Bb3', 'Ab3', 'Gb3', '', 'Eb3', 'Db3', '',
 		'Bb2', 'Ab2', 'Gb2', '', 'Eb2', 'Db2', '',
 		'Bb1', 'Ab1', 'Gb1', '', 'Eb1', 'Db1', '',
-		'Bb0', 'Ab0', 'Gb0', '', 'Eb0', 'Db0', ''
+		'Bb0', 'Ab0'
 	];
 
 	let notesInOrderReverse = [
-		'F1', 'G1', 'A1', 'B1', 
+		'C1', 'D1', 'E1', 'F1', 'G1', 'A1', 'B1',
 		'C2', 'D2', 'E2', 'F2', 'G2', 'A2', 'B2',
 		'C3', 'D3', 'E3', 'F3', 'G3', 'A3', 'B3',
 		'C4', 'D4', 'E4', 'F4', 'G4', 'A4', 'B4',
 		'C5', 'D5', 'E5', 'F5', 'G5', 'A5', 'B5',
 		'C6', 'D6', 'E6', 'F6', 'G6', 'A6', 'B6',
-		'C7', 'D7', 'E7'
+		'C7', 'D7', 'E7', 'F7', 'G7', 'A7', 'B7',
+		'C8', 'D7'
+
 	];
 
 	let blackNotesInOrderReverse = [
-		'Gb1', 'Ab1', 'Bb1', 
-		'', 'Db2', 'Eb2', '', 'Gb2', 'Ab2', 'Bb2',
-		'', 'Db3', 'Eb3', '', 'Gb3', 'Ab3', 'Bb3',
-		'', 'Db4', 'Eb4', '', 'Gb4', 'Ab4', 'Bb4',
-		'', 'Db5', 'Eb5', '', 'Gb5', 'Ab5', 'Bb5',
-		'', 'Db6', 'Eb6', '', 'Gb6', 'Ab6', 'Bb6',
-		'', 'Db7', 'Eb7', ''
+		'Db1', 'Eb1', '', 'Gb1', 'Ab1', 'Bb1', '',
+		 'Db2', 'Eb2', '', 'Gb2', 'Ab2', 'Bb2','',
+		'Db3', 'Eb3', '', 'Gb3', 'Ab3', 'Bb3','', 
+		 'Db4', 'Eb4', '', 'Gb4', 'Ab4', 'Bb4','',
+		 'Db5', 'Eb5', '', 'Gb5', 'Ab5', 'Bb5','',
+		'Db6', 'Eb6', '', 'Gb6', 'Ab6', 'Bb6','', 
+	'Db7', 'Eb7', '', 'Gb7', 'Ab7', 'Bb7',	'', 
+	 'Db1',	'',
 
 	];
-
-	let KeyLabelMapping = ['C', 'D', 'E', 'F', 'G', 'A', 'B']
-	let reverseKeyLabelMapping = ['F', 'G', 'A', 'B', 'C', 'D', 'E']
-
-
-
 
 	if(horizontal){
 		if($entries) {
@@ -150,7 +149,7 @@
 				on:click={() => {
 					playBlackKey(idx);
 				}}
-				class="{horizontal ? 'h-1/2 top-0 -right-4 w-8 rounded-b-md ' : 'h-10 top-[3.75rem] w-1/2 rounded-r-md'} black-key absolute pointer-events-auto z-10"
+				class="{horizontal ? 'h-1/2 top-0 -right-4 w-8 rounded-b-md black-key-horizontal' : 'h-10 top-[3.75rem] w-1/2 rounded-r-md'} black-key absolute pointer-events-auto z-10"
 			></button>
 		</div>
 	{/each}
@@ -179,9 +178,15 @@
 		border-bottom: 5px inset black;
 	}
 
-	.key-container:nth-child(7n + 4) .black-key,
-	.key-container:nth-child(7n) .black-key,
-	.key-container:last-child .black-key {
+	.key-container:nth-child(7n + 4) .black-key:not(.black-key-horizontal),
+	.key-container:nth-child(7n) .black-key:not(.black-key-horizontal),
+	.key-container:last-child .black-key:not(.black-key-horizontal) {
+		display: none;
+	}
+
+	.key-container:nth-child(7n) .black-key.black-key-horizontal,
+	.key-container:nth-child(7n + 3) .black-key.black-key-horizontal,
+	.key-container:last-child .black-key.black-key-horizontal {
 		display: none;
 	}
 
