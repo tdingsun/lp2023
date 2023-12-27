@@ -110,13 +110,13 @@
 				<div
 					class="w-full h-full absolute group-hover:block group-hover:from-[whitesmoke] group-hover:to-red group-hover:via-lightred group-hover:via-85% group-hover:from-50% black-key-hover:hidden
 					{horizontal ? `group-hover:bg-gradient-to-b rounded-b-[5px] ${entry.slug === $page.params.name ? 'bg-gradient-to-b from-[whitesmoke] to-red via-lightred via-85% from-50% block' : 'hidden'}`
-					 : `rounded-r-[5px]   group-hover:bg-gradient-to-r ${entry.slug === $page.params.name ? 'bg-gradient-to-r from-[whitesmoke] to-red via-lightred via-85% from-50% block' : 'hidden'}`
+					 : `rounded-r-[5px]   group-hover:bg-gradient-to-r ${entry.slug === $page.params.name ? 'bg-gradient-to-r from-[whitesmoke] to-red via-lightred via-90% from-50% block' : 'hidden'}`
 					}"
 				>
 					<div
 						class="bg-[rgb(255,247,187)] aspect-square absolute rounded-[10rem]  blur-md
 						{horizontal ? 
-						'h-11 right-2 bottom-3' : 
+						'h-11 right-4 bottom-3' : 
 						'h-14 right-3 top-3'} 
 						"
 					></div>
@@ -197,7 +197,7 @@
 		color: rgb(255, 132, 0) !important;
 	}
 	.key-container:nth-child(7n + 3) .piano-name p::first-letter {
-		color: rgb(222, 177, 0) !important;
+		color: rgb(201, 154, 0) !important;
 	}
 	.key-container:nth-child(7n + 4) .piano-name p::first-letter {
 		color: rgb(23, 154, 23) !important;
