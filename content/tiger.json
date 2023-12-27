@@ -11,7 +11,7 @@
       "songname": "Celebrity (IU Cover)",
       "artistname": "NewJeans",
       "link": "https://www.youtube.com/watch?v=txtKTTb3U8g",
-      "description": "And this happened too. People were scared. I was scared."
+      "description": "And this happened too."
     },
     {
       "songname": "precipice (4)",
@@ -75,7 +75,7 @@
       "songname": "A Headache and a Black Eye",
       "artistname": "dœgægé",
       "link": "https://www.youtube.com/watch?v=g9maoqAuYCc",
-      "description": "I'm secretly obsessed with you and you know it."
+      "description": "I'm secretly obsessed with you and you know it"
     },
     {
       "songname": "introvert",
@@ -87,6 +87,12 @@
           "image": "/images/length.png"
         }
       ]
+    },
+    {
+      "songname": "playwright",
+      "link": "https://www.youtube.com/watch?v=7Bx9WSvsG8Q",
+      "artistname": "dobi, han.irl <3",
+      "description": "Something about using the word 'laptop' in a song really got to me"
     },
     {
       "songname": "Never Meant",
