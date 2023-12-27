@@ -160,7 +160,6 @@
 				createSCPlayer(defaultSCsource);
 				clearInterval(SCScriptLoadInterval)
 			} else {
-				console.log('no sc');
 				count++;
 			}
 		}, 250);

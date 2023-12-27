@@ -31,7 +31,6 @@
 				setSCArt();
 				clearInterval(SCScriptLoadInterval)
 			} else {
-				console.log('no sc');
 			}
 		}, 250);
 		

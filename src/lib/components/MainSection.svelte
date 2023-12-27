@@ -11,8 +11,6 @@
 		stickyOpen = false;
 	}
 	let containerWidth: number;
-	$: console.log(containerWidth);
-
 </script>
 
 	<div
